@@ -1,0 +1,169 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<MerchantReport xmlns="http://mobicom.oceanbank.ru/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" dateFrom="2011-06-29" dateTo="2013-06-18" agregator="33" totalCount="30">
+
+<Merchant>
+	<id>13632</id>
+	<createTime>2013-05-30T16:42:18</createTime>
+	<editTime>2013-05-30T16:45:25</editTime>
+	<closeTime xsi:nil="1"></closeTime>
+	<Owner>
+		<id>M2INTERNET</id>
+	</Owner>
+	<brand xsi:nil="1"></brand>
+	<name>MobToInternet/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name>
+	<ProviderLinks>
+		<Provider>
+			<id>1</id>
+			<Category>
+				<providerCode>Access to Internet-6</providerCode>
+				<minAmount>1000</minAmount>
+				<maxAmount>150000</maxAmount>
+				<abonentInterest>6.45</abonentInterest>
+				<active>1</active>
+			</Category>
+		</Provider>
+		<Provider>
+			<id>2</id>
+			<Category>
+				<providerCode xsi:nil="1">
+				</providerCode><minAmount xsi:nil="1"/>
+				<maxAmount xsi:nil="1"/>
+				<abonentInterest xsi:nil="1"/>
+				<active>0</active>
+			</Category>
+		</Provider>
+		<Provider>
+			<id>3</id>
+			<Category>
+				<providerCode xsi:nil="1"></providerCode>
+				<minAmount xsi:nil="1"/>
+				<maxAmount xsi:nil="1"/>
+				<abonentInterest xsi:nil="1"/>
+				<active>0</active>
+			</Category>
+		</Provider>
+		<Provider>
+			<id>4</id>
+			<Category>
+				<providerCode xsi:nil="1"></providerCode>
+				<minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/>
+				<abonentInterest xsi:nil="1"/>
+				<active>0</active>
+			</Category>
+		</Provider>
+	</ProviderLinks>
+</Merchant>
+
+<Merchant>
+	<id>13631</id>
+	<createTime>2013-05-30T16:42:18</createTime>
+	<editTime>2013-05-30T16:45:25</editTime>
+	<closeTime xsi:nil="1"></closeTime>
+	<Owner>
+		<id>M2TV</id>
+	</Owner>
+	<brand xsi:nil="1"></brand>
+	<name>MobToTV/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name>
+	<ProviderLinks>
+		<Provider>
+			<id>1</id>
+			<Category>
+				<providerCode>Paid TV-6</providerCode>
+				<minAmount>1000</minAmount>
+				<maxAmount>320000</maxAmount>
+				<abonentInterest>6.45</abonentInterest>
+				<active>1</active>
+			</Category>
+		</Provider>
+		<Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider>
+		<Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider>
+		<Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider>
+	</ProviderLinks>
+</Merchant>
+
+<Merchant><id>13630</id><createTime>2013-05-30T16:42:18</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2TRADE</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToTrade/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Online-shops-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13629</id><createTime>2013-05-30T16:42:18</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2GOS</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToGos/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Gov. Services-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13633</id><createTime>2013-05-30T16:42:18</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2PHONE</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToPhone/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Telecom-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>7.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13627</id><createTime>2013-05-30T16:42:18</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2PEREVOD</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToPerevodЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/perevodi</name><ProviderLinks><Provider><id>1</id><Category><providerCode>MMT-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>7.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13626</id><createTime>2013-05-30T16:42:18</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2WEB</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToWebЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/oplata-web</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Online-shops-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13625</id><createTime>2013-05-30T16:42:18</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2TAXI</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToTaxiЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/oplata-taksi</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Ticketing-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13624</id><createTime>2013-05-30T16:42:18</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2M</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToMobЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/oplata-s-mobilnogo-na-mobilnyj</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Telecom-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>7.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13628</id><createTime>2013-05-30T16:42:18</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2GKH</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToGKH/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Payments for utilities-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13644</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2POD</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToPod/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>MMOG-6</providerCode><minAmount>31500</minAmount><maxAmount>1500000</maxAmount><abonentInterest>21.50</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13645</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2NET</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToNet/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Социальные сети-6</providerCode><minAmount>31500</minAmount><maxAmount>1500000</maxAmount><abonentInterest>41.50</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13646</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2MMOG</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToMmog/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>MMOG-6</providerCode><minAmount>31500</minAmount><maxAmount>1500000</maxAmount><abonentInterest>21.50</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13647</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2FILE</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToFile/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Файлообменники-6</providerCode><minAmount>31500</minAmount><maxAmount>1500000</maxAmount><abonentInterest>31.50</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13648</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2QUIZ</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToQuiz/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Lottery-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>26.50</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks></Merchant>
+<Merchant>
+<id>13649</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2PARKING</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToParking/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Ticketing-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13650</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2TURIZM</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToTurizm/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Other-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13651</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2GIBDD</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToGIBDD/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Gov. Services-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13652</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2EXCHANGE</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToExchange/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Forex-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>7.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13643</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2CONTENT</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToContent/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>MMOG-6</providerCode><minAmount>31500</minAmount><maxAmount>1500000</maxAmount><abonentInterest>21.50</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13642</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2MED</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToMed/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Services-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13641</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2SHOW</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToShow/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Ticketing-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13640</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2SOFT</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToSoft/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>PC Software-6</providerCode><minAmount>31500</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13639</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2VENDING</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToVending/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Online-shops-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13653</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2BANK</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToBank/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>MMT-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>7.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13637</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2BILET</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToBilet/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Ticketing-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13636</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2HOTEL</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToHotel/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Other-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13635</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2TRANSPORT</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToTransport/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Ticketing-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13634</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2CREDIT</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToCredit/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>MMT-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>7.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+<Merchant><id>13638</id><createTime>2013-05-30T16:42:19</createTime><editTime>2013-05-30T16:45:25</editTime><closeTime xsi:nil="1"></closeTime><Owner><id>M2CHARITY</id></Owner><brand xsi:nil="1"></brand>
+<name>MobToCharity/ЗАО Авант Мобайл/http://www.uniplatservice.ru/ru/projects/</name><ProviderLinks><Provider><id>1</id><Category><providerCode>Other-6</providerCode><minAmount>1000</minAmount><maxAmount>1500000</maxAmount><abonentInterest>6.45</abonentInterest><active>1</active></Category></Provider><Provider><id>2</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>3</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider><Provider><id>4</id><Category><providerCode xsi:nil="1"></providerCode><minAmount xsi:nil="1"/><maxAmount xsi:nil="1"/><abonentInterest xsi:nil="1"/><active>0</active></Category></Provider></ProviderLinks>
+</Merchant>
+
+</MerchantReport>

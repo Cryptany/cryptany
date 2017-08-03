@@ -1,0 +1,81 @@
+﻿@using Recaptcha
+@{
+    ViewBag.Title = "TaxiPayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<script type="text/javascript">
+
+    function OnSuccess(data) {
+        $('#modalWindow').arcticmodal();
+        $("#getStateButton:hidden").slideDown("slow");
+    }
+    function OnFailure(request, error) {
+        modalWindowText.innerHTML = "Извиите, сервис временно не доступен.";
+        $('#modalWindow').arcticmodal();
+    }
+
+</script>
+
+
+
+@using (Ajax.BeginForm("Pay", new AjaxOptions
+                                            {
+                                                HttpMethod = "POST",
+                                                InsertionMode = InsertionMode.Replace,
+                                                UpdateTargetId = "modalWindowText",
+                                                OnSuccess = "OnSuccess",
+                                                OnFailure = "OnFailure"
+                                            }
+                      )
+        )
+ {
+
+    <h2>Оплата такси<br/></h2>
+     <div class ="Project">
+         <table>
+             <tr>
+                 <td class = "PaymentTable">Введите номер для списания</td>
+                 <td><div class="textBlock"><input id="phone2" name="phone2" type="text" class="textBlockInput" onkeyup=" findOperator(this, '#operator1'); "/></div>
+                     <div class="blockInfo" id="operator1"/></td>
+             </tr>
+             <tr>
+                 <td class = "PaymentTable" >Сумма платежа</td>
+                 <td><div class="moneytextBlock"><input id="money" name="money" type="text" class="InputmoneytextBlock" onkeyup=" countMoney(this, '#comissionMoney'); "/></div>
+                     <div class="blockInfo" id="comissionMoney"/></td>
+             </tr>
+             @*<tr>
+                 <td class = "PaymentTable">Введите код с картинки</td>
+                 <td colspan = "2">
+                     <div class="Capcha">
+                         @MvcHtmlString.Create(Html.GenerateCaptcha("recaptcha", "white"))
+                     </div>
+                 </td>
+             </tr>*@
+             <tr>
+                 <td></td>
+                 <td colspan="2" align="left"><div class="AccessChb"><input type="checkbox" name="chbAccept" value="false" title="я принимаю условия предоставления услуг"/>
+                                                  я принимаю условия предоставления услуг</div></td>
+             </tr>
+             <tr>
+                 <td/>
+                 <td align="left"><input type="submit" value="Провести оплату" class="PayButton" /></td>
+                 <td/>
+             </tr>
+             <tr>
+                 <td/>
+                 <td><div  onclick = "paymentState()" id="getStateButton">Просмотреть статус оплаты</div></td>
+             </tr>
+         </table>
+         
+     <div style="display: none;">
+         <div class="box-modal" id="modalWindow">
+             <div class="box-modal_close arcticmodal-close">закрыть</div>
+             <div id="modalWindowText"> </div>
+         </div>
+
+     </div>
+     </div>
+}

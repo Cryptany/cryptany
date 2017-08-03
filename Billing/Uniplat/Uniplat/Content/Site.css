@@ -1,0 +1,247 @@
+body {
+	background-color: #666666;
+	padding: 0;
+	margin: 10px 0 40px 0;
+	text-align: center;
+	font-family: Tahoma, Verdana,  Helvetica, sans-serif;
+	font-size: small;
+	color: #666;
+	}
+
+.main {
+	    width: 740px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 50px;
+		border: 1px solid white;
+		background-color: white;
+		position: relative;
+		padding: 0;
+}
+	
+.top {
+		height: 245px;
+		/*border: 1px solid green;*/
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		background-color: Black;
+}
+
+.menu {
+		height: 34px;
+		width: 100%;
+		background-color: #2b2b2b;
+}
+
+.bottom	{
+		/*position: absolute; 
+		bottom: 0;
+		left: 0;*/
+		width: 100%;
+		height: 34px;
+        text-align: left;
+		font-size: 80%;
+		padding-left: 50px;
+	}
+
+.logo {
+		display: block;
+		float: left;
+		height: 240px;
+		margin: 0;
+		padding: 0;
+}
+
+img {
+		border : 0;
+}
+
+.slider {
+		float: right;
+		height: 240px;
+		margin: 0;
+		padding: 0;
+}
+
+.middle {
+	    margin: 20px;
+	    display: block;
+	    position: relative;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+ul.sequence li {
+    margin-left:40px;
+}
+    
+.infoBlock {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+h2 {
+    text-align: justify;
+}
+
+.Project {
+        margin-top: 30px;
+        width: auto;
+        margin-left: auto;    
+        margin-right: auto;
+}
+        
+.Project InfoBlock {
+		margin-top: 50px;
+		width: 300px;
+		height: auto;
+		text-align: center;
+}
+
+.caption {
+		color: #696969;
+		margin-top: 20px;
+		font-size: 18px;
+		text-align: center !important;
+}
+
+.textBlock {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		border: 1px solid #696969;
+		border-radius: 7px;
+		width: 260px;
+		height: 35px;
+		background-image: url('Img/backphone3.png'); 
+		background-position: 0 0; 
+		background-repeat: no-repeat;
+}
+	
+input.textBlockInput {
+		font-size: 24px;
+		color: #0000CD;
+		margin-left: 40px;
+		border: 0;
+		width: 200px;
+		outline: none;
+		height: 30px;
+}
+	
+.moneytextBlock {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		border: 1px solid #696969;
+		border-radius: 7px;
+		width: 260px;
+		height: 35px;
+		background-image: url('Img/rub1.png'); 
+		background-position: 220px 0; 
+		background-repeat: no-repeat;
+		padding-left : 4px;
+}
+
+input.InputmoneytextBlock {
+		font-size:24px;
+		color: #0000CD;
+		margin-right: 40px;
+		border: 0;
+		width: 170px;
+		direction:RTL;
+		outline: none;
+		height: 30px;
+		padding-right: 10px;
+		text-align: right;
+}
+	
+.blockInfo {
+		margin-top: 10px;
+	    height: 30px;
+		text-align: center !important;
+}
+	
+.moneyResult {
+		width: 260px;
+		border: 1px solid #D3D3D3;
+		border-radius: 7px;
+		background-color: #D3D3D3;
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		text-align: center !important;
+}
+	
+.PayButton {
+	    cursor: pointer;
+	    width: 280px;
+		border: 3px solid #D3D3D3;
+		border-radius: 7px;
+		margin-top: 10px;
+		margin-left: 40px;
+		Height: 50px;
+}
+	
+.ActionBlock {
+	    cursor:pointer;
+	    width: 140px;
+		border: 3px solid #D3D3D3;
+		border-radius: 7px;
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		Height: 50px;
+		text-align: center !important;  
+		padding-top: 20px; 
+		font-size: large;
+}
+    
+.ActionBlock a {
+        text-align: center;
+	    font-family: Tahoma, Verdana,  Helvetica, sans-serif;
+	    font-size: medium;    
+	    color: #696969;
+	    text-decoration: none;
+}
+
+.ActionBlock:hover {
+        background: #696969;    
+        color: white;
+}
+
+    
+.PaymentTable {
+        padding-top: 15px;
+        color: #696969;
+		font-size: 18px;
+		text-align: left;
+	    vertical-align: top;
+}
+    
+.Capcha {
+		margin-left: 40px;
+}
+    
+.AccessChb { 
+		margin-left: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+}
+        
+#getStateButton {
+        margin-top: 10px ;
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 40px;
+        cursor: pointer;
+        padding-top: 20px;
+        display: none;
+}

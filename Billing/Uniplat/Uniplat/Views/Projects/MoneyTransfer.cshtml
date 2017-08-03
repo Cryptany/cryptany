@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "MoneyTransfer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Денежные переводы<br/></h2>
+    <div class ="Project">
+        <div class="InfoBlock">
+		    <div class="caption">
+			    Введите номер для списания
+		    </div>
+		    <div class="textBlock">
+			    <input id="phone2" type="text" class="textBlockInput" onkeyup="findOperator(this,'#operator1');"/>
+
+                <div class="blockInfo" id="operator1">
+			
+		        </div>
+
+		    </div>
+
+	    </div>
+        <br/>
+	    <div class="InfoBlock">
+		    <div class="caption">
+			    Сумма платежа
+		    </div>
+		    <div class="moneytextBlock">
+			    <input id="money" type="text" class="InputmoneytextBlock" onkeyup="countMoney(this,'#comissionMoney');"/>
+		    </div>	
+            <div class="moneyResult" id="comissionMoney">
+            </div>
+	    </div>
+
+        <div class="ActionBlock" onclick = "pay('#phone2','#money');">
+           Провесnи оплату
+        </div>
+    </div>

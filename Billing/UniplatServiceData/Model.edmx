@@ -1,0 +1,1339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="UPSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="UPSModelStoreContainer">
+          <EntitySet Name="ClientMessages" EntityType="UPSModel.Store.ClientMessages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Abonents" EntityType="UPSModel.Store.Abonents" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Banks" EntityType="UPSModel.Store.Banks" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="DEFcodes" EntityType="UPSModel.Store.DEFcodes" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Merchants" EntityType="UPSModel.Store.Merchants" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Merchants2Operators" EntityType="UPSModel.Store.Merchants2Operators" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="MobicomMessages" EntityType="UPSModel.Store.MobicomMessages" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="OperatorBrands" EntityType="UPSModel.Store.OperatorBrands" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="OperatorParameters" EntityType="UPSModel.Store.OperatorParameters" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Operators" EntityType="UPSModel.Store.Operators" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Partner2Merchants" EntityType="UPSModel.Store.Partner2Merchants" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Partners" EntityType="UPSModel.Store.Partners" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Payments" EntityType="UPSModel.Store.Payments" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Regions" EntityType="UPSModel.Store.Regions" store:Type="Tables" Schema="ups" />
+          <EntitySet Name="Status" EntityType="UPSModel.Store.Status" store:Type="Tables" Schema="ups" />
+          <AssociationSet Name="FK_Abonents_DEFcodes" Association="UPSModel.Store.FK_Abonents_DEFcodes">
+            <End Role="DEFcodes" EntitySet="DEFcodes" />
+            <End Role="Abonents" EntitySet="Abonents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEFcodes_Operators_OperatorId" Association="UPSModel.Store.FK_DEFcodes_Operators_OperatorId">
+            <End Role="Operators" EntitySet="Operators" />
+            <End Role="DEFcodes" EntitySet="DEFcodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEFcodes_Regions" Association="UPSModel.Store.FK_DEFcodes_Regions">
+            <End Role="Regions" EntitySet="Regions" />
+            <End Role="DEFcodes" EntitySet="DEFcodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Merchants_Banks" Association="UPSModel.Store.FK_Merchants_Banks">
+            <End Role="Banks" EntitySet="Banks" />
+            <End Role="Merchants" EntitySet="Merchants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Merchants2Operators_Merchants" Association="UPSModel.Store.FK_Merchants2Operators_Merchants">
+            <End Role="Merchants" EntitySet="Merchants" />
+            <End Role="Merchants2Operators" EntitySet="Merchants2Operators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Merchants2Operators_OperatorParameters" Association="UPSModel.Store.FK_Merchants2Operators_OperatorParameters">
+            <End Role="OperatorParameters" EntitySet="OperatorParameters" />
+            <End Role="Merchants2Operators" EntitySet="Merchants2Operators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Merchants2Operators_Operators" Association="UPSModel.Store.FK_Merchants2Operators_Operators">
+            <End Role="OperatorBrands" EntitySet="OperatorBrands" />
+            <End Role="Merchants2Operators" EntitySet="Merchants2Operators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MobicomMessages_ClientMessages_ClientMessageId" Association="UPSModel.Store.FK_MobicomMessages_ClientMessages_ClientMessageId">
+            <End Role="ClientMessages" EntitySet="ClientMessages" />
+            <End Role="MobicomMessages" EntitySet="MobicomMessages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MobicomMessages_ClientMessages_MobicomMessageId" Association="UPSModel.Store.FK_MobicomMessages_ClientMessages_MobicomMessageId">
+            <End Role="MobicomMessages" EntitySet="MobicomMessages" />
+            <End Role="ClientMessages" EntitySet="ClientMessages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Operators_OperatorBrands_BrandId" Association="UPSModel.Store.FK_Operators_OperatorBrands_BrandId">
+            <End Role="OperatorBrands" EntitySet="OperatorBrands" />
+            <End Role="Operators" EntitySet="Operators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Partner2Merchants_Merchants" Association="UPSModel.Store.FK_Partner2Merchants_Merchants">
+            <End Role="Merchants" EntitySet="Merchants" />
+            <End Role="Partner2Merchants" EntitySet="Partner2Merchants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Partner2Merchants_Partners" Association="UPSModel.Store.FK_Partner2Merchants_Partners">
+            <End Role="Partners" EntitySet="Partners" />
+            <End Role="Partner2Merchants" EntitySet="Partner2Merchants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_Merchants" Association="UPSModel.Store.FK_Payments_Merchants">
+            <End Role="Merchants" EntitySet="Merchants" />
+            <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_Partners" Association="UPSModel.Store.FK_Payments_Partners">
+            <End Role="Partners" EntitySet="Partners" />
+            <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_Status_StatusId" Association="UPSModel.Store.FK_Payments_Status_StatusId">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Payments" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGIONS_PARENT_ID" Association="UPSModel.Store.FK_REGIONS_PARENT_ID">
+            <End Role="Regions" EntitySet="Regions" />
+            <End Role="Regions1" EntitySet="Regions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ClientMessages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MobicomMessageId" Type="uniqueidentifier" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Method" Type="varchar" MaxLength="50" />
+          <Property Name="Action" Type="varchar" MaxLength="50" />
+          <Property Name="Version" Type="varchar" MaxLength="10" />
+          <Property Name="Hash" Type="nvarchar" MaxLength="50" />
+          <Property Name="PaymentId" Type="varchar" MaxLength="50" />
+          <Property Name="PartnerCode" Type="varchar" MaxLength="3" />
+          <Property Name="ServiceId" Type="varchar" MaxLength="10" />
+          <Property Name="MSISDN" Type="varchar" MaxLength="10" />
+          <Property Name="OperatorCode" Type="varchar" MaxLength="3" />
+          <Property Name="PaymentNumber" Type="varchar" MaxLength="10" />
+          <Property Name="Amount" Type="varchar" MaxLength="10" />
+          <Property Name="Comment" Type="varchar" MaxLength="50" />
+          <Property Name="ResultCode" Type="varchar" MaxLength="10" />
+          <Property Name="ResultComment" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Abonents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MSISDN" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RegionId" Type="uniqueidentifier" />
+          <Property Name="AreaId" Type="uniqueidentifier" />
+          <Property Name="OperatorId" Type="uniqueidentifier" />
+          <Property Name="HashCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="PIN" Type="nchar" MaxLength="4" />
+          <Property Name="DEFCodeId" Type="uniqueidentifier" />
+          <Property Name="CreatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Banks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="URL" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="AgregarorId" Type="int" Nullable="false" />
+          <Property Name="ProtocolVersion" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DEFcodes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RegionId" Type="uniqueidentifier" />
+          <Property Name="DEF" Type="int" />
+          <Property Name="RangeStart" Type="bigint" />
+          <Property Name="RangeEnd" Type="bigint" />
+          <Property Name="OperatorId" Type="uniqueidentifier" />
+          <Property Name="ChangeType" Type="int" />
+          <Property Name="ChangeDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Merchants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Code" Type="int" Nullable="false" />
+          <Property Name="OwnerId" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="BankId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="EditTime" Type="datetime" />
+          <Property Name="CloseTime" Type="datetime" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Merchants2Operators">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MerchantId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BrandId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OperatorParametersId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="MobicomMessages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ClientMessageId" Type="uniqueidentifier" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Method" Type="varchar" MaxLength="50" />
+          <Property Name="Action" Type="varchar" MaxLength="50" />
+          <Property Name="Version" Type="varchar" MaxLength="10" />
+          <Property Name="Hash" Type="nvarchar" MaxLength="50" />
+          <Property Name="AgreagatorId" Type="varchar" MaxLength="10" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="10" />
+          <Property Name="OwnerId" Type="varchar" MaxLength="50" />
+          <Property Name="ClientPhoneNumber" Type="varchar" MaxLength="10" />
+          <Property Name="ClientPhoneProvider" Type="varchar" MaxLength="3" />
+          <Property Name="PaymentAmount" Type="varchar" MaxLength="10" />
+          <Property Name="PaymentCurrency" Type="varchar" MaxLength="3" />
+          <Property Name="PaymentResult" Type="varchar" MaxLength="10" />
+          <Property Name="MessageBill" Type="varchar" MaxLength="10" />
+          <Property Name="MessageComment" Type="varchar" MaxLength="50" />
+          <Property Name="ResultCode" Type="varchar" MaxLength="10" />
+          <Property Name="ResultComment" Type="varchar" MaxLength="255" />
+          <Property Name="StartResultCode" Type="varchar" MaxLength="50" />
+          <Property Name="StartResultComment" Type="varchar" MaxLength="255" />
+          <Property Name="ReserveResultCode" Type="varchar" MaxLength="50" />
+          <Property Name="ReserveResultComment" Type="varchar" MaxLength="255" />
+          <Property Name="RegisterResultCode" Type="varchar" MaxLength="50" />
+          <Property Name="RegisterResultComment" Type="varchar" MaxLength="255" />
+          <Property Name="RefundResultCode" Type="varchar" MaxLength="50" />
+          <Property Name="RefundResultComment" Type="varchar" MaxLength="255" />
+          <Property Name="TransactionId" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OperatorBrands">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OperatorParameters">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProviderCode" Type="varchar" MaxLength="50" />
+          <Property Name="MinAmount" Type="int" />
+          <Property Name="MaxAmount" Type="int" />
+          <Property Name="AbonentInterest" Type="decimal" Scale="2" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Code" Type="int" />
+        </EntityType>
+        <EntityType Name="Operators">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegionId" Type="uniqueidentifier" />
+          <Property Name="BrandId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Partner2Merchants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PartnerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MerchantId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Partners">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="varchar" MaxLength="2000" />
+          <Property Name="Code" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="IpAddrres" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="UrAddress" Type="varchar" MaxLength="2000" />
+          <Property Name="URL" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ContactManager" Type="varchar" MaxLength="255" />
+          <Property Name="ContactTech" Type="varchar" MaxLength="255" />
+          <Property Name="ContactPhone" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Payments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PartnerId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PaymentNumber" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="MSISDN" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ProviderCode" Type="int" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+          <Property Name="Currency" Type="int" Nullable="false" />
+          <Property Name="SMSComment" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="MessageTime" Type="datetime" />
+          <Property Name="StatusId" Type="uniqueidentifier" />
+          <Property Name="StatusTime" Type="datetime" />
+          <Property Name="StatusDescription" Type="varchar" MaxLength="255" />
+          <Property Name="MerchantId" Type="uniqueidentifier" />
+          <Property Name="OwnerId" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Regions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PARENT_ID" Type="uniqueidentifier" />
+          <Property Name="NODE_NAME" Type="varchar" MaxLength="255" />
+          <Property Name="LEFT_BOUND" Type="int" />
+          <Property Name="RIGHT_BOUND" Type="int" />
+          <Property Name="LEVEL" Type="int" />
+          <Property Name="COUNTRY_PHONE_CODE" Type="int" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Code" Type="int" Nullable="false" />
+          <Property Name="ProviderId" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="255" />
+          <Property Name="PartnerCode" Type="int" Nullable="false" />
+          <Property Name="PartnerDescription" Type="varchar" MaxLength="255" />
+          <Property Name="IsTerminal" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Abonents_DEFcodes">
+          <End Role="DEFcodes" Type="UPSModel.Store.DEFcodes" Multiplicity="0..1" />
+          <End Role="Abonents" Type="UPSModel.Store.Abonents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEFcodes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Abonents">
+              <PropertyRef Name="DEFCodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEFcodes_Operators_OperatorId">
+          <End Role="Operators" Type="UPSModel.Store.Operators" Multiplicity="0..1" />
+          <End Role="DEFcodes" Type="UPSModel.Store.DEFcodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DEFcodes">
+              <PropertyRef Name="OperatorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEFcodes_Regions">
+          <End Role="Regions" Type="UPSModel.Store.Regions" Multiplicity="0..1" />
+          <End Role="DEFcodes" Type="UPSModel.Store.DEFcodes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DEFcodes">
+              <PropertyRef Name="RegionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Merchants_Banks">
+          <End Role="Banks" Type="UPSModel.Store.Banks" Multiplicity="1" />
+          <End Role="Merchants" Type="UPSModel.Store.Merchants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Banks">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Merchants">
+              <PropertyRef Name="BankId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Merchants2Operators_Merchants">
+          <End Role="Merchants" Type="UPSModel.Store.Merchants" Multiplicity="1" />
+          <End Role="Merchants2Operators" Type="UPSModel.Store.Merchants2Operators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Merchants2Operators">
+              <PropertyRef Name="MerchantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Merchants2Operators_OperatorParameters">
+          <End Role="OperatorParameters" Type="UPSModel.Store.OperatorParameters" Multiplicity="0..1" />
+          <End Role="Merchants2Operators" Type="UPSModel.Store.Merchants2Operators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperatorParameters">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Merchants2Operators">
+              <PropertyRef Name="OperatorParametersId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Merchants2Operators_Operators">
+          <End Role="OperatorBrands" Type="UPSModel.Store.OperatorBrands" Multiplicity="1" />
+          <End Role="Merchants2Operators" Type="UPSModel.Store.Merchants2Operators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperatorBrands">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Merchants2Operators">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MobicomMessages_ClientMessages_ClientMessageId">
+          <End Role="ClientMessages" Type="UPSModel.Store.ClientMessages" Multiplicity="0..1" />
+          <End Role="MobicomMessages" Type="UPSModel.Store.MobicomMessages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientMessages">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MobicomMessages">
+              <PropertyRef Name="ClientMessageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MobicomMessages_ClientMessages_MobicomMessageId">
+          <End Role="MobicomMessages" Type="UPSModel.Store.MobicomMessages" Multiplicity="0..1" />
+          <End Role="ClientMessages" Type="UPSModel.Store.ClientMessages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MobicomMessages">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ClientMessages">
+              <PropertyRef Name="MobicomMessageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Operators_OperatorBrands_BrandId">
+          <End Role="OperatorBrands" Type="UPSModel.Store.OperatorBrands" Multiplicity="0..1" />
+          <End Role="Operators" Type="UPSModel.Store.Operators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperatorBrands">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Operators">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Partner2Merchants_Merchants">
+          <End Role="Merchants" Type="UPSModel.Store.Merchants" Multiplicity="1" />
+          <End Role="Partner2Merchants" Type="UPSModel.Store.Partner2Merchants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Partner2Merchants">
+              <PropertyRef Name="MerchantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Partner2Merchants_Partners">
+          <End Role="Partners" Type="UPSModel.Store.Partners" Multiplicity="1" />
+          <End Role="Partner2Merchants" Type="UPSModel.Store.Partner2Merchants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partners">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Partner2Merchants">
+              <PropertyRef Name="PartnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_Merchants">
+          <End Role="Merchants" Type="UPSModel.Store.Merchants" Multiplicity="0..1" />
+          <End Role="Payments" Type="UPSModel.Store.Payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Payments">
+              <PropertyRef Name="MerchantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_Partners">
+          <End Role="Partners" Type="UPSModel.Store.Partners" Multiplicity="1" />
+          <End Role="Payments" Type="UPSModel.Store.Payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partners">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Payments">
+              <PropertyRef Name="PartnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_Status_StatusId">
+          <End Role="Status" Type="UPSModel.Store.Status" Multiplicity="0..1" />
+          <End Role="Payments" Type="UPSModel.Store.Payments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Payments">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGIONS_PARENT_ID">
+          <End Role="Regions" Type="UPSModel.Store.Regions" Multiplicity="0..1" />
+          <End Role="Regions1" Type="UPSModel.Store.Regions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Regions1">
+              <PropertyRef Name="PARENT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetBrandByMSISDN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ups">
+          <Parameter Name="msisdn" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="UPSModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="UPSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Abonents" EntityType="UPSModel.Abonent" />
+          <EntitySet Name="Banks" EntityType="UPSModel.Bank" />
+          <EntitySet Name="DEFcodes" EntityType="UPSModel.DEFcode" />
+          <EntitySet Name="Merchants" EntityType="UPSModel.Merchant" />
+          <EntitySet Name="Merchants2Operators" EntityType="UPSModel.Merchants2Operators" />
+          <EntitySet Name="OperatorBrands" EntityType="UPSModel.OperatorBrand" />
+          <EntitySet Name="OperatorParameters" EntityType="UPSModel.OperatorParameter" />
+          <EntitySet Name="Operators" EntityType="UPSModel.Operator" />
+          <EntitySet Name="Partner2Merchants" EntityType="UPSModel.Partner2Merchants" />
+          <EntitySet Name="Partners" EntityType="UPSModel.Partner" />
+          <EntitySet Name="Regions" EntityType="UPSModel.Region" />
+          <AssociationSet Name="FK_Abonents_DEFcodes" Association="UPSModel.FK_Abonents_DEFcodes">
+            <End Role="DEFcodes" EntitySet="DEFcodes" />
+            <End Role="Abonents" EntitySet="Abonents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Merchants_Banks" Association="UPSModel.FK_Merchants_Banks">
+            <End Role="Banks" EntitySet="Banks" />
+            <End Role="Merchants" EntitySet="Merchants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEFcodes_Operators_OperatorId" Association="UPSModel.FK_DEFcodes_Operators_OperatorId">
+            <End Role="Operators" EntitySet="Operators" />
+            <End Role="DEFcodes" EntitySet="DEFcodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEFcodes_Regions" Association="UPSModel.FK_DEFcodes_Regions">
+            <End Role="Regions" EntitySet="Regions" />
+            <End Role="DEFcodes" EntitySet="DEFcodes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Merchants2Operators_Merchants" Association="UPSModel.FK_Merchants2Operators_Merchants">
+            <End Role="Merchants" EntitySet="Merchants" />
+            <End Role="Merchants2Operators" EntitySet="Merchants2Operators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Partner2Merchants_Merchants" Association="UPSModel.FK_Partner2Merchants_Merchants">
+            <End Role="Merchants" EntitySet="Merchants" />
+            <End Role="Partner2Merchants" EntitySet="Partner2Merchants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Merchants2Operators_OperatorParameters" Association="UPSModel.FK_Merchants2Operators_OperatorParameters">
+            <End Role="OperatorParameters" EntitySet="OperatorParameters" />
+            <End Role="Merchants2Operators" EntitySet="Merchants2Operators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Merchants2Operators_Operators" Association="UPSModel.FK_Merchants2Operators_Operators">
+            <End Role="OperatorBrands" EntitySet="OperatorBrands" />
+            <End Role="Merchants2Operators" EntitySet="Merchants2Operators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Operators_OperatorBrands_BrandId" Association="UPSModel.FK_Operators_OperatorBrands_BrandId">
+            <End Role="OperatorBrands" EntitySet="OperatorBrands" />
+            <End Role="Operators" EntitySet="Operators" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Partner2Merchants_Partners" Association="UPSModel.FK_Partner2Merchants_Partners">
+            <End Role="Partners" EntitySet="Partners" />
+            <End Role="Partner2Merchants" EntitySet="Partner2Merchants" />
+          </AssociationSet>
+          <AssociationSet Name="FK_REGIONS_PARENT_ID" Association="UPSModel.FK_REGIONS_PARENT_ID">
+            <End Role="Regions" EntitySet="Regions" />
+            <End Role="Regions1" EntitySet="Regions" />
+          </AssociationSet>
+          <FunctionImport Name="GetBrandByMSISDN" EntitySet="OperatorBrands" ReturnType="Collection(UPSModel.OperatorBrand)">
+          <Parameter Name="msisdn" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="ClientMessages" EntityType="UPSModel.ClientMessage" />
+          <EntitySet Name="MobicomMessages" EntityType="UPSModel.MobicomMessage" />
+          <AssociationSet Name="FK_MobicomMessages_ClientMessages_ClientMessageId" Association="UPSModel.FK_MobicomMessages_ClientMessages_ClientMessageId">
+            <End Role="ClientMessage" EntitySet="ClientMessages" />
+            <End Role="MobicomMessage" EntitySet="MobicomMessages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MobicomMessages_ClientMessages_MobicomMessageId" Association="UPSModel.FK_MobicomMessages_ClientMessages_MobicomMessageId">
+            <End Role="MobicomMessage" EntitySet="MobicomMessages" />
+            <End Role="ClientMessage" EntitySet="ClientMessages" />
+          </AssociationSet>
+          <EntitySet Name="Payments" EntityType="UPSModel.Payment" />
+          <AssociationSet Name="FK_Payments_Merchants" Association="UPSModel.FK_Payments_Merchants">
+            <End Role="Merchant" EntitySet="Merchants" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Payments_Partners" Association="UPSModel.FK_Payments_Partners">
+            <End Role="Partner" EntitySet="Partners" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+          <EntitySet Name="Status" EntityType="UPSModel.Status" />
+          <AssociationSet Name="FK_Payments_Status_StatusId" Association="UPSModel.FK_Payments_Status_StatusId">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Payment" EntitySet="Payments" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Abonent">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="MSISDN" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RegionId" Type="Guid" />
+          <Property Name="AreaId" Type="Guid" />
+          <Property Name="OperatorId" Type="Guid" />
+          <Property Name="HashCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PIN" Type="String" MaxLength="4" Unicode="true" FixedLength="true" />
+          <Property Name="DEFCodeId" Type="Guid" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <NavigationProperty Name="DEFcode" Relationship="UPSModel.FK_Abonents_DEFcodes" FromRole="Abonents" ToRole="DEFcodes" />
+        </EntityType>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="URL" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="AgregarorId" Type="Int32" Nullable="false" />
+          <Property Name="ProtocolVersion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Merchants" Relationship="UPSModel.FK_Merchants_Banks" FromRole="Banks" ToRole="Merchants" />
+        </EntityType>
+        <EntityType Name="DEFcode">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="RegionId" Type="Guid" />
+          <Property Name="DEF" Type="Int32" />
+          <Property Name="RangeStart" Type="Int64" />
+          <Property Name="RangeEnd" Type="Int64" />
+          <Property Name="OperatorId" Type="Guid" />
+          <Property Name="ChangeType" Type="Int32" />
+          <Property Name="ChangeDate" Type="DateTime" />
+          <NavigationProperty Name="Abonents" Relationship="UPSModel.FK_Abonents_DEFcodes" FromRole="DEFcodes" ToRole="Abonents" />
+          <NavigationProperty Name="Operator" Relationship="UPSModel.FK_DEFcodes_Operators_OperatorId" FromRole="DEFcodes" ToRole="Operators" />
+          <NavigationProperty Name="Region" Relationship="UPSModel.FK_DEFcodes_Regions" FromRole="DEFcodes" ToRole="Regions" />
+        </EntityType>
+        <EntityType Name="Merchant">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <Property Name="OwnerId" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="BankId" Type="Guid" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="EditTime" Type="DateTime" />
+          <Property Name="CloseTime" Type="DateTime" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Bank" Relationship="UPSModel.FK_Merchants_Banks" FromRole="Merchants" ToRole="Banks" />
+          <NavigationProperty Name="Merchants2Operators" Relationship="UPSModel.FK_Merchants2Operators_Merchants" FromRole="Merchants" ToRole="Merchants2Operators" />
+          <NavigationProperty Name="Partner2Merchants" Relationship="UPSModel.FK_Partner2Merchants_Merchants" FromRole="Merchants" ToRole="Partner2Merchants" />
+          <NavigationProperty Name="Payments" Relationship="UPSModel.FK_Payments_Merchants" FromRole="Merchant" ToRole="Payment" />
+        </EntityType>
+        <EntityType Name="Merchants2Operators">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="MerchantId" Type="Guid" Nullable="false" />
+          <Property Name="BrandId" Type="Guid" Nullable="false" />
+          <Property Name="OperatorParametersId" Type="Guid" />
+          <NavigationProperty Name="Merchant" Relationship="UPSModel.FK_Merchants2Operators_Merchants" FromRole="Merchants2Operators" ToRole="Merchants" />
+          <NavigationProperty Name="OperatorParameter" Relationship="UPSModel.FK_Merchants2Operators_OperatorParameters" FromRole="Merchants2Operators" ToRole="OperatorParameters" />
+          <NavigationProperty Name="OperatorBrand" Relationship="UPSModel.FK_Merchants2Operators_Operators" FromRole="Merchants2Operators" ToRole="OperatorBrands" />
+        </EntityType>
+        <EntityType Name="OperatorBrand">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Merchants2Operators" Relationship="UPSModel.FK_Merchants2Operators_Operators" FromRole="OperatorBrands" ToRole="Merchants2Operators" />
+          <NavigationProperty Name="Operators" Relationship="UPSModel.FK_Operators_OperatorBrands_BrandId" FromRole="OperatorBrands" ToRole="Operators" />
+        </EntityType>
+        <EntityType Name="OperatorParameter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ProviderCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MinAmount" Type="Int32" />
+          <Property Name="MaxAmount" Type="Int32" />
+          <Property Name="AbonentInterest" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="Code" Type="Int32" />
+          <NavigationProperty Name="Merchants2Operators" Relationship="UPSModel.FK_Merchants2Operators_OperatorParameters" FromRole="OperatorParameters" ToRole="Merchants2Operators" />
+        </EntityType>
+        <EntityType Name="Operator">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RegionId" Type="Guid" />
+          <Property Name="BrandId" Type="Guid" />
+          <NavigationProperty Name="DEFcodes" Relationship="UPSModel.FK_DEFcodes_Operators_OperatorId" FromRole="Operators" ToRole="DEFcodes" />
+          <NavigationProperty Name="OperatorBrand" Relationship="UPSModel.FK_Operators_OperatorBrands_BrandId" FromRole="Operators" ToRole="OperatorBrands" />
+        </EntityType>
+        <EntityType Name="Partner2Merchants">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="PartnerId" Type="Guid" Nullable="false" />
+          <Property Name="MerchantId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Merchant" Relationship="UPSModel.FK_Partner2Merchants_Merchants" FromRole="Partner2Merchants" ToRole="Merchants" />
+          <NavigationProperty Name="Partner" Relationship="UPSModel.FK_Partner2Merchants_Partners" FromRole="Partner2Merchants" ToRole="Partners" />
+        </EntityType>
+        <EntityType Name="Partner">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="IpAddrres" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UrAddress" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ContactManager" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ContactTech" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ContactPhone" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Partner2Merchants" Relationship="UPSModel.FK_Partner2Merchants_Partners" FromRole="Partners" ToRole="Partner2Merchants" />
+          <NavigationProperty Name="Payments" Relationship="UPSModel.FK_Payments_Partners" FromRole="Partner" ToRole="Payment" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="PARENT_ID" Type="Guid" />
+          <Property Name="NODE_NAME" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="LEFT_BOUND" Type="Int32" />
+          <Property Name="RIGHT_BOUND" Type="Int32" />
+          <Property Name="LEVEL" Type="Int32" />
+          <Property Name="COUNTRY_PHONE_CODE" Type="Int32" />
+          <NavigationProperty Name="DEFcodes" Relationship="UPSModel.FK_DEFcodes_Regions" FromRole="Regions" ToRole="DEFcodes" />
+          <NavigationProperty Name="Regions1" Relationship="UPSModel.FK_REGIONS_PARENT_ID" FromRole="Regions" ToRole="Regions1" />
+          <NavigationProperty Name="Region1" Relationship="UPSModel.FK_REGIONS_PARENT_ID" FromRole="Regions1" ToRole="Regions" />
+        </EntityType>
+        <Association Name="FK_Abonents_DEFcodes">
+          <End Role="DEFcodes" Type="UPSModel.DEFcode" Multiplicity="0..1" />
+          <End Role="Abonents" Type="UPSModel.Abonent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEFcodes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Abonents">
+              <PropertyRef Name="DEFCodeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Merchants_Banks">
+          <End Role="Banks" Type="UPSModel.Bank" Multiplicity="1" />
+          <End Role="Merchants" Type="UPSModel.Merchant" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Banks">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Merchants">
+              <PropertyRef Name="BankId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEFcodes_Operators_OperatorId">
+          <End Role="Operators" Type="UPSModel.Operator" Multiplicity="0..1" />
+          <End Role="DEFcodes" Type="UPSModel.DEFcode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operators">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DEFcodes">
+              <PropertyRef Name="OperatorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEFcodes_Regions">
+          <End Role="Regions" Type="UPSModel.Region" Multiplicity="0..1" />
+          <End Role="DEFcodes" Type="UPSModel.DEFcode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DEFcodes">
+              <PropertyRef Name="RegionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Merchants2Operators_Merchants">
+          <End Role="Merchants" Type="UPSModel.Merchant" Multiplicity="1" />
+          <End Role="Merchants2Operators" Type="UPSModel.Merchants2Operators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Merchants2Operators">
+              <PropertyRef Name="MerchantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Partner2Merchants_Merchants">
+          <End Role="Merchants" Type="UPSModel.Merchant" Multiplicity="1" />
+          <End Role="Partner2Merchants" Type="UPSModel.Partner2Merchants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchants">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Partner2Merchants">
+              <PropertyRef Name="MerchantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Merchants2Operators_OperatorParameters">
+          <End Role="OperatorParameters" Type="UPSModel.OperatorParameter" Multiplicity="0..1" />
+          <End Role="Merchants2Operators" Type="UPSModel.Merchants2Operators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperatorParameters">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Merchants2Operators">
+              <PropertyRef Name="OperatorParametersId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Merchants2Operators_Operators">
+          <End Role="OperatorBrands" Type="UPSModel.OperatorBrand" Multiplicity="1" />
+          <End Role="Merchants2Operators" Type="UPSModel.Merchants2Operators" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperatorBrands">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Merchants2Operators">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Operators_OperatorBrands_BrandId">
+          <End Role="OperatorBrands" Type="UPSModel.OperatorBrand" Multiplicity="0..1" />
+          <End Role="Operators" Type="UPSModel.Operator" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OperatorBrands">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Operators">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Partner2Merchants_Partners">
+          <End Role="Partners" Type="UPSModel.Partner" Multiplicity="1" />
+          <End Role="Partner2Merchants" Type="UPSModel.Partner2Merchants" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partners">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Partner2Merchants">
+              <PropertyRef Name="PartnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_REGIONS_PARENT_ID">
+          <End Role="Regions" Type="UPSModel.Region" Multiplicity="0..1" />
+          <End Role="Regions1" Type="UPSModel.Region" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regions">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Regions1">
+              <PropertyRef Name="PARENT_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ClientMessage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="MobicomMessageId" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" />
+          <Property Type="String" Name="Method" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Action" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Version" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Hash" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PaymentId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PartnerCode" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ServiceId" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MSISDN" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OperatorCode" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PaymentNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Amount" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comment" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ResultCode" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ResultComment" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MobicomMessages" Relationship="UPSModel.FK_MobicomMessages_ClientMessages_ClientMessageId" FromRole="ClientMessage" ToRole="MobicomMessage" />
+          <NavigationProperty Name="MobicomMessage" Relationship="UPSModel.FK_MobicomMessages_ClientMessages_MobicomMessageId" FromRole="ClientMessage" ToRole="MobicomMessage" />
+        </EntityType>
+        <EntityType Name="MobicomMessage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="ClientMessageId" />
+          <Property Type="DateTime" Name="CreateTime" Nullable="false" />
+          <Property Type="String" Name="Method" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Action" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Version" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Hash" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AgreagatorId" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MerchantId" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OwnerId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ClientPhoneNumber" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ClientPhoneProvider" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PaymentAmount" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PaymentCurrency" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PaymentResult" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MessageBill" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MessageComment" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ResultCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ResultComment" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StartResultCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StartResultComment" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReserveResultCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ReserveResultComment" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RegisterResultCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RegisterResultComment" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RefundResultCode" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RefundResultComment" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransactionId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ClientMessage" Relationship="UPSModel.FK_MobicomMessages_ClientMessages_ClientMessageId" FromRole="MobicomMessage" ToRole="ClientMessage" />
+          <NavigationProperty Name="ClientMessages" Relationship="UPSModel.FK_MobicomMessages_ClientMessages_MobicomMessageId" FromRole="MobicomMessage" ToRole="ClientMessage" />
+        </EntityType>
+        <Association Name="FK_MobicomMessages_ClientMessages_ClientMessageId">
+          <End Type="UPSModel.ClientMessage" Role="ClientMessage" Multiplicity="0..1" />
+          <End Type="UPSModel.MobicomMessage" Role="MobicomMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientMessage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MobicomMessage">
+              <PropertyRef Name="ClientMessageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MobicomMessages_ClientMessages_MobicomMessageId">
+          <End Type="UPSModel.MobicomMessage" Role="MobicomMessage" Multiplicity="0..1" />
+          <End Type="UPSModel.ClientMessage" Role="ClientMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MobicomMessage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ClientMessage">
+              <PropertyRef Name="MobicomMessageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="PartnerId" Nullable="false" />
+          <Property Type="String" Name="PaymentNumber" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MSISDN" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ProviderCode" />
+          <Property Type="Int32" Name="Amount" Nullable="false" />
+          <Property Type="Int32" Name="Currency" Nullable="false" />
+          <Property Type="String" Name="SMSComment" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="MessageTime" />
+          <Property Type="Guid" Name="StatusId" />
+          <Property Type="DateTime" Name="StatusTime" />
+          <Property Type="String" Name="StatusDescription" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="MerchantId" />
+          <Property Type="String" Name="OwnerId" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Merchant" Relationship="UPSModel.FK_Payments_Merchants" FromRole="Payment" ToRole="Merchant" />
+          <NavigationProperty Name="Partner" Relationship="UPSModel.FK_Payments_Partners" FromRole="Payment" ToRole="Partner" />
+          <NavigationProperty Name="Status" Relationship="UPSModel.FK_Payments_Status_StatusId" FromRole="Payment" ToRole="Status" />
+        </EntityType>
+        <Association Name="FK_Payments_Merchants">
+          <End Type="UPSModel.Merchant" Role="Merchant" Multiplicity="0..1" />
+          <End Type="UPSModel.Payment" Role="Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Merchant">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="MerchantId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Payments_Partners">
+          <End Type="UPSModel.Partner" Role="Partner" Multiplicity="1" />
+          <End Type="UPSModel.Payment" Role="Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Partner">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="PartnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Int32" Name="Code" Nullable="false" />
+          <Property Type="Int32" Name="ProviderId" />
+          <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="PartnerCode" Nullable="false" />
+          <Property Type="String" Name="PartnerDescription" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Payments" Relationship="UPSModel.FK_Payments_Status_StatusId" FromRole="Status" ToRole="Payment" />
+          <Property Type="Boolean" Name="IsTerminal" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Payments_Status_StatusId">
+          <End Type="UPSModel.Status" Role="Status" Multiplicity="0..1" />
+          <End Type="UPSModel.Payment" Role="Payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Payment">
+              <PropertyRef Name="StatusId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="UPSModelStoreContainer" CdmEntityContainer="UPSEntities">
+          <EntitySetMapping Name="Abonents"><EntityTypeMapping TypeName="UPSModel.Abonent"><MappingFragment StoreEntitySet="Abonents">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="MSISDN" ColumnName="MSISDN" />
+            <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+            <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+            <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+            <ScalarProperty Name="HashCode" ColumnName="HashCode" />
+            <ScalarProperty Name="PIN" ColumnName="PIN" />
+            <ScalarProperty Name="DEFCodeId" ColumnName="DEFCodeId" />
+            <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Banks"><EntityTypeMapping TypeName="UPSModel.Bank"><MappingFragment StoreEntitySet="Banks">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="URL" ColumnName="URL" />
+            <ScalarProperty Name="AgregarorId" ColumnName="AgregarorId" />
+            <ScalarProperty Name="ProtocolVersion" ColumnName="ProtocolVersion" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DEFcodes"><EntityTypeMapping TypeName="UPSModel.DEFcode"><MappingFragment StoreEntitySet="DEFcodes">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+            <ScalarProperty Name="DEF" ColumnName="DEF" />
+            <ScalarProperty Name="RangeStart" ColumnName="RangeStart" />
+            <ScalarProperty Name="RangeEnd" ColumnName="RangeEnd" />
+            <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+            <ScalarProperty Name="ChangeType" ColumnName="ChangeType" />
+            <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Merchants"><EntityTypeMapping TypeName="UPSModel.Merchant"><MappingFragment StoreEntitySet="Merchants">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+            <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="BankId" ColumnName="BankId" />
+            <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+            <ScalarProperty Name="EditTime" ColumnName="EditTime" />
+            <ScalarProperty Name="CloseTime" ColumnName="CloseTime" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Merchants2Operators"><EntityTypeMapping TypeName="UPSModel.Merchants2Operators"><MappingFragment StoreEntitySet="Merchants2Operators">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+            <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+            <ScalarProperty Name="OperatorParametersId" ColumnName="OperatorParametersId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OperatorBrands"><EntityTypeMapping TypeName="UPSModel.OperatorBrand"><MappingFragment StoreEntitySet="OperatorBrands">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OperatorParameters"><EntityTypeMapping TypeName="UPSModel.OperatorParameter"><MappingFragment StoreEntitySet="OperatorParameters">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ProviderCode" ColumnName="ProviderCode" />
+            <ScalarProperty Name="MinAmount" ColumnName="MinAmount" />
+            <ScalarProperty Name="MaxAmount" ColumnName="MaxAmount" />
+            <ScalarProperty Name="AbonentInterest" ColumnName="AbonentInterest" />
+            <ScalarProperty Name="Active" ColumnName="Active" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Operators"><EntityTypeMapping TypeName="UPSModel.Operator"><MappingFragment StoreEntitySet="Operators">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+            <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Partner2Merchants"><EntityTypeMapping TypeName="UPSModel.Partner2Merchants"><MappingFragment StoreEntitySet="Partner2Merchants">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="PartnerId" ColumnName="PartnerId" />
+            <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Partners"><EntityTypeMapping TypeName="UPSModel.Partner"><MappingFragment StoreEntitySet="Partners">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+            <ScalarProperty Name="IpAddrres" ColumnName="IpAddrres" />
+            <ScalarProperty Name="UrAddress" ColumnName="UrAddress" />
+            <ScalarProperty Name="URL" ColumnName="URL" />
+            <ScalarProperty Name="Password" ColumnName="Password" />
+            <ScalarProperty Name="ContactManager" ColumnName="ContactManager" />
+            <ScalarProperty Name="ContactTech" ColumnName="ContactTech" />
+            <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Regions"><EntityTypeMapping TypeName="UPSModel.Region"><MappingFragment StoreEntitySet="Regions">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="PARENT_ID" ColumnName="PARENT_ID" />
+            <ScalarProperty Name="NODE_NAME" ColumnName="NODE_NAME" />
+            <ScalarProperty Name="LEFT_BOUND" ColumnName="LEFT_BOUND" />
+            <ScalarProperty Name="RIGHT_BOUND" ColumnName="RIGHT_BOUND" />
+            <ScalarProperty Name="LEVEL" ColumnName="LEVEL" />
+            <ScalarProperty Name="COUNTRY_PHONE_CODE" ColumnName="COUNTRY_PHONE_CODE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetBrandByMSISDN" FunctionName="UPSModel.Store.GetBrandByMSISDN" />
+          <EntitySetMapping Name="ClientMessages">
+            <EntityTypeMapping TypeName="UPSModel.ClientMessage">
+              <MappingFragment StoreEntitySet="ClientMessages">
+                <ScalarProperty Name="ResultComment" ColumnName="ResultComment" />
+                <ScalarProperty Name="ResultCode" ColumnName="ResultCode" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PaymentNumber" ColumnName="PaymentNumber" />
+                <ScalarProperty Name="OperatorCode" ColumnName="OperatorCode" />
+                <ScalarProperty Name="MSISDN" ColumnName="MSISDN" />
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="PartnerCode" ColumnName="PartnerCode" />
+                <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+                <ScalarProperty Name="Hash" ColumnName="Hash" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="MobicomMessageId" ColumnName="MobicomMessageId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MobicomMessages">
+            <EntityTypeMapping TypeName="UPSModel.MobicomMessage">
+              <MappingFragment StoreEntitySet="MobicomMessages">
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="RefundResultComment" ColumnName="RefundResultComment" />
+                <ScalarProperty Name="RefundResultCode" ColumnName="RefundResultCode" />
+                <ScalarProperty Name="RegisterResultComment" ColumnName="RegisterResultComment" />
+                <ScalarProperty Name="RegisterResultCode" ColumnName="RegisterResultCode" />
+                <ScalarProperty Name="ReserveResultComment" ColumnName="ReserveResultComment" />
+                <ScalarProperty Name="ReserveResultCode" ColumnName="ReserveResultCode" />
+                <ScalarProperty Name="StartResultComment" ColumnName="StartResultComment" />
+                <ScalarProperty Name="StartResultCode" ColumnName="StartResultCode" />
+                <ScalarProperty Name="ResultComment" ColumnName="ResultComment" />
+                <ScalarProperty Name="ResultCode" ColumnName="ResultCode" />
+                <ScalarProperty Name="MessageComment" ColumnName="MessageComment" />
+                <ScalarProperty Name="MessageBill" ColumnName="MessageBill" />
+                <ScalarProperty Name="PaymentResult" ColumnName="PaymentResult" />
+                <ScalarProperty Name="PaymentCurrency" ColumnName="PaymentCurrency" />
+                <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+                <ScalarProperty Name="ClientPhoneProvider" ColumnName="ClientPhoneProvider" />
+                <ScalarProperty Name="ClientPhoneNumber" ColumnName="ClientPhoneNumber" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="AgreagatorId" ColumnName="AgreagatorId" />
+                <ScalarProperty Name="Hash" ColumnName="Hash" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="ClientMessageId" ColumnName="ClientMessageId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payments">
+            <EntityTypeMapping TypeName="UPSModel.Payment">
+              <MappingFragment StoreEntitySet="Payments">
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="StatusDescription" ColumnName="StatusDescription" />
+                <ScalarProperty Name="StatusTime" ColumnName="StatusTime" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="MessageTime" ColumnName="MessageTime" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SMSComment" ColumnName="SMSComment" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ProviderCode" ColumnName="ProviderCode" />
+                <ScalarProperty Name="MSISDN" ColumnName="MSISDN" />
+                <ScalarProperty Name="PaymentNumber" ColumnName="PaymentNumber" />
+                <ScalarProperty Name="PartnerId" ColumnName="PartnerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status">
+            <EntityTypeMapping TypeName="UPSModel.Status">
+              <MappingFragment StoreEntitySet="Status">
+                <ScalarProperty Name="IsTerminal" ColumnName="IsTerminal" />
+                <ScalarProperty Name="PartnerDescription" ColumnName="PartnerDescription" />
+                <ScalarProperty Name="PartnerCode" ColumnName="PartnerCode" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProviderId" ColumnName="ProviderId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="UPSModel.Abonent" Width="1.5" PointX="13.25" PointY="11.125" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.Bank" Width="1.5" PointX="0.75" PointY="6.375" Height="2.3648893229166665" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.DEFcode" Width="1.5" PointX="11" PointY="11" Height="3.1340950520833353" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.Merchant" Width="1.5" PointX="3" PointY="5.625" Height="3.7109993489583317" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.Merchants2Operators" Width="1.5" PointX="5.25" PointY="6.375" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.OperatorBrand" Width="1.5" PointX="3" PointY="11" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.OperatorParameter" Width="1.5" PointX="3" PointY="13.5" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.Operator" Width="1.5" PointX="9.125" PointY="15.5" Height="2.1725878906249978" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.Partner2Merchants" Width="1.5" PointX="5.25" PointY="3.5" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.Partner" Width="1.5" PointX="6.375" PointY="9" Height="3.5186979166666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="UPSModel.Region" Width="1.5" PointX="8.75" PointY="11.125" Height="2.9417936197916674" IsExpanded="true" />
+        <AssociationConnector Association="UPSModel.FK_Abonents_DEFcodes" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.5" PointY="12.595896809895834" />
+          <ConnectorPoint PointX="13.25" PointY="12.595896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_Merchants_Banks" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.5574446614583337" />
+          <ConnectorPoint PointX="3" PointY="7.5574446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_DEFcodes_Operators_OperatorId" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.46875" PointY="15.5" />
+          <ConnectorPoint PointX="10.46875" PointY="11.03125" />
+          <ConnectorPoint PointX="11" PointY="11.03125" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_DEFcodes_Regions" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.25" PointY="12.595896809895834" />
+          <ConnectorPoint PointX="10.385416666666666" PointY="12.595896809895834" />
+          <ConnectorPoint PointX="10.552083333333334" PointY="12.595896809895834" />
+          <ConnectorPoint PointX="11" PointY="12.595896809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_Merchants2Operators_Merchants" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="7.768847714843754" />
+          <ConnectorPoint PointX="5.25" PointY="7.768847714843754" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_Partner2Merchants_Merchants" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.625" />
+          <ConnectorPoint PointX="4.875" PointY="5.25" />
+          <ConnectorPoint PointX="4.875" PointY="5.8552864583333353" />
+          <ConnectorPoint PointX="5.25" PointY="5.4802864583333353" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_Merchants2Operators_OperatorParameters" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="14.778595377604166" />
+          <ConnectorPoint PointX="4.791666666666667" PointY="14.778595377604166" />
+          <ConnectorPoint PointX="4.958333333333333" PointY="14.778595377604166" />
+          <ConnectorPoint PointX="5.59375" PointY="14.778595377604166" />
+          <ConnectorPoint PointX="5.59375" PointY="8.7398893229166674" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_Merchants2Operators_Operators" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.131735026041667" />
+          <ConnectorPoint PointX="5.3906225" PointY="12.131735026041667" />
+          <ConnectorPoint PointX="5.3906225" PointY="8.7398893229166674" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_Operators_OperatorBrands_BrandId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="12.787985026041667" />
+          <ConnectorPoint PointX="4.875" PointY="13.162985026041667" />
+          <ConnectorPoint PointX="4.875" PointY="16.586293945312498" />
+          <ConnectorPoint PointX="9.125" PointY="16.586293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_Partner2Merchants_Partners" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.3125005000000005" PointY="9" />
+          <ConnectorPoint PointX="7.3125005000000005" PointY="4.4901432291666676" />
+          <ConnectorPoint PointX="6.75" PointY="4.4901432291666676" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_REGIONS_PARENT_ID" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.2819230769230767" PointY="14.066793619791667" />
+          <ConnectorPoint PointX="9.2819230769230767" PointY="14.316793619791667" />
+          <ConnectorPoint PointX="9.7284615384615378" PointY="14.316793619791667" />
+          <ConnectorPoint PointX="9.7284615384615378" PointY="14.066793619791667" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="UPSModel.ClientMessage" Width="1.5" PointX="10.375" PointY="2.25" Height="4.6725065104166674" />
+        <EntityTypeShape EntityType="UPSModel.MobicomMessage" Width="1.5" PointX="12.625" PointY="1.5" Height="6.78782226562501" />
+        <AssociationConnector Association="UPSModel.FK_MobicomMessages_ClientMessages_ClientMessageId" >
+          <ConnectorPoint PointX="11.875" PointY="4.5862532552083337" />
+          <ConnectorPoint PointX="12.625" PointY="4.5862532552083337" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_MobicomMessages_ClientMessages_MobicomMessageId" >
+          <ConnectorPoint PointX="12.625" PointY="3.3556266276041669" />
+          <ConnectorPoint PointX="11.875" PointY="3.3556266276041669" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="UPSModel.Payment" Width="1.5" PointX="8.25" PointY="3.75" Height="4.480205078125" />
+        <AssociationConnector Association="UPSModel.FK_Payments_Merchants" >
+          <ConnectorPoint PointX="4.5" PointY="6.1184270398392329" />
+          <ConnectorPoint PointX="7.2291671666666675" PointY="6.118427039839232" />
+          <ConnectorPoint PointX="7.3958338333333336" PointY="6.1184270398392329" />
+          <ConnectorPoint PointX="7.5416694166666671" PointY="6.118427039839232" />
+          <ConnectorPoint PointX="7.7083360833333332" PointY="6.1184270398392329" />
+          <ConnectorPoint PointX="8.25" PointY="6.1184270398392329" />
+        </AssociationConnector>
+        <AssociationConnector Association="UPSModel.FK_Payments_Partners" >
+          <ConnectorPoint PointX="7.62500275" PointY="9" />
+          <ConnectorPoint PointX="7.62500275" PointY="5.79935424908629" />
+          <ConnectorPoint PointX="8.25" PointY="5.79935424908629" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="UPSModel.Status" Width="1.5" PointX="0.75" PointY="1" Height="2.5571907552083388" />
+        <AssociationConnector Association="UPSModel.FK_Payments_Status_StatusId" >
+          <ConnectorPoint PointX="2.25" PointY="2.21875" />
+          <ConnectorPoint PointX="9" PointY="2.21875" />
+          <ConnectorPoint PointX="9" PointY="3.75" />
+        </AssociationConnector>
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

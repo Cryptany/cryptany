@@ -1,0 +1,417 @@
+<?xml version='1.0' encoding='utf-8'?><wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://mobicom.oceanbank.ru/xsd" xmlns:mob="http://mobicom.oceanbank.ru/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://mobicom.oceanbank.ru/xsd">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://mobicom.oceanbank.ru/xsd">
+      <xs:complexType name="Agregator">
+        <xs:sequence>
+          <xs:element name="id" nillable="false" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="AccountLinks">
+
+        <xs:sequence>
+          <xs:element name="Account" nillable="true" minOccurs="1" maxOccurs="unbounded" type="mob:Account"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Merchant">
+        <xs:sequence>
+          <xs:element name="id" nillable="false" type="xs:long"/>
+          <xs:element name="name" nillable="true" type="xs:string"/>
+          <xs:element name="Owner" nillable="true" type="mob:Owner"/>
+
+          <xs:element name="brand" nillable="true" type="xs:string"/>
+          <xs:element name="www" nillable="true" type="xs:string"/>
+          <xs:element name="createTime" nillable="true" type="xs:dateTime"/>
+          <xs:element name="editTime" nillable="true" type="xs:dateTime"/>
+          <xs:element name="closeTime" nillable="true" type="xs:dateTime"/>
+          <xs:element name="AccountLinks" nillable="true" type="mob:AccountLinks"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Provider">
+
+        <xs:sequence>
+          <xs:element name="id" nillable="false" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Owner">
+        <xs:sequence>
+          <xs:element name="id" nillable="false" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="Result">
+        <xs:sequence>
+          <xs:element name="code" nillable="true" type="xs:int"/>
+          <xs:element name="extra" nillable="true" type="xs:string"/>
+          <xs:element name="comment" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Address">
+        <xs:sequence>
+
+          <xs:element name="view" nillable="false" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Contact">
+        <xs:sequence>
+          <xs:element name="kind" nillable="false" type="xs:string"/>
+          <xs:element name="value" nillable="false" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="Payer">
+        <xs:sequence>
+          <xs:element name="name" nillable="true" type="xs:string"/>
+          <xs:element name="account" nillable="true" type="xs:string"/>
+          <xs:element name="Address" nillable="true" type="mob:Address"/>
+          <xs:element name="inn" nillable="true" type="xs:string"/>
+          <xs:element name="identifier" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="Param">
+        <xs:simpleContent>
+          <xs:extension base="xs:string">
+            <xs:attribute name="name" use="required" type="xs:string"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:complexType name="Period">
+        <xs:sequence>
+
+          <xs:element name="start" nillable="false" type="xs:dateTime"/>
+          <xs:element name="finish" nillable="false" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Addresses">
+        <xs:sequence>
+          <xs:element name="Address" nillable="true" minOccurs="0" maxOccurs="unbounded" type="mob:Address"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="Contacts">
+        <xs:sequence>
+          <xs:element name="Contact" nillable="true" minOccurs="0" maxOccurs="unbounded" type="mob:Contact"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Payers">
+        <xs:sequence>
+          <xs:element name="Payer" nillable="true" minOccurs="1" maxOccurs="unbounded" type="mob:Payer"/>
+        </xs:sequence>
+
+      </xs:complexType>
+      <xs:complexType name="Params">
+        <xs:sequence>
+          <xs:element name="Param" nillable="true" minOccurs="0" maxOccurs="unbounded" type="mob:Param"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Bank">
+        <xs:sequence>
+          <xs:element name="bik" nillable="true" type="xs:string"/>
+
+          <xs:element name="name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Account">
+        <xs:sequence>
+          <xs:element name="account" nillable="true" type="xs:string"/>
+          <xs:element name="name" nillable="true" type="xs:string"/>
+          <xs:element name="Bank" nillable="true" type="mob:Bank"/>
+        </xs:sequence>
+
+      </xs:complexType>
+      <xs:complexType name="SupplierOrgInfo">
+        <xs:sequence>
+          <xs:element name="name" nillable="true" type="xs:string"/>
+          <xs:element name="inn" nillable="true" type="xs:string"/>
+          <xs:element name="kpp" nillable="true" type="xs:string"/>
+          <xs:element name="Account" nillable="true" type="mob:Account"/>
+          <xs:element name="Addresses" nillable="true" type="mob:Addresses"/>
+          <xs:element name="Contacts" nillable="true" type="mob:Contacts"/>
+
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="BudgetIndex">
+        <xs:sequence>
+          <xs:element name="status" nillable="true" type="xs:string"/>
+          <xs:element name="paymentType" nillable="true" type="xs:string"/>
+          <xs:element name="purpose" nillable="true" type="xs:string"/>
+          <xs:element name="taxPeriod" nillable="true" type="xs:string"/>
+          <xs:element name="taxDocNumber" nillable="true" type="xs:string"/>
+
+          <xs:element name="taxDocDate" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Payment">
+        <xs:attribute name="kind" use="optional" type="xs:int"/>
+        <xs:attribute name="supplierBillID" use="optional" type="xs:string"/>
+        <xs:sequence>
+          <xs:element name="Payer" nillable="true" type="mob:Payer"/>
+          <xs:element name="narrative" nillable="true" type="xs:string"/>
+
+          <xs:element name="amount" nillable="true" type="xs:long"/>
+          <xs:element name="currency" nillable="true" type="xs:int"/>
+          <xs:element name="SupplierOrgInfo" nillable="true" type="mob:SupplierOrgInfo"/>
+          <xs:element name="kbk" nillable="true" type="xs:string"/>
+          <xs:element name="okato" nillable="true" type="xs:string"/>
+          <xs:element name="BudgetIndex" nillable="true" type="mob:BudgetIndex"/>
+          <xs:element name="Params" nillable="true" type="mob:Params"/>
+          <xs:element name="result" nillable="true" type="xs:int"/>
+        </xs:sequence>
+
+      </xs:complexType>
+      <xs:complexType name="Interval">
+        <xs:sequence>
+          <xs:element name="unit" nillable="false" type="xs:string"/>
+          <xs:element name="amount" nillable="false" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Phone">
+        <xs:sequence>
+
+          <xs:element name="number" nillable="false" type="xs:string"/>
+          <xs:element name="provider" nillable="true" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Client">
+        <xs:sequence>
+          <xs:element name="Phone" nillable="false" type="mob:Phone"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="Message">
+        <xs:sequence>
+          <xs:element name="bill" nillable="true" type="xs:string"/>
+          <xs:element name="comment" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Start">
+        <xs:sequence>
+          <xs:element name="Result" nillable="true" type="mob:Result"/>
+
+          <xs:element name="timestamp" nillable="true" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Reserve">
+        <xs:sequence>
+          <xs:element name="Result" nillable="true" type="mob:Result"/>
+          <xs:element name="timestamp" nillable="true" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+
+      <xs:complexType name="Register">
+        <xs:sequence>
+          <xs:element name="Result" nillable="true" type="mob:Result"/>
+          <xs:element name="timestamp" nillable="true" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Refund">
+        <xs:sequence>
+          <xs:element name="Result" nillable="true" type="mob:Result"/>
+
+          <xs:element name="timestamp" nillable="true" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Transaction">
+        <xs:sequence>
+          <xs:element name="id" nillable="false" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrepdPayment">
+
+        <xs:sequence>
+          <xs:element name="creditAmount" nillable="false" type="xs:long"/>
+          <xs:element name="purchaseAmount" nillable="false" type="xs:long"/>
+          <xs:element name="currency" nillable="false" type="xs:int"/>
+          <xs:element name="date" nillable="false" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PrepdResult">
+        <xs:sequence>
+
+          <xs:element name="code" nillable="false" type="xs:int"/>
+          <xs:element name="pan" nillable="false" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Regular">
+        <xs:sequence>
+          <xs:element name="Owner" nillable="false" type="mob:Owner"/>
+          <xs:element name="Payment" nillable="true" type="mob:Payment"/>
+          <xs:element name="Start" nillable="true" type="mob:Start"/>
+
+          <xs:element name="Reserve" nillable="true" type="mob:Reserve"/>
+          <xs:element name="Register" nillable="true" type="mob:Register"/>
+          <xs:element name="Refund" nillable="true" type="mob:Refund"/>
+          <xs:element name="Transaction" nillable="true" type="mob:Transaction"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Regulars">
+        <xs:sequence>
+          <xs:element name="Regular" nillable="true" minOccurs="0" maxOccurs="unbounded" type="mob:Regular"/>
+
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="MobicomReserveRequest">
+        <xs:sequence>
+          <xs:element name="Agregator" nillable="false" type="mob:Agregator"/>
+
+          <xs:element name="Merchant" nillable="false" type="mob:Merchant"/>
+          <xs:element name="Client" nillable="false" type="mob:Client"/>
+          <xs:element name="Payment" nillable="false" type="mob:Payment"/>
+          <xs:element name="Transaction" nillable="false" type="mob:Transaction"/>
+        </xs:sequence>
+        <xs:attribute name="version" use="required" type="xs:string"/>
+        <xs:attribute name="hash" use="required" type="xs:string"/>
+      </xs:complexType>
+
+      <xs:complexType name="MobicomReserveResponse">
+        <xs:sequence>
+          <xs:element name="Agregator" nillable="false" type="mob:Agregator"/>
+
+          <xs:element name="Merchant" nillable="false" type="mob:Merchant"/>
+          <xs:element name="Client" nillable="false" type="mob:Client"/>
+          <xs:element name="Payment" nillable="false" type="mob:Payment"/>
+          <xs:element name="Transaction" nillable="false" type="mob:Transaction"/>
+          <xs:element name="Message" nillable="false" type="mob:Message"/>
+          <xs:element name="Result" nillable="false" type="mob:Result"/>
+          <xs:element name="Owner" nillable="false" type="mob:Owner"/>
+        </xs:sequence>
+        <xs:attribute name="version" use="required" type="xs:string"/>
+      </xs:complexType>
+      <xs:element name="MCResrvReq" type="mob:MobicomReserveRequest"/>
+      <xs:element name="MCResrvRes" type="mob:MobicomReserveResponse"/>
+
+      <xs:complexType name="MobicomReserveExpressRequest">
+        <xs:sequence>
+          <xs:element name="Agregator" nillable="false" type="mob:Agregator"/>
+          <xs:element name="Merchant" nillable="false" type="mob:Merchant"/>
+          <xs:element name="Owner" nillable="false" type="mob:Owner"/>
+        </xs:sequence>
+        <xs:attribute name="version" use="required" type="xs:string"/>
+        <xs:attribute name="hash" use="required" type="xs:string"/>
+      </xs:complexType>
+
+      <xs:complexType name="MobicomReserveExpressResponse">
+        <xs:sequence>
+          <xs:element name="Owner" nillable="false" type="mob:Owner"/>
+          <xs:element name="Payment" nillable="false" type="mob:Payment"/>
+          <xs:element name="Message" nillable="false" type="mob:Message"/>
+          <xs:element name="Result" nillable="false" type="mob:Result"/>
+        </xs:sequence>
+        <xs:attribute name="version" use="required" type="xs:string"/>
+      </xs:complexType>
+      <xs:element name="MCResrvExReq" type="mob:MobicomReserveExpressRequest"/>
+      <xs:element name="MCResrvExRes" type="mob:MobicomReserveExpressResponse"/>
+
+      <xs:complexType name="MobicomRegisterRequest">
+        <xs:sequence>
+          <xs:element name="Agregator" nillable="false" type="mob:Agregator"/>
+
+          <xs:element name="Merchant" nillable="false" type="mob:Merchant"/>
+          <xs:element name="Owner" nillable="false" type="mob:Owner"/>
+          <xs:element name="Client" nillable="false" type="mob:Client"/>
+          <xs:element name="Regular" nillable="true" type="mob:Regular"/>
+          <xs:element name="Payment" nillable="false" type="mob:Payment"/>
+          <xs:element name="Transaction" nillable="false" type="mob:Transaction"/>
+        </xs:sequence>
+        <xs:attribute name="version" use="required" type="xs:string"/>
+        <xs:attribute name="hash" use="required" type="xs:string"/>
+      </xs:complexType>
+
+      <xs:complexType name="MobicomRegisterResponse">
+        <xs:sequence>
+          <xs:element name="Agregator" nillable="false" type="mob:Agregator"/>
+
+          <xs:element name="Merchant" nillable="false" type="mob:Merchant"/>
+          <xs:element name="Owner" nillable="false" type="mob:Owner"/>
+          <xs:element name="Client" nillable="false" type="mob:Client"/>
+          <xs:element name="Payment" nillable="false" type="mob:Payment"/>
+          <xs:element name="Transaction" nillable="false" type="mob:Transaction"/>
+          <xs:element name="Message" nillable="false" type="mob:Message"/>
+          <xs:element name="Result" nillable="false" type="mob:Result"/>
+        </xs:sequence>
+        <xs:attribute name="version" use="required" type="xs:string"/>
+      </xs:complexType>
+      <xs:element name="MCRegistReq" type="mob:MobicomRegisterRequest"/>
+      <xs:element name="MCRegistRes" type="mob:MobicomRegisterResponse"/>
+
+    </xs:schema>
+  </wsdl:types>
+
+  <wsdl:portType name="mobicomType">
+    <wsdl:operation name="MobicomReserveRequestOperation">
+      <wsdl:input message="mob:MobicomReserveRequestMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:mobicomReserveRequest"/>
+      <wsdl:output message="mob:MobicomReserveResponseMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:mobicomReserveRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="MobicomReserveExpressRequestOperation">
+      <wsdl:input message="mob:MobicomReserveExpressRequestMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:mobicomReserveExpressRequest"/>
+      <wsdl:output message="mob:MobicomReserveExpressResponseMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:mobicomReserveExpressRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="MobicomRegisterRequestOperation">
+      <wsdl:input message="mob:MobicomRegisterRequestMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:mobicomRegisterRequest"/>
+      <wsdl:output message="mob:MobicomRegisterResponseMessage" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:mobicomRegisterRequest"/>
+    </wsdl:operation>
+  </wsdl:portType>
+
+  <wsdl:binding name="mobicomBinding" type="mob:mobicomType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="MobicomReserveRequestOperation">
+      <soap:operation soapAction="urn:mobicomReserveRequest" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobicomReserveExpressRequestOperation">
+      <soap:operation soapAction="urn:mobicomReserveExpressRequest" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MobicomRegisterRequestOperation">
+      <soap:operation soapAction="urn:mobicomRegisterRequest" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="mobicomPartner">
+    <wsdl:port name="mobicomPort" binding="mob:mobicomBinding">
+      <soap:address location="https://?/"/>
+    </wsdl:port>
+  </wsdl:service>
+  
+  <wsdl:message name="MobicomReserveRequestMessage">
+    <wsdl:part name="part1" element="mob:MCResrvReq"/>
+  </wsdl:message>
+  
+  <wsdl:message name="MobicomReserveResponseMessage">
+    <wsdl:part name="part1" element="mob:MCResrvRes"/>
+  </wsdl:message>
+  
+  <wsdl:message name="MobicomReserveExpressRequestMessage">
+    <wsdl:part name="part1" element="mob:MCResrvExReq"/>
+  </wsdl:message>
+  
+  <wsdl:message name="MobicomReserveExpressResponseMessage">
+    <wsdl:part name="part1" element="mob:MCResrvExRes"/>
+  </wsdl:message>
+  
+  <wsdl:message name="MobicomRegisterRequestMessage">
+    <wsdl:part name="part1" element="mob:MCRegistReq"/>
+  </wsdl:message>
+  
+  <wsdl:message name="MobicomRegisterResponseMessage">
+    <wsdl:part name="part1" element="mob:MCRegistRes"/>
+  </wsdl:message>
+</wsdl:definitions>

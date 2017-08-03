@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/UniplatServiceWCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/UniplatServiceWCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ReqDebit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:int" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MSISDN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OperatorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartnerCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServiceId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqDebit" nillable="true" type="tns:ReqDebit" />
+  <xs:complexType name="Resp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PaymentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultCode" type="xs:int" />
+      <xs:element minOccurs="0" name="Resultcoment" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Resp" nillable="true" type="tns:Resp" />
+  <xs:complexType name="ReqState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hash" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PartnerCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqState" nillable="true" type="tns:ReqState" />
+</xs:schema>

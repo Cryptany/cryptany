@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MobicomEmulationWCF" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MobicomEmulationWCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="MobicomStartRequest">
+    <xs:sequence>
+      <xs:element name="Agregator" nillable="true" type="tns:Agregator" />
+      <xs:element name="Client" nillable="true" type="tns:Client" />
+      <xs:element name="Merchant" nillable="true" type="tns:Merchant" />
+      <xs:element name="Message" nillable="true" type="tns:Message" />
+      <xs:element name="Owner" nillable="true" type="tns:Owner" />
+      <xs:element name="Payment" nillable="true" type="tns:Payment" />
+      <xs:element name="hash" nillable="true" type="xs:string" />
+      <xs:element name="version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobicomStartRequest" nillable="true" type="tns:MobicomStartRequest" />
+  <xs:complexType name="Agregator">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Agregator" nillable="true" type="tns:Agregator" />
+  <xs:complexType name="Client">
+    <xs:sequence>
+      <xs:element name="Phone" nillable="true" type="tns:Phone" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Client" nillable="true" type="tns:Client" />
+  <xs:complexType name="Phone">
+    <xs:sequence>
+      <xs:element name="number" nillable="true" type="xs:string" />
+      <xs:element name="provider" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Phone" nillable="true" type="tns:Phone" />
+  <xs:complexType name="Merchant">
+    <xs:sequence>
+      <xs:element name="AccountLinks" nillable="true" type="tns:ArrayOfAccount" />
+      <xs:element name="Owner" nillable="true" type="tns:Owner" />
+      <xs:element name="brand" nillable="true" type="xs:string" />
+      <xs:element name="closeTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="createTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="editTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+      <xs:element name="www" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Merchant" nillable="true" type="tns:Merchant" />
+  <xs:complexType name="ArrayOfAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Account" nillable="true" type="tns:Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccount" nillable="true" type="tns:ArrayOfAccount" />
+  <xs:complexType name="Account">
+    <xs:sequence>
+      <xs:element name="Bank" nillable="true" type="tns:Bank" />
+      <xs:element name="account" nillable="true" type="xs:string" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="Bank">
+    <xs:sequence>
+      <xs:element name="bik" nillable="true" type="xs:string" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bank" nillable="true" type="tns:Bank" />
+  <xs:complexType name="Owner">
+    <xs:sequence>
+      <xs:element name="id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Owner" nillable="true" type="tns:Owner" />
+  <xs:complexType name="Message">
+    <xs:sequence>
+      <xs:element name="bill" nillable="true" type="xs:string" />
+      <xs:element name="comment" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Message" nillable="true" type="tns:Message" />
+  <xs:complexType name="Payment">
+    <xs:sequence>
+      <xs:element name="BudgetIndex" nillable="true" type="tns:BudgetIndex" />
+      <xs:element name="Params" nillable="true" type="tns:ArrayOfParam" />
+      <xs:element name="Payer" nillable="true" type="tns:Payer" />
+      <xs:element name="SupplierOrgInfo" nillable="true" type="tns:SupplierOrgInfo" />
+      <xs:element name="amount" nillable="true" type="xs:long" />
+      <xs:element name="currency" nillable="true" type="xs:int" />
+      <xs:element name="kbk" nillable="true" type="xs:string" />
+      <xs:element name="kind" type="xs:int" />
+      <xs:element name="kindSpecified" type="xs:boolean" />
+      <xs:element name="narrative" nillable="true" type="xs:string" />
+      <xs:element name="okato" nillable="true" type="xs:string" />
+      <xs:element name="result" nillable="true" type="xs:int" />
+      <xs:element name="supplierBillID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Payment" nillable="true" type="tns:Payment" />
+  <xs:complexType name="BudgetIndex">
+    <xs:sequence>
+      <xs:element name="paymentType" nillable="true" type="xs:string" />
+      <xs:element name="purpose" nillable="true" type="xs:string" />
+      <xs:element name="status" nillable="true" type="xs:string" />
+      <xs:element name="taxDocDate" nillable="true" type="xs:string" />
+      <xs:element name="taxDocNumber" nillable="true" type="xs:string" />
+      <xs:element name="taxPeriod" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BudgetIndex" nillable="true" type="tns:BudgetIndex" />
+  <xs:complexType name="ArrayOfParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Param" nillable="true" type="tns:Param" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParam" nillable="true" type="tns:ArrayOfParam" />
+  <xs:complexType name="Param">
+    <xs:sequence>
+      <xs:element name="Value" nillable="true" type="xs:string" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Param" nillable="true" type="tns:Param" />
+  <xs:complexType name="Payer">
+    <xs:sequence>
+      <xs:element name="Address" nillable="true" type="tns:Address" />
+      <xs:element name="account" nillable="true" type="xs:string" />
+      <xs:element name="identifier" nillable="true" type="xs:string" />
+      <xs:element name="inn" nillable="true" type="xs:string" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Payer" nillable="true" type="tns:Payer" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element name="view" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="SupplierOrgInfo">
+    <xs:sequence>
+      <xs:element name="Account" nillable="true" type="tns:Account" />
+      <xs:element name="Addresses" nillable="true" type="tns:ArrayOfAddress" />
+      <xs:element name="Contacts" nillable="true" type="tns:ArrayOfContact" />
+      <xs:element name="inn" nillable="true" type="xs:string" />
+      <xs:element name="kpp" nillable="true" type="xs:string" />
+      <xs:element name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SupplierOrgInfo" nillable="true" type="tns:SupplierOrgInfo" />
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress" />
+  <xs:complexType name="ArrayOfContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact" nillable="true" type="tns:Contact" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContact" nillable="true" type="tns:ArrayOfContact" />
+  <xs:complexType name="Contact">
+    <xs:sequence>
+      <xs:element name="kind" nillable="true" type="xs:string" />
+      <xs:element name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contact" nillable="true" type="tns:Contact" />
+  <xs:complexType name="MobicomStartResponse">
+    <xs:sequence>
+      <xs:element name="Owner" nillable="true" type="tns:Owner" />
+      <xs:element name="Result" nillable="true" type="tns:Result" />
+      <xs:element name="version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobicomStartResponse" nillable="true" type="tns:MobicomStartResponse" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element name="amount" nillable="true" type="xs:long" />
+      <xs:element name="code" nillable="true" type="xs:int" />
+      <xs:element name="comment" nillable="true" type="xs:string" />
+      <xs:element name="extra" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result" />
+  <xs:complexType name="MobicomStatusRequest">
+    <xs:sequence>
+      <xs:element name="Agregator" nillable="true" type="tns:Agregator" />
+      <xs:element name="Owner" nillable="true" type="tns:Owner" />
+      <xs:element name="hash" nillable="true" type="xs:string" />
+      <xs:element name="version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobicomStatusRequest" nillable="true" type="tns:MobicomStatusRequest" />
+  <xs:complexType name="MobicomStatusResponse">
+    <xs:sequence>
+      <xs:element name="Agregator" nillable="true" type="tns:Agregator" />
+      <xs:element name="Client" nillable="true" type="tns:Client" />
+      <xs:element name="Merchant" nillable="true" type="tns:Merchant" />
+      <xs:element name="Owner" nillable="true" type="tns:Owner" />
+      <xs:element name="Payment" nillable="true" type="tns:Payment" />
+      <xs:element name="Refund" nillable="true" type="tns:Refund" />
+      <xs:element name="Register" nillable="true" type="tns:Register" />
+      <xs:element name="Reserve" nillable="true" type="tns:Reserve" />
+      <xs:element name="Result" nillable="true" type="tns:Result" />
+      <xs:element name="Start" nillable="true" type="tns:Start" />
+      <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
+      <xs:element name="version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MobicomStatusResponse" nillable="true" type="tns:MobicomStatusResponse" />
+  <xs:complexType name="Refund">
+    <xs:sequence>
+      <xs:element name="Result" nillable="true" type="tns:Result" />
+      <xs:element name="timestamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Refund" nillable="true" type="tns:Refund" />
+  <xs:complexType name="Register">
+    <xs:sequence>
+      <xs:element name="Result" nillable="true" type="tns:Result" />
+      <xs:element name="timestamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Register" nillable="true" type="tns:Register" />
+  <xs:complexType name="Reserve">
+    <xs:sequence>
+      <xs:element name="Result" nillable="true" type="tns:Result" />
+      <xs:element name="timestamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Reserve" nillable="true" type="tns:Reserve" />
+  <xs:complexType name="Start">
+    <xs:sequence>
+      <xs:element name="Result" nillable="true" type="tns:Result" />
+      <xs:element name="timestamp" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Start" nillable="true" type="tns:Start" />
+  <xs:complexType name="Transaction">
+    <xs:sequence>
+      <xs:element name="id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Transaction" nillable="true" type="tns:Transaction" />
+</xs:schema>

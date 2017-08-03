@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2001/12/soap-envelope" targetNamespace="">
+  <soap:Body>
+    <GetDebitState>
+      <ReqState>
+        <Hash>qwe</Hash>
+      </ReqState>
+    </GetDebitState>
+  </soap:Body>
+</soap:Envelope>
+
+
+<!--<Envelope xmlns:s="http:="//schemas.xmlsoap.org/soap/envelope/">
+<soap:Header>
+</soap:Header>
+<s:Body>
+  <GetStatus xmlns=""http:="//tempuri.org/">
+  <request xmlns:d=""http:="//schemas.datacontract.org/2004/07/UniplatServiceWCF">
+  <d:AbonentMSISDN>dfasfas</d:AbonentMSISDN>
+  <d:Amount>2330</d:Amount>
+  <d:CheckSum>dfgsdfgsdfgsdfg</d:CheckSum>
+  <d:Partner />
+  </request>
+  </GetStatus>
+</s:Body>
+</Envelope>-->
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
+<Request>
+  <AbonentMSDN></AbonentMSDN>
+  <Amount></Amount>
+  <Partner>
+    <Name></Name>
+    <Code></Code>
+    <Comment></Comment>
+  </Partner>
+  <CheckSum></CheckSum>
+</Request>-->
+
