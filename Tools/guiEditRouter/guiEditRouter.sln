@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guiEditRouter", "guiEditRouter\guiEditRouter.csproj", "{2A9B73D8-7E89-4555-A661-1F8540262BC6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8} = {523F6A58-F059-4D3B-8DA7-EFCA35C238E8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guiEditRouter.Web", "guiEditRouter.Web\guiEditRouter.Web.csproj", "{53A28A57-051D-45AC-A82D-374011011683}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouterDBService", "..\ServiceBlockEditor\WcfService1\RouterDBService.csproj", "{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2A9B73D8-7E89-4555-A661-1F8540262BC6}.Release|x86.ActiveCfg = Release|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{53A28A57-051D-45AC-A82D-374011011683}.Release|x86.ActiveCfg = Release|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{523F6A58-F059-4D3B-8DA7-EFCA35C238E8}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

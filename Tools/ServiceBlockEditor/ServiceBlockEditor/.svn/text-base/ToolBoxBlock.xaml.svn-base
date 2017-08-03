@@ -1,0 +1,21 @@
+﻿    <UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="ServiceBlockEditor.ToolBoxBlock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+        <Border Name="CheckedMode" Width="150" Height="Auto" GotFocus="CheckedMode_GotFocus" LostFocus="CheckedMode_LostFocus">
+        <Border BorderThickness="1" CornerRadius="4" BorderBrush="Black" Margin="5" Background="White" >
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" GotFocus="CheckedMode_GotFocus" LostFocus="CheckedMode_LostFocus">
+                <TextBlock Name="BlockName" FontSize="14" FontWeight="Bold" FontFamily="Courier New" Text="{Binding BlockName, Mode=OneWay}" GotFocus="CheckedMode_GotFocus" LostFocus="CheckedMode_LostFocus"/>
+                    <TextBlock FontSize="10" Text="Params" FontWeight="Bold" FontFamily="Courier New" />
+
+                <sdk:DataGrid IsReadOnly="True" ColumnWidth="*" HeadersVisibility="None"  AutoGenerateColumns="False" ItemsSource="{Binding Properties}" BorderThickness="0" ClipboardCopyMode="None">
+                        <sdk:DataGrid.Columns>
+                        <sdk:DataGridTextColumn Binding="{Binding}" FontSize="10" FontFamily="Courier New"/>
+                        </sdk:DataGrid.Columns>
+                    </sdk:DataGrid>
+                    
+            </StackPanel>
+            </Border>
+        </Border>
+
+</UserControl>

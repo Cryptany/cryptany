@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/XMLSettings/Validators
+END
+BaseValidator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/XMLSettings/Validators/BaseValidator.cs
+END
+SendSMSValidator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/XMLSettings/Validators/SendSMSValidator.cs
+END
+SubscriptionValidator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/XMLSettings/Validators/SubscriptionValidator.cs
+END

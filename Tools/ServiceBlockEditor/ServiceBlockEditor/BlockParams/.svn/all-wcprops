@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/BlockParams
+END
+BaseParam.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/BlockParams/BaseParam.cs
+END
+ListOfValuesParam.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/BlockParams/ListOfValuesParam.cs
+END
+BinaryParam.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/BlockParams/BinaryParam.cs
+END
+TextParam.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/BlockParams/TextParam.cs
+END
+BlockSettingSchema.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/avant4/!svn/ver/876/NewProjects/ServiceBlockEditor/ServiceBlockEditor/BlockParams/BlockSettingSchema.cs
+END

@@ -1,0 +1,21 @@
+<stylecopresultscache>
+  <version>11</version>
+  <project key="1407761262">
+    <configuration>DEBUG;TRACE;SILVERLIGHT</configuration>
+  </project>
+  <sourcecode name="MainPage.xaml.cs" parser="StyleCop.CSharp.CsParser">
+    <settings>
+      <timestamp>07/06/2011 11:29:50</timestamp>
+      <milliseconds>0</milliseconds>
+    </settings>
+    <timestamp>10/17/2012 17:48:23</timestamp>
+    <milliseconds>247</milliseconds>
+    <violations>
+      <violation namespace="StyleCop.CSharp.CsParser" rule="SyntaxException" ruleCheckId="SA0102">
+        <context>A syntax error has been discovered in file C:\Users\samusenko\documents\visual studio 2010\Projects\ServiceBlockEditor\ServiceBlockEditor\MainPage.xaml.cs on line 17.</context>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+</stylecopresultscache>

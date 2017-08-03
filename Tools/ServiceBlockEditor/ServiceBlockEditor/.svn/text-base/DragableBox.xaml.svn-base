@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="DragAndDropSimple.DragableBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+ >
+    <Canvas x:Name="rootCanvas">
+        <!-- You can drag this rectangle around the canvas. -->
+        <Rectangle
+    MouseLeftButtonDown="Handle_MouseDown"
+    MouseMove="Handle_MouseMove"
+    MouseLeftButtonUp="Handle_MouseUp"
+    Canvas.Left="30" Canvas.Top="30" Fill="Red"
+    Width="50" Height="50" />
+    </Canvas>
+
+</UserControl>

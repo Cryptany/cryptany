@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="DragAndDropSimple.DragableBlock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Canvas x:Name="rootCanvas">
+        <!--<Border Name="Captured">-->
+            <Border
+                Margin="5"
+                Name="DBlock"
+                MouseLeftButtonDown="Handle_MouseDown"
+                MouseMove="Handle_MouseMove"
+               
+                MouseLeftButtonUp="Handle_MouseUp" BorderThickness="3" 
+                BorderBrush="Black" Cursor="Hand" Opacity="1" 
+                Background="WhiteSmoke" CornerRadius="4" MinWidth="80" MinHeight="40">
+
+            <TextBlock  Name ="MyCaption" HorizontalAlignment="Center" Margin="5 3 5 3" VerticalAlignment="Center" FontFamily="Courier New" FontWeight="Bold" FontSize="14" MaxWidth="200" />
+            </Border>
+        <!--</Border>-->
+    </Canvas>
+
+</UserControl>

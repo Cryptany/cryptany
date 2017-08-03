@@ -1,1 +1,3 @@
-# legacy
+# Cryptany legacy project
+
+## General

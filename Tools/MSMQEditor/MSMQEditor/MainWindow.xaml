@@ -1,0 +1,57 @@
+﻿<Window x:Class="MSMQEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="QueueEditor" Height="355" Width="949" Icon="/MSMQEditor;component/Giraffe.ico" WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <TextBlock Text="Сервер : " Margin="5" />
+            <TextBox Name="txtMashineName" Width="200" Margin="5" Text="stronghold.bastion.ru"/>
+            <CheckBox Name="CurrentMashine" Content="Текущий сервер" Margin="5"/>
+            <CheckBox Name="CurrentUser" Content="Текущий пользователь" Margin="5"/>
+            <Button Content="Показать" Margin="5" Click="Button_Click" />
+            <Button Content="Обновить сообщения" Margin="5" Click="Button_Click_3" />
+            <Button Content="Ожидать сообщения" Margin="5" Click="Button_Click_5" />
+            <TextBox Name="PeriodOfWaiting" Margin="5" Width="50" Text="20"/>
+        </StackPanel>
+        <Border Grid.Row="1"  Grid.Column="0" BorderBrush="Black" BorderThickness="1">
+            <!--<StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <TextBlock Text="Очереди"  Margin="5"/>-->
+                <ListBox Name="QueuesList" ItemsSource="{Binding}" SelectionChanged="QueuesList_SelectionChanged" />
+            <!--</StackPanel>-->
+        </Border>
+        <Border Grid.Row="1"  Grid.Column="2" BorderBrush="Black" BorderThickness="1">
+            <!--<StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <TextBlock Text="Сообщения"  Margin="5"/>-->
+            <ListBox Name="MessageList" ItemsSource="{Binding}" SelectionChanged="MessageList_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Text}" DataContext="{Binding}" Name="Message"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <!--</StackPanel>-->
+        </Border>
+        <GridSplitter Grid.Row="1"  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="2" Cursor="Hand" />
+        <Border Grid.Row="2"  Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="1">
+            <StackPanel Orientation="Vertical">
+                <ListBox Name="MessageInfo" Height="145"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Удалить" Width="100" HorizontalAlignment="Left" Margin="1" Click="Button_Click_1" />
+                    <Button Content="Копировать" Width="100" HorizontalAlignment="Left" Margin="1" Click="Button_Click_2" />
+                    <Button Content="Копировать  в файл" Width="130" HorizontalAlignment="Left" Margin="1" Click="Button_Click_4" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

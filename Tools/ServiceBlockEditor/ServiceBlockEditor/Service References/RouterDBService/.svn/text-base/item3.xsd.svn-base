@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService1" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dev:3487/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://dev:3487/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ListOfService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LOS" nillable="true" type="tns:ArrayOfService" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfService" nillable="true" type="tns:ListOfService" />
+  <xs:complexType name="ArrayOfService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Service" nillable="true" type="tns:Service" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfService" nillable="true" type="tns:ArrayOfService" />
+  <xs:complexType name="Service">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="expressions" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="id" type="ser:guid" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="serviceBlocksId" nillable="true" type="q2:ArrayOfKeyValueOfguidstring" />
+      <xs:element minOccurs="0" name="serviceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="typeid" type="ser:guid" />
+      <xs:element minOccurs="0" name="typename" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Service" nillable="true" type="tns:Service" />
+  <xs:complexType name="ServiceBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="blocks" nillable="true" type="tns:ArrayOfBlock" />
+      <xs:element minOccurs="0" name="id" type="ser:guid" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceBlock" nillable="true" type="tns:ServiceBlock" />
+  <xs:complexType name="ArrayOfBlock">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Block" nillable="true" type="tns:Block" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlock" nillable="true" type="tns:ArrayOfBlock" />
+  <xs:complexType name="Block">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="blockEntryId" type="ser:guid" />
+      <xs:element minOccurs="0" name="id" type="ser:guid" />
+      <xs:element minOccurs="0" name="isVerification" type="xs:boolean" />
+      <xs:element minOccurs="0" name="links" nillable="true" type="tns:ArrayOfBlockLink" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="settings" nillable="true" type="tns:_BlockSettings" />
+      <xs:element minOccurs="0" name="settingsString" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="typeid" type="ser:guid" />
+      <xs:element minOccurs="0" name="typename" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Block" nillable="true" type="tns:Block" />
+  <xs:complexType name="ArrayOfBlockLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BlockLink" nillable="true" type="tns:BlockLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlockLink" nillable="true" type="tns:ArrayOfBlockLink" />
+  <xs:complexType name="BlockLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="ser:guid" />
+      <xs:element minOccurs="0" name="linkedBlockId" type="ser:guid" />
+      <xs:element minOccurs="0" name="linkedEntryBlockId" type="ser:guid" />
+      <xs:element minOccurs="0" name="output" type="xs:boolean" />
+      <xs:element minOccurs="0" name="yes" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlockLink" nillable="true" type="tns:BlockLink" />
+  <xs:complexType name="_BlockSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Conditions" nillable="true" type="tns:ArrayOf_Condition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="_BlockSettings" nillable="true" type="tns:_BlockSettings" />
+  <xs:complexType name="ArrayOf_Condition">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="_Condition" nillable="true" type="tns:_Condition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOf_Condition" nillable="true" type="tns:ArrayOf_Condition" />
+  <xs:complexType name="_Condition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Operation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Property" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="_Condition" nillable="true" type="tns:_Condition" />
+  <xs:complexType name="ArrayOfBlockSettingsParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BlockSettingsParam" nillable="true" type="tns:BlockSettingsParam" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBlockSettingsParam" nillable="true" type="tns:ArrayOfBlockSettingsParam" />
+  <xs:complexType name="BlockSettingsParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="ser:guid" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BlockSettingsParam" nillable="true" type="tns:BlockSettingsParam" />
+  <xs:complexType name="ArrayOfBaseParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BaseParam" nillable="true" type="tns:BaseParam" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBaseParam" nillable="true" type="tns:ArrayOfBaseParam" />
+  <xs:complexType name="BaseParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BlockType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="listParam" type="xs:boolean" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="paramSource" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="paramTemplates" nillable="true" type="q3:ArrayOfKeyValueOfguidstring" />
+      <xs:element minOccurs="0" name="required" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseParam" nillable="true" type="tns:BaseParam" />
+</xs:schema>
