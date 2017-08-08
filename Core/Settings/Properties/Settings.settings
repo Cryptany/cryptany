@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="avantMobile.Settings.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DBSettingsProviderSelectQuery" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">select [key], [value], [type] from common.Settings </Value>
+    </Setting>
+    <Setting Name="DBSettingsProviderDelAllQuery" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">delete from common.Settings </Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

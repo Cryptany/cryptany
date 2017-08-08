@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="avantMobile.Settings.AbstractSettingsProvider">
+    <Position X="3" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <FileName>AbstractSettingsProvider.cs</FileName>
+      <HashCode>AAAAAIAAAiAEAIAgCAAQAEAAAEAAAAAACAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="avantMobile.Settings.ConvertFromStringException" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>CustomExceptions.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.Settings.DBSettingsProvider">
+    <Position X="1" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>DBSettingsProvider.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAIAgAAAAAAAAAAAAAAAAAQAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.Settings.WebServiceSettingsProvider">
+    <Position X="6.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>WebServiceSettingsProvider.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAIAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.Settings.XMLSettingsProvider">
+    <Position X="4" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>XMLSettingsProvider.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAIAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.Settings.SettingsProviderFactory">
+    <Position X="6.5" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>SettingsProviderFactory.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAACAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="avantMobile.Settings.ISettingsProvider" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ISettingsProvider.cs</FileName>
+      <HashCode>AAAAAIAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

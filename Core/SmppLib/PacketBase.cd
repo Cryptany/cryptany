@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="avantMobile.SmppLib.SmppDate">
+    <Position X="11" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>AAAgAAAAAEAAAAAAAIAAAABAAAAAAAABAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.SmppLib.SmppAddress">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>AAIgAAAAAEAICAAAAAAAAABAEAAAAEACAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.SmppLib.SupportOperations">
+    <Position X="13" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>AAAAAEBAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.SmppLib.OptionalParameter">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>ABAgAAIAAEAAAAAAAAAAAABAAAwAAAAAAAAgAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Enum Name="avantMobile.SmppLib.OptionalParameter.tagEnum" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PacketBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="avantMobile.SmppLib.PacketBase">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>AAIgAAAAAEAACAAAIQkAAAAAAAIAAAAAIAAAgAQAAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Enum Name="avantMobile.SmppLib.PacketBase.dataCodingEnum" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PacketBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="avantMobile.SmppLib.PacketBase.commandIdEnum" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PacketBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="avantMobile.SmppLib.PacketBase.commandStatusEnum" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PacketBase.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+  </Class>
+  <Class Name="avantMobile.SmppLib.BindPacketBase">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>AAIgEAAAAEABAAEAAIAAAQAAAAAQAAACAAAAgAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.SmppLib.BindResponseBase">
+    <Position X="6.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>AAIgEAAAAEAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.SmppLib.MessagePacketBase">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>CILsAAAAimAAQQAAQAAiQAAAEAAAAAIGERoAAAACCBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.SmppLib.DataPacketBase">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>AIBMAAAAAmAAAAAAAAACAAAAAAAAAAAEEBIAAAACAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="avantMobile.SmppLib.MessageRespBase">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PacketBase.cs</FileName>
+      <HashCode>AAIgAAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>
