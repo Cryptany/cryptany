@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4DFEF69A-B146-4B78-909D-CB8B2A29E329}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cryptany.Core.ConfigOM</RootNamespace>
+    <AssemblyName>Cryptany.Core.ConfigOM</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'x64|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abonent.cs" />
+    <Compile Include="AbonentSession.cs" />
+    <Compile Include="AbonentSessionEntry.cs" />
+    <Compile Include="Answer.cs" />
+    <Compile Include="AnswerBlock.cs" />
+    <Compile Include="AnswerBlockType.cs" />
+    <Compile Include="AnswerMap.cs" />
+    <Compile Include="AnswerType.cs" />
+    <Compile Include="AvantikProject.cs" />
+    <Compile Include="BlockedAbonentChannel.cs" />
+    <Compile Include="CashChannel.cs" />
+    <Compile Include="Chains.cs" />
+    <Compile Include="Channel.cs" />
+    <Compile Include="ChannelState.cs" />
+    <Compile Include="CheckAction.cs" />
+    <Compile Include="CompositeChannel.cs" />
+    <Compile Include="ConcreateObjectBase.cs" />
+    <Compile Include="Condition.cs" />
+    <Compile Include="ConfigurationFacade.cs" />
+    <Compile Include="ContentChannel.cs" />
+    <Compile Include="ContentFormat.cs" />
+    <Compile Include="ContragentResource.cs" />
+    <Compile Include="ContragentSmsChannel.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="DataAccessManager\IDataAccessManager.cs" />
+    <Compile Include="DataAccessManager\IPriceInfo.cs" />
+    <Compile Include="DataAccessManager\IServiceNumber.cs" />
+    <Compile Include="DataAccessManager\PriceInfo.cs" />
+    <Compile Include="DataAccessManager\ServiceNumberInfo.cs" />
+    <Compile Include="DataSet\LocalDataSet.cs" />
+    <Compile Include="ExWebService.cs" />
+    <Compile Include="GeneralObject.cs" />
+    <Compile Include="GlobalErrorChannel.cs" />
+    <Compile Include="Interfaces\IChannel.cs" />
+    <Compile Include="ObjectNamespace.cs" />
+    <Compile Include="ObjectTable.cs" />
+    <Compile Include="Operator.cs" />
+    <Compile Include="OperatorBrand.cs" />
+    <Compile Include="Parameter.cs" />
+    <Compile Include="ParameterValue.cs" />
+    <Compile Include="ParameterValueCategory.cs" />
+    <Compile Include="Partner.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Regex.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="Rule.cs" />
+    <Compile Include="RuleCategory.cs" />
+    <Compile Include="RuleData.cs" />
+    <Compile Include="RuleStatement.cs" />
+    <Compile Include="RuleType.cs" />
+    <Compile Include="SaleChannel.cs" />
+    <Compile Include="Service References\ClubsManagerWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs" />
+    <Compile Include="ServiceGroup.cs" />
+    <Compile Include="ServiceGroupBalancingType.cs" />
+    <Compile Include="ServiceGroupRule.cs" />
+    <Compile Include="ServiceGroupRuleParameter.cs" />
+    <Compile Include="ServiceGroupRuleParameterCheckType.cs" />
+    <Compile Include="ServiceGroupRuleParameterType.cs" />
+    <Compile Include="ServiceInstance.cs" />
+    <Compile Include="ServiceInstanceType.cs" />
+    <Compile Include="ServiceNumber.cs" />
+    <Compile Include="ServiceSettings.cs" />
+    <Compile Include="SharedResourcesChannel.cs" />
+    <Compile Include="SMSC.cs" />
+    <Compile Include="SmscSettings.cs" />
+    <Compile Include="Statement.cs" />
+    <Compile Include="SubscriptionChannel.cs" />
+    <Compile Include="Tariff.cs" />
+    <Compile Include="Token.cs" />
+    <Compile Include="TransportServiceSettings.cs" />
+    <Compile Include="WebAccessChannel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Entities.cd" />
+    <None Include="Service References\ClubsManagerWCF\Cryptany.Core.ConfigOM.ClubsManagerWCF.Abonent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClubsManagerWCF\Cryptany.Core.ConfigOM.ClubsManagerWCF.Club.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClubsManagerWCF\Cryptany.Core.ConfigOM.ClubsManagerWCF.DefCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClubsManagerWCF\Cryptany.Core.ConfigOM.ClubsManagerWCF.Subscription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClubsManagerWCF\Cryptany.Core.ConfigOM.ClubsManagerWCF.Tariffication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClubsManagerWCF\ClubsManager2.wsdl" />
+    <None Include="Service References\ClubsManagerWCF\mex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClubsManagerWCF\mex1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClubsManagerWCF\mex2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ClubsManagerWCF\mex3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cryptany.Core.Management\Cryptany.Core.Management.csproj">
+      <Project>{C7652C3B-9F08-4020-B665-E1AA6137E148}</Project>
+      <Name>Avant.Core.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryptany.Core.DPO\Cryptany.Core.DPO.csproj">
+      <Project>{7C929C53-F5FE-43C1-AE27-42D804BFDB0D}</Project>
+      <Name>Avant.DPO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryptany.Common.Utils\CommonUtils.csproj">
+      <Project>{7E31C002-96F3-4500-8A94-17CA32115B7F}</Project>
+      <Name>CommonUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryptany.Common.Logging\Logging.csproj">
+      <Project>{E45340CA-AA2B-4256-88FB-428AA28EEF3F}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Settings\Settings.csproj">
+      <Project>{1EDA6189-6195-492C-8B2F-609DDCD95FF3}</Project>
+      <Name>Settings</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ClubsManagerWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClubsManagerWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClubsManagerWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClubsManagerWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

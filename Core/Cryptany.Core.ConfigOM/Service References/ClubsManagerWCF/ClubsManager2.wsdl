@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ClubsManager2" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dev:9999/mex?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dev:9999/mex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dev:9999/mex?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Cryptany.Core.Foundation.Clubs2" />
+      <xsd:import schemaLocation="http://dev:9999/mex?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClubsManager2_GetAbonentById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbonentById" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetAbonentById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbonentByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetAbonentByMSISDN_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbonentByMSISDN" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetAbonentByMSISDN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbonentByMSISDNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetAbonentByMSISDNWithAutoCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbonentByMSISDNWithAutoCreate" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetAbonentByMSISDNWithAutoCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAbonentByMSISDNWithAutoCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetDefCodeByMSISDN_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefCodeByMSISDN" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetDefCodeByMSISDN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDefCodeByMSISDNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_IsAllowSubscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAllowSubscribe" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_IsAllowSubscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAllowSubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_IsAllowSubscribeForResource_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAllowSubscribeForResource" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_IsAllowSubscribeForResource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAllowSubscribeForResourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_IsAllowSubscribeForOperatorBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAllowSubscribeForOperatorBrand" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_IsAllowSubscribeForOperatorBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAllowSubscribeForOperatorBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetClubById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubById" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetClubById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetClubs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubs" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetClubs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClubsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetSubscriptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscriptions" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetSubscriptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscriptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetSubscriptionsByClub_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscriptionsByClub" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetSubscriptionsByClub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscriptionsByClubResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetSubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscription" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_Subscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Subscribe" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_Subscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_Unsubscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:Unsubscribe" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_Unsubscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnsubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_UnsubscribeAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnsubscribeAll" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_UnsubscribeAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnsubscribeAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetNextReloadTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextReloadTime" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetNextReloadTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextReloadTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetTariffications_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTariffications" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetTariffications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTarifficationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetTarifficationsByClub_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTarifficationsByClub" />
+  </wsdl:message>
+  <wsdl:message name="IClubsManager2_GetTarifficationsByClub_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTarifficationsByClubResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IClubsManager2">
+    <wsdl:operation name="GetAbonentById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetAbonentById" message="tns:IClubsManager2_GetAbonentById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetAbonentByIdResponse" message="tns:IClubsManager2_GetAbonentById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbonentByMSISDN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetAbonentByMSISDN" message="tns:IClubsManager2_GetAbonentByMSISDN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetAbonentByMSISDNResponse" message="tns:IClubsManager2_GetAbonentByMSISDN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAbonentByMSISDNWithAutoCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetAbonentByMSISDNWithAutoCreate" message="tns:IClubsManager2_GetAbonentByMSISDNWithAutoCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetAbonentByMSISDNWithAutoCreateResponse" message="tns:IClubsManager2_GetAbonentByMSISDNWithAutoCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDefCodeByMSISDN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetDefCodeByMSISDN" message="tns:IClubsManager2_GetDefCodeByMSISDN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetDefCodeByMSISDNResponse" message="tns:IClubsManager2_GetDefCodeByMSISDN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAllowSubscribe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/IsAllowSubscribe" message="tns:IClubsManager2_IsAllowSubscribe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/IsAllowSubscribeResponse" message="tns:IClubsManager2_IsAllowSubscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAllowSubscribeForResource">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/IsAllowSubscribeForResource" message="tns:IClubsManager2_IsAllowSubscribeForResource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/IsAllowSubscribeForResourceResponse" message="tns:IClubsManager2_IsAllowSubscribeForResource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAllowSubscribeForOperatorBrand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/IsAllowSubscribeForOperatorBrand" message="tns:IClubsManager2_IsAllowSubscribeForOperatorBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/IsAllowSubscribeForOperatorBrandResponse" message="tns:IClubsManager2_IsAllowSubscribeForOperatorBrand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClubById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetClubById" message="tns:IClubsManager2_GetClubById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetClubByIdResponse" message="tns:IClubsManager2_GetClubById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClubs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetClubs" message="tns:IClubsManager2_GetClubs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetClubsResponse" message="tns:IClubsManager2_GetClubs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetSubscriptions" message="tns:IClubsManager2_GetSubscriptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetSubscriptionsResponse" message="tns:IClubsManager2_GetSubscriptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriptionsByClub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetSubscriptionsByClub" message="tns:IClubsManager2_GetSubscriptionsByClub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetSubscriptionsByClubResponse" message="tns:IClubsManager2_GetSubscriptionsByClub_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetSubscription" message="tns:IClubsManager2_GetSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetSubscriptionResponse" message="tns:IClubsManager2_GetSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Subscribe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/Subscribe" message="tns:IClubsManager2_Subscribe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/SubscribeResponse" message="tns:IClubsManager2_Subscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/Unsubscribe" message="tns:IClubsManager2_Unsubscribe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/UnsubscribeResponse" message="tns:IClubsManager2_Unsubscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnsubscribeAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/UnsubscribeAll" message="tns:IClubsManager2_UnsubscribeAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/UnsubscribeAllResponse" message="tns:IClubsManager2_UnsubscribeAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextReloadTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetNextReloadTime" message="tns:IClubsManager2_GetNextReloadTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetNextReloadTimeResponse" message="tns:IClubsManager2_GetNextReloadTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffications">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetTariffications" message="tns:IClubsManager2_GetTariffications_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetTarifficationsResponse" message="tns:IClubsManager2_GetTariffications_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTarifficationsByClub">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClubsManager2/GetTarifficationsByClub" message="tns:IClubsManager2_GetTarifficationsByClub_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClubsManager2/GetTarifficationsByClubResponse" message="tns:IClubsManager2_GetTarifficationsByClub_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IClubsManager2" type="tns:IClubsManager2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAbonentById">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetAbonentById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbonentByMSISDN">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetAbonentByMSISDN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAbonentByMSISDNWithAutoCreate">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetAbonentByMSISDNWithAutoCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDefCodeByMSISDN">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetDefCodeByMSISDN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAllowSubscribe">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/IsAllowSubscribe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAllowSubscribeForResource">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/IsAllowSubscribeForResource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAllowSubscribeForOperatorBrand">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/IsAllowSubscribeForOperatorBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClubById">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetClubById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClubs">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetClubs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriptions">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetSubscriptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriptionsByClub">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetSubscriptionsByClub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscription">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetSubscription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subscribe">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/Subscribe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Unsubscribe">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/Unsubscribe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnsubscribeAll">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/UnsubscribeAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextReloadTime">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetNextReloadTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTariffications">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetTariffications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTarifficationsByClub">
+      <soap:operation soapAction="http://tempuri.org/IClubsManager2/GetTarifficationsByClub" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClubsManager2">
+    <wsdl:port name="BasicHttpBinding_IClubsManager2" binding="tns:BasicHttpBinding_IClubsManager2">
+      <soap:address location="http://dev:9999/HTTPClubManager2" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
