@@ -1,0 +1,96 @@
+﻿Выполняется установка сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется откат для сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется установка сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется откат для сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется установка сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется откат для сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется установка сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется откат для сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется установка сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется откат для сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется установка сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Выполняется откат для сборки 'C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll'.
+Затронуты следующие параметры:
+   logtoconsole = 
+   assemblypath = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+   logfile = C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog
+Возникло исключение при попытке найти программы установки в сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+System.Reflection.ReflectionTypeLoadException: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений.
+Выполняется прерывание установки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.

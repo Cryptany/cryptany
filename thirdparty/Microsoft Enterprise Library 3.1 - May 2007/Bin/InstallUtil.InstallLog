@@ -1,0 +1,1056 @@
+﻿
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Common\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Common.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Caching\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Caching.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Данный файл находится в C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\windows\assembly\GAC_MSIL\Microsoft.Practices.EnterpriseLibrary.Logging\3.1.0.0__b03f5f7f11d50a3a\Microsoft.Practices.EnterpriseLibrary.Logging.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Security.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
+
+Выполняется групповая операция установки.
+
+Начинается этап установки процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+
+На этапе установки возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+
+Начинается этап отката процедуры установки.
+См. файл журнала выполнения операция для сборки C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Данный файл находится в C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.InstallLog.
+При выполнении программы установки System.Configuration.Install.AssemblyInstaller на этапе отката возникло исключение.
+System.InvalidOperationException: Не удалось получить типы программы установки в сборке C:\Program Files\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Validation.dll.
+Возникло внутреннее исключение System.Reflection.ReflectionTypeLoadException со следующим сообщением об ошибке: Не удается загрузить один или более запрошенных типов. Обратитесь к свойству LoaderExceptions для получения дополнительных сведений..
+На этапе отката процедуры установки возникло исключение. Это исключение будет проигнорировано, и откат будет продолжен. Однако после завершения отката компьютер может не вернуться полностью в исходное состояние.
+
+Этап отката выполнен успешно.
+
+Групповая операция установки выполнена.
