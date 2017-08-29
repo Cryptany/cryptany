@@ -220,7 +220,7 @@ namespace Uniplat.Controllers
 //                {
 //                    _defCodes=new DataTable();
 //                    using (var con = new SqlConnection(
-//                        "Data Source=arsenal.bastion.ru;Initial Catalog=avant2;Persist Security Info=True;User ID=uniplatservice;Password=Maslov3210"))
+//                        "Data Source=;Initial Catalog=;Persist Security Info=True;User ID=uniplatservice;Password=Maslov3210"))
 //                    {
 //                        con.Open();
 //                        using (var cmd = new SqlCommand(@"
@@ -231,10 +231,10 @@ namespace Uniplat.Controllers
 //                        d.RangeEnd,
 //                        ob.Id as OperatorBrandId,
 //                        ob.Name + ' ' + r.NODE_NAME as Name
-//                          FROM [avant2].[kernel].[DEFcode] d
-//                          join [avant2].[kernel].Operators o on o.Id = d.OperatorId
-//                          join [avant2].[kernel].OperatorBrands ob on ob.Id = o.BrandId
-//                          join [avant2].[kernel].Regions r on r.ID = d.RegionId
+//                          FROM [kernel].[DEFcode] d
+//                          join [kernel].Operators o on o.Id = d.OperatorId
+//                          join [kernel].OperatorBrands ob on ob.Id = o.BrandId
+//                          join [kernel].Regions r on r.ID = d.RegionId
 //                    ", con))
 //                        {
 //                            var da = new SqlDataAdapter(cmd);
