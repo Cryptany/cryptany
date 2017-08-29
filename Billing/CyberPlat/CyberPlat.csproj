@@ -69,7 +69,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Utils\Monitoring\Monitoring\Monitoring.csproj">
+    <ProjectReference Include="..\..\Core\Cryptany.Core.Monitoring\Cryptany.Core.Monitoring.csproj">
       <Project>{9AE14E64-C8EB-4A78-9A3F-1DDBA6CDB51F}</Project>
       <Name>Monitoring</Name>
     </ProjectReference>

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Router service")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Avant Mobile")]
-[assembly: AssemblyProduct("AvantCore")]
-[assembly: AssemblyCopyright("Copyright (C) 2004-2007 avant Mobile, Inc.")]
+[assembly: AssemblyCompany("Cryptany")]
+[assembly: AssemblyProduct("Cryptany.Core.Router library")]
+[assembly: AssemblyCopyright("Copyright (C) 2004-2017 Cryptany, Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

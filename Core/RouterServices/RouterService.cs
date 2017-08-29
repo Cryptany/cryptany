@@ -2,11 +2,11 @@ using System;
 using System.ComponentModel;
 using System.Configuration;
 using System.ServiceProcess;
-using Avant.Core.Management;
-using avantMobile.avantCore;
+using Cryptany.Core.Management;
+using Cryptany.Core;
 
 
-namespace RouterServices
+namespace Cryptany.Core.Router.RouterServices
 {
     public class RouterService : ServiceBase
     {
@@ -28,10 +28,10 @@ namespace RouterServices
             // This call is required by the Windows.Forms Component Designer.
             InitializeComponent();
             this.ServiceCode = ServiceCode;
-            ServiceName = "Avant.RouterService" + this.ServiceCode;
+            ServiceName = "Cryptany.Core.Router.RouterService" + this.ServiceCode;
             if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["RouterServiceID"]))
                 ServiceManager.ServiceId = new Guid(ConfigurationManager.AppSettings["RouterServiceID"]);
-            // Для локальной отладки может быть использовано
+            // For local debug use this:
             // this.OnStart(new string[0]);
         }
 
@@ -44,7 +44,7 @@ namespace RouterServices
             // 
             // RouterService
             // 
-            ServiceName = "Avant.RouterService";
+            ServiceName = "Cryptany.Core.Router.RouterService";
         }
 
         
@@ -77,7 +77,7 @@ namespace RouterServices
                     System.Diagnostics.EventLogEntryType.Error);
                 ServiceManager.LogEvent("Failed to start router service! Exception: " + ex, EventType.Error, EventSeverity.Critical);
 
-                throw new ApplicationException(ex.Message); // не даем стартовать сервису, если все так плохо
+                throw new ApplicationException(ex.Message);
             }
         }
 
@@ -86,11 +86,11 @@ namespace RouterServices
             EventLog.WriteEntry(e.Exception.ToString(), System.Diagnostics.EventLogEntryType.Error);
         }
 
-        //private void _Router_RouterCriticalError(object sender, Router.RouterCriticalErrorEventArgs e)
-        //{
-        //    EventLog.WriteEntry("Router service is being stopped due to exception: " + e.FiredException.ToString(), System.Diagnostics.EventLogEntryType.Error);
-        //    Stop();
-        //}
+        private void _Router_RouterCriticalError(object sender, Router.RouterCriticalErrorEventArgs e)
+        {
+            EventLog.WriteEntry("Router service is being stopped due to exception: " + e.FiredException.ToString(), System.Diagnostics.EventLogEntryType.Error);
+            Stop();
+        }
 
         /// <summary>
         /// Stop this service.

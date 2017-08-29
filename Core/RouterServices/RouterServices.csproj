@@ -8,8 +8,8 @@
     <ProjectGuid>{FDD065D7-6E55-4426-91E9-D26A4067337E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RouterService</RootNamespace>
-    <AssemblyName>RouterService</AssemblyName>
+    <RootNamespace>Cryptany.Core.Router.RouterService</RootNamespace>
+    <AssemblyName>Cryptany.Core.Router.RouterService</AssemblyName>
     <StartupObject>
     </StartupObject>
     <IsWebBootstrapper>true</IsWebBootstrapper>
@@ -111,17 +111,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\avant.core.management\Avant.Core.Management.csproj">
+    <ProjectReference Include="..\Cryptany.Core.Management\Cryptany.Core.Management.csproj">
       <Project>{C7652C3B-9F08-4020-B665-E1AA6137E148}</Project>
-      <Name>Avant.Core.Management</Name>
+      <Name>Cryptany.Core.Management</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Avant.Core.Services\Avant.Core.Services.csproj">
+    <ProjectReference Include="..\Cryptany.Core.Services\Cryptany.Core.Services.csproj">
       <Project>{90EFA82A-236E-422D-B78A-19E9BA84784E}</Project>
-      <Name>Avant.Core.Services</Name>
+      <Name>Cryptany.Core.Services</Name>
     </ProjectReference>
-    <ProjectReference Include="..\avantcore\avantCore.csproj">
+    <ProjectReference Include="..\Cryptany.Core\Cryptany.Core.csproj">
       <Project>{1FD7A2F6-70F8-4F79-A1EE-EBF9189053E4}</Project>
-      <Name>avantCore</Name>
+      <Name>Cryptany.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

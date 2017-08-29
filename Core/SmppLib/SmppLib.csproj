@@ -11,7 +11,7 @@
     </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>SmppLib</AssemblyName>
+    <AssemblyName>Cryptany.Core.SmppLib</AssemblyName>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
@@ -19,7 +19,7 @@
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>Library</OutputType>
-    <RootNamespace>SmppLib</RootNamespace>
+    <RootNamespace>Cryptany.Core.SmppLib</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject>
     </StartupObject>
@@ -115,14 +115,6 @@
     </Compile>
     <Compile Include="SmppPacket.cs" />
     <Compile Include="UnknownCommandException.cs" />
-    <None Include="avantCore.sln" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="PacketBase.cd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SmppPacket.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="UML\" />

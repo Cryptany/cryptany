@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Source>
+	<Entities><!--entitiesTagPath-->
+		<Answers>
+			<Answer id="abcdef01-0123-4567-8901-23456789abcd">
+				<Body>c1</Body>
+				<ContentTypeID>1</ContentTypeID>
+				<AnswerTypeID>1</AnswerTypeID>
+				<PosInCycle>5</PosInCycle>
+				<Rules>
+					<Item>1</Item>
+					<Item>2</Item>
+					<Item>3</Item>
+					<Item>4</Item>
+				</Rules>
+			</Answer>
+		</Answers>
+	</Entities>
+</Source>
