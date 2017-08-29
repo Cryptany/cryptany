@@ -8,7 +8,7 @@ using System.Net;
 using System.Text;
 using org.CyberPlat;
 using System.Web;
-using Avant.Monitoring;
+using Cryptany.Common.Monitoring;
 
 namespace CyberPlat
 {
@@ -74,7 +74,7 @@ namespace CyberPlat
             }
             catch (Exception ex)
             {
-                Functions.AddEvent("Ошибка при инициализации CyberPlatClient!", string.Format("CyberPlatClient!: [{0}]", ex.Message), EventType.Critical, null, ex);
+                Functions.AddEvent("Error initializing CyberPlatClient!", string.Format("CyberPlatClient!: [{0}]", ex.Message), EventType.Critical, null, ex);
                 throw;
             }
         }
@@ -138,7 +138,7 @@ namespace CyberPlat
             }
             catch (IPrivException ex)
             {
-                Functions.AddEvent("Ошибка при подписывании сообщения!", string.Format("Sign!: [{0}]", ex.Message), EventType.Critical, null, ex);
+                Functions.AddEvent("Error signing the message!", string.Format("Sign!: [{0}]", ex.Message), EventType.Critical, null, ex);
             }
             if (sec != null)
                 sec.closeKey();
@@ -153,13 +153,13 @@ namespace CyberPlat
             {
                 pub = IPriv.openPublicKey(PublicKey, Convert.ToUInt32(SerialNumber, 10));
                 pub.verifyText(message);
-                Functions.AddEvent("Подпись верна!",
+                Functions.AddEvent("Signature valid!",
                                 string.Format("VerifySign: [{0}]", message), EventType.Info);
                 res = true;
             }
             catch (IPrivException ex)
             {
-                Functions.AddEvent("Ошибка при проверке подписи!", string.Format("VerifySign!: [{0}]", ex.Message), EventType.Critical, null, ex);
+                Functions.AddEvent("Error during signature verification!", string.Format("VerifySign!: [{0}]", ex.Message), EventType.Critical, null, ex);
             }
             if (pub != null)
                 pub.closeKey();
@@ -175,7 +175,7 @@ namespace CyberPlat
             }
             catch (Exception ex)
             {
-                Functions.AddEvent("Ошибка при преобразовании данных!", string.Format("PrepareData!: [{0}]; data=[{1}]", ex.Message, data), EventType.Critical, null, ex);
+                Functions.AddEvent("Error transforming data!", string.Format("PrepareData!: [{0}]; data=[{1}]", ex.Message, data), EventType.Critical, null, ex);
             }
             return res;
         }
@@ -227,7 +227,7 @@ namespace CyberPlat
             }
             catch (Exception ex)
             {
-                Functions.AddEvent("Ошибка в методе Post!", string.Format("Post!: [{0}]; url=[{1}]; data=[{2}]", ex.Message, url, data), EventType.Critical, null, ex);
+                Functions.AddEvent("Error during Post request!", string.Format("Post!: [{0}]; url=[{1}]; data=[{2}]", ex.Message, url, data), EventType.Critical, null, ex);
             }
             return strReturn;
         }
