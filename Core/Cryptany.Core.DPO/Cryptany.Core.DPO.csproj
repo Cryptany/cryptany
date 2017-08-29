@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C929C53-F5FE-43C1-AE27-42D804BFDB0D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cryptany.Core.DPO</RootNamespace>
+    <AssemblyName>Cryptany.Core.DPO</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'x64|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter.cs" />
+    <Compile Include="Collections\TreeCollection.cs" />
+    <Compile Include="Configuration\Configuration.cs" />
+    <Compile Include="Configuration\EntityConfigurationError.cs" />
+    <Compile Include="Configuration\EntityAttributeConfiguration.cs" />
+    <Compile Include="Configuration\EntityConfiguration.cs" />
+    <Compile Include="Configuration\EntityPropertyConfiguration.cs" />
+    <Compile Include="EntityCollection.cs" />
+    <Compile Include="EntityList.cs" />
+    <Compile Include="FacadeBuilder.cs" />
+    <Compile Include="Indexes.cs" />
+    <Compile Include="MetaObjects\Attributes\AggregatedClassAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\CaptionAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\ClassCaptionAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\CustomObjectFactoryAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\DbSchema.cs" />
+    <Compile Include="MetaObjects\Attributes\DenyLoadAllOnGetByIdAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\EntityCacheTypeAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\GetByIdCommandAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\IdFieldAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\IdFieldNameAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\IdFieldTypeAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\ObligatoryFieldAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\ReadOnlyFieldAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\IntFieldConstraintAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\FieldNameAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\NonPersistentAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\RelationAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\InternalAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\TableAttribute.cs" />
+    <Compile Include="Cache.cs" />
+    <Compile Include="CachesContainer.cs" />
+    <Compile Include="ClassFactory.cs" />
+    <Compile Include="DataSet\DataSetLoader.cs" />
+    <Compile Include="DataSet\DataSetSaver.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="EntityCache.cs" />
+    <Compile Include="ICache.cs" />
+    <Compile Include="IConnection.cs" />
+    <Compile Include="IDataSetSaver.cs" />
+    <Compile Include="IEntity.cs" />
+    <Compile Include="IEntityCache.cs" />
+    <Compile Include="ILoader.cs" />
+    <Compile Include="ITransaction.cs" />
+    <Compile Include="Mapper.cs" />
+    <Compile Include="MetaObjects\Attributes\VirtualObjectAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\WrappedClassAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\Wrapping\EncapsulatedClassesAttribute.cs" />
+    <Compile Include="MetaObjects\Attributes\Wrapping\WrappedClassAttribute.cs" />
+    <Compile Include="DataSet\WrappedPropertyAttribute.cs" />
+    <Compile Include="MetaObjects\DefaultObjectFactory.cs" />
+    <Compile Include="MetaObjects\DynamicEntityBuilder.cs" />
+    <Compile Include="MetaObjects\DynamicEntityBuilding\DynamicEntityAttributeDescription.cs" />
+    <Compile Include="MetaObjects\DynamicEntityBuilding\DynamicEntityBuildingError.cs" />
+    <Compile Include="MetaObjects\DynamicEntityBuilding\DynamicEntityDescription.cs" />
+    <Compile Include="MetaObjects\DynamicEntityBuilding\DynamicEntityPropertyDescription.cs" />
+    <Compile Include="MetaObjects\InstanceDescription.cs" />
+    <Compile Include="MetaObjects\InstancePropertyDescription.cs" />
+    <Compile Include="MetaObjects\IObjectFactory.cs" />
+    <Compile Include="MetaObjects\IWrapObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetaObjects\ObjectDescription.cs" />
+    <Compile Include="MetaObjects\ObjectFactoryDescription.cs" />
+    <Compile Include="MetaObjects\PropertyDescription.cs" />
+    <Compile Include="MetaObjects\PropertyDescriptionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersistentStorage.cs" />
+    <Compile Include="Predicates\Predicates.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Sql\MsSqlDataLoader.cs" />
+    <Compile Include="Sql\MsSqlDataSaver.cs" />
+    <Compile Include="Sql\SqlScriptBuilder.cs" />
+    <Compile Include="StorageAccessMediator.cs" />
+    <Compile Include="StringCaseInsensitiveComparer.cs" />
+    <Compile Include="Predicates\Xml\XmlDataLoader.cs" />
+    <Compile Include="Predicates\Xml\XmlDataSaver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configuration\config sample 1.dpo-config.xml" />
+    <Content Include="MetaObjects\DynamicEntityBuilding\config sample 1.dpo-config.xml" />
+    <Content Include="Predicates\Xml\sample.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PersistentStorage\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

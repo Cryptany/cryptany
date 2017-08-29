@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Cryptany.Core.DPO.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CompositeChannel_Attributes_Table" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Channels,ServiceID,ConditionOperation.Equals,11561D42-3C46-4FDA-B415-8CC8FC8C8DEC</Value>
+    </Setting>
+    <Setting Name="QuizChannel_Attribures_Table" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Channels,ServiceID,ConditionOperation.Equals,253B0FD6-B864-4CCC-BC96-29F129393971</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

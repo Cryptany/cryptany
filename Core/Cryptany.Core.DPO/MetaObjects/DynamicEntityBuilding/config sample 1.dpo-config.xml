@@ -1,0 +1,38 @@
+﻿<config>
+  <entities>
+    <entity name="TvadChannel">
+      <metaatttibutes>
+        <DbSchema>services</DbSchema>
+        <Table>
+          <Name>Channels</Name>
+          <Filter>
+            <FiledName>ServiceId</FiledName>
+            <Predicate>IN</Predicate>
+            <Value>{guid1}</Value>
+            <Value>{guidN}</Value>
+          </Filter>
+        </Table>
+        <Scheme>services</Scheme>
+      </metaatttibutes>
+      <attributes>
+        <IdAttribute>
+          <Name>NOTID</Name>
+          <Caption>ID YES</Caption>
+          <EditControl>
+            <Assembly>.\assmname.dll</Assembly>
+            <Class name="mynamespace.megaoontrols.supercontrols"/>
+          </EditControl>
+        </IdAttribute>
+        <attribute name="Name">
+          <FiledName>Name0</FiledName>
+        </attribute>
+        <attribute name="AnswerMaps">
+          <Hide/>
+        </attribute>
+      </attributes>
+    </entity>
+  </entities>
+  <editor>
+    <ShowIdField value="true"/>
+  </editor>
+</config>
