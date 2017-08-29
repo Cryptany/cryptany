@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TransportModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="TransportModelStoreContainer">
+          <EntitySet Name="RegionsToMacroRegions" EntityType="TransportModel.Store.RegionsToMacroRegions" store:Type="Tables" Schema="kernel" />
+          <EntitySet Name="ServiceNumbers" EntityType="TransportModel.Store.ServiceNumbers" store:Type="Tables" Schema="kernel" />
+          <EntitySet Name="SMSC" EntityType="TransportModel.Store.SMSC" store:Type="Tables" Schema="kernel" />
+          <EntitySet Name="SMSCSettings" EntityType="TransportModel.Store.SMSCSettings" store:Type="Tables" Schema="kernel" />
+          <EntitySet Name="Tariff" EntityType="TransportModel.Store.Tariff" store:Type="Tables" Schema="kernel" />
+          <EntitySet Name="ContragentResources" EntityType="TransportModel.Store.ContragentResources" store:Type="Tables" Schema="management" />
+          <EntitySet Name="CheckType" EntityType="TransportModel.Store.CheckType" store:Type="Tables" Schema="transport" />
+          <EntitySet Name="ParameterType" EntityType="TransportModel.Store.ParameterType" store:Type="Tables" Schema="transport" />
+          <EntitySet Name="RegionsToRegionGroup" EntityType="TransportModel.Store.RegionsToRegionGroup" store:Type="Tables" Schema="transport" />
+          <EntitySet Name="ServiceGroup" EntityType="TransportModel.Store.ServiceGroup" store:Type="Tables" Schema="transport" />
+          <EntitySet Name="ServiceGroupRule" EntityType="TransportModel.Store.ServiceGroupRule" store:Type="Tables" Schema="transport" />
+          <EntitySet Name="SmscToServiceGroup" EntityType="TransportModel.Store.SmscToServiceGroup" store:Type="Tables" Schema="transport" />
+          <AssociationSet Name="FK_ServiceGroupRule_CheckType_Id" Association="TransportModel.Store.FK_ServiceGroupRule_CheckType_Id">
+            <End Role="CheckType" EntitySet="CheckType" />
+            <End Role="ServiceGroupRule" EntitySet="ServiceGroupRule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceGroupRule_ParameterType_Id" Association="TransportModel.Store.FK_ServiceGroupRule_ParameterType_Id">
+            <End Role="ParameterType" EntitySet="ParameterType" />
+            <End Role="ServiceGroupRule" EntitySet="ServiceGroupRule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceGroupRule_ServiceGroup_Id" Association="TransportModel.Store.FK_ServiceGroupRule_ServiceGroup_Id">
+            <End Role="ServiceGroup" EntitySet="ServiceGroup" />
+            <End Role="ServiceGroupRule" EntitySet="ServiceGroupRule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SMSCSettings_SMSC" Association="TransportModel.Store.FK_SMSCSettings_SMSC">
+            <End Role="SMSC" EntitySet="SMSC" />
+            <End Role="SMSCSettings" EntitySet="SMSCSettings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SmscToServiceGroup_ServiceGroup_Id" Association="TransportModel.Store.FK_SmscToServiceGroup_ServiceGroup_Id">
+            <End Role="ServiceGroup" EntitySet="ServiceGroup" />
+            <End Role="SmscToServiceGroup" EntitySet="SmscToServiceGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SmscToServiceGroup_SMSC_Id" Association="TransportModel.Store.FK_SmscToServiceGroup_SMSC_Id">
+            <End Role="SMSC" EntitySet="SMSC" />
+            <End Role="SmscToServiceGroup" EntitySet="SmscToServiceGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tariff_ServiceNumbers_ServiceNumberId" Association="TransportModel.Store.FK_Tariff_ServiceNumbers_ServiceNumberId">
+            <End Role="ServiceNumbers" EntitySet="ServiceNumbers" />
+            <End Role="Tariff" EntitySet="Tariff" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="RegionsToMacroRegions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RegionId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MacroRegionId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OperatorBrandId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServiceNumbers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SMSC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Code" Type="int" />
+          <Property Name="ContactTech" Type="nvarchar(max)" />
+          <Property Name="ContactHelpdesk" Type="nvarchar(max)" />
+          <Property Name="ContactManager" Type="nvarchar(max)" />
+          <Property Name="EmergencyPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDelimited" Type="bit" Nullable="false" />
+          <Property Name="Delimiter" Type="char" MaxLength="1" />
+          <Property Name="ServiceId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="SMSCSettings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SMSCId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ProtocolType" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SMPP" Type="xml" />
+          <Property Name="HTTP" Type="xml" />
+          <Property Name="Settings" Type="xml" />
+          <Property Name="ManagerClass" Type="varchar" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="Tariff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OperatorId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ServiceNumberId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TarifficationType" Type="tinyint" Nullable="false" />
+          <Property Name="OperatorParameters" Type="varchar" MaxLength="255" />
+          <Property Name="CurrencyId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ContragentResources">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ContragentId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Alias" Type="nvarchar" MaxLength="50" />
+          <Property Name="URL" Type="varchar" MaxLength="256" />
+          <Property Name="type" Type="tinyint" Nullable="false" />
+          <Property Name="IsTemplate" Type="bit" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ResourceCode" Type="int" />
+          <Property Name="HasDownloadTemplate" Type="bit" Nullable="false" />
+          <Property Name="DownloadTemplateURL" Type="nvarchar" MaxLength="500" />
+          <Property Name="isActive" Type="bit" Nullable="false" />
+          <Property Name="isUSSD" Type="bit" Nullable="false" />
+          <Property Name="DownloadTemplateTarget" Type="bigint" />
+          <Property Name="Code" Type="varchar" MaxLength="50" />
+          <Property Name="ReleaseDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CheckType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ParameterType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="RegionsToRegionGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RegionGroupId" Type="uniqueidentifier" />
+          <Property Name="RegionId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="ServiceGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ServiceGroupRule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ServiceGroupId" Type="uniqueidentifier" />
+          <Property Name="ParameterTypeId" Type="uniqueidentifier" />
+          <Property Name="CheckTypeId" Type="uniqueidentifier" />
+          <Property Name="Value" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="SmscToServiceGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ServiceGroupId" Type="uniqueidentifier" />
+          <Property Name="SmscId" Type="uniqueidentifier" />
+        </EntityType>
+        <Association Name="FK_ServiceGroupRule_CheckType_Id">
+          <End Role="CheckType" Type="TransportModel.Store.CheckType" Multiplicity="0..1" />
+          <End Role="ServiceGroupRule" Type="TransportModel.Store.ServiceGroupRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CheckType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceGroupRule">
+              <PropertyRef Name="CheckTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceGroupRule_ParameterType_Id">
+          <End Role="ParameterType" Type="TransportModel.Store.ParameterType" Multiplicity="0..1" />
+          <End Role="ServiceGroupRule" Type="TransportModel.Store.ServiceGroupRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParameterType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceGroupRule">
+              <PropertyRef Name="ParameterTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceGroupRule_ServiceGroup_Id">
+          <End Role="ServiceGroup" Type="TransportModel.Store.ServiceGroup" Multiplicity="0..1" />
+          <End Role="ServiceGroupRule" Type="TransportModel.Store.ServiceGroupRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceGroupRule">
+              <PropertyRef Name="ServiceGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SMSCSettings_SMSC">
+          <End Role="SMSC" Type="TransportModel.Store.SMSC" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SMSCSettings" Type="TransportModel.Store.SMSCSettings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SMSC">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SMSCSettings">
+              <PropertyRef Name="SMSCId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SmscToServiceGroup_ServiceGroup_Id">
+          <End Role="ServiceGroup" Type="TransportModel.Store.ServiceGroup" Multiplicity="0..1" />
+          <End Role="SmscToServiceGroup" Type="TransportModel.Store.SmscToServiceGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SmscToServiceGroup">
+              <PropertyRef Name="ServiceGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SmscToServiceGroup_SMSC_Id">
+          <End Role="SMSC" Type="TransportModel.Store.SMSC" Multiplicity="0..1" />
+          <End Role="SmscToServiceGroup" Type="TransportModel.Store.SmscToServiceGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SMSC">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SmscToServiceGroup">
+              <PropertyRef Name="SmscId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tariff_ServiceNumbers_ServiceNumberId">
+          <End Role="ServiceNumbers" Type="TransportModel.Store.ServiceNumbers" Multiplicity="1" />
+          <End Role="Tariff" Type="TransportModel.Store.Tariff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceNumbers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tariff">
+              <PropertyRef Name="ServiceNumberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetOperatorBrandByMSISDN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="kernel">
+          <Parameter Name="msisdn" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetRusDEFCodesWithBrands" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="transport" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TransportModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="TransportEntities" annotation:LazyLoadingEnabled="true" a:TypeAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <EntitySet Name="ServiceNumber" EntityType="TransportModel.ServiceNumber" />
+          <EntitySet Name="SMSC" EntityType="TransportModel.SMSC" />
+          <EntitySet Name="SMSCSettings" EntityType="TransportModel.SMSCSettings" />
+          <EntitySet Name="Tariff" EntityType="TransportModel.Tariff" />
+          <EntitySet Name="ContragentResource" EntityType="TransportModel.ContragentResource" />
+          <EntitySet Name="ParameterType" EntityType="TransportModel.ParameterType" />
+          <EntitySet Name="ServiceGroup" EntityType="TransportModel.ServiceGroup" />
+          <EntitySet Name="ServiceGroupRule" EntityType="TransportModel.ServiceGroupRule" />
+          <EntitySet Name="SmscToServiceGroup" EntityType="TransportModel.SmscToServiceGroup" />
+          <AssociationSet Name="FK_Tariff_ServiceNumbers_ServiceNumberId" Association="TransportModel.FK_Tariff_ServiceNumbers_ServiceNumberId">
+            <End Role="ServiceNumbers" EntitySet="ServiceNumber" />
+            <End Role="Tariff" EntitySet="Tariff" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SMSCSettings_SMSC" Association="TransportModel.FK_SMSCSettings_SMSC">
+            <End Role="SMSC" EntitySet="SMSC" />
+            <End Role="SMSCSettings" EntitySet="SMSCSettings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SmscToServiceGroup_SMSC_Id" Association="TransportModel.FK_SmscToServiceGroup_SMSC_Id">
+            <End Role="SMSC" EntitySet="SMSC" />
+            <End Role="SmscToServiceGroup" EntitySet="SmscToServiceGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceGroupRule_ParameterType_Id" Association="TransportModel.FK_ServiceGroupRule_ParameterType_Id">
+            <End Role="ParameterType" EntitySet="ParameterType" />
+            <End Role="ServiceGroupRule" EntitySet="ServiceGroupRule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceGroupRule_ServiceGroup_Id" Association="TransportModel.FK_ServiceGroupRule_ServiceGroup_Id">
+            <End Role="ServiceGroup" EntitySet="ServiceGroup" />
+            <End Role="ServiceGroupRule" EntitySet="ServiceGroupRule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SmscToServiceGroup_ServiceGroup_Id" Association="TransportModel.FK_SmscToServiceGroup_ServiceGroup_Id">
+            <End Role="ServiceGroup" EntitySet="ServiceGroup" />
+            <End Role="SmscToServiceGroup" EntitySet="SmscToServiceGroup" />
+          </AssociationSet>
+          <EntitySet Name="CheckType" EntityType="TransportModel.CheckType" />
+          <AssociationSet Name="FK_ServiceGroupRule_CheckType_Id" Association="TransportModel.FK_ServiceGroupRule_CheckType_Id">
+            <End Role="CheckType" EntitySet="CheckType" />
+            <End Role="ServiceGroupRule" EntitySet="ServiceGroupRule" />
+          </AssociationSet>
+          <FunctionImport Name="GetDefCodes" ReturnType="Collection(TransportModel.DEFCode)" />
+          <EntitySet Name="RegionsToMacroRegions" EntityType="TransportModel.RegionsToMacroRegions" />
+          <EntitySet Name="RegionsToRegionGroup" EntityType="TransportModel.RegionsToRegionGroup" />
+          </EntityContainer>
+        <EntityType Name="ServiceNumber">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="SN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SMSC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Code" Type="Int32" />
+          <Property Name="ContactTech" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ContactHelpdesk" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ContactManager" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="EmergencyPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsDelimited" Type="Boolean" Nullable="false" />
+          <Property Name="Delimiter" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="ServiceId" Type="Guid" />
+        </EntityType>
+        <EntityType Name="SMSCSettings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="SMSCId" Type="Guid" Nullable="false" />
+          <Property Name="ProtocolType" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="SMPP" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="HTTP" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Settings" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ManagerClass" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="SMSC" Relationship="TransportModel.FK_SMSCSettings_SMSC" FromRole="SMSCSettings" ToRole="SMSC" />
+        </EntityType>
+        <EntityType Name="Tariff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="OperatorId" Type="Guid" Nullable="false" />
+          <Property Name="ServiceNumberId" Type="Guid" Nullable="false" />
+          <Property Name="TarifficationType" Type="Byte" Nullable="false" />
+          <Property Name="OperatorParameters" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="CurrencyId" Type="Guid" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="StartDate" Type="DateTime" />
+          <Property Name="EndDate" Type="DateTime" />
+          <Property Name="IsActive" Type="Boolean" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="ContragentResource">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContragentId" Type="Guid" Nullable="false" />
+          <Property Name="Alias" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="URL" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+          <Property Name="type" Type="Byte" Nullable="false" />
+          <Property Name="IsTemplate" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ResourceCode" Type="Int32" />
+          <Property Name="HasDownloadTemplate" Type="Boolean" Nullable="false" />
+          <Property Name="DownloadTemplateURL" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="isActive" Type="Boolean" Nullable="false" />
+          <Property Name="isUSSD" Type="Boolean" Nullable="false" />
+          <Property Name="DownloadTemplateTarget" Type="Int64" />
+          <Property Name="Code" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ReleaseDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="ParameterType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ServiceGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ServiceGroupRule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ServiceGroupId" Type="Guid" />
+          <Property Name="ParameterTypeId" Type="Guid" />
+          <Property Name="CheckTypeId" Type="Guid" />
+          <Property Name="Value" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SmscToServiceGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ServiceGroupId" Type="Guid" />
+          <Property Name="SmscId" Type="Guid" />
+          <NavigationProperty Name="SMSC" Relationship="TransportModel.FK_SmscToServiceGroup_SMSC_Id" FromRole="SmscToServiceGroup" ToRole="SMSC" />
+          <NavigationProperty Name="ServiceGroup" Relationship="TransportModel.FK_SmscToServiceGroup_ServiceGroup_Id" FromRole="SmscToServiceGroup" ToRole="ServiceGroup" />
+        </EntityType>
+        <Association Name="FK_Tariff_ServiceNumbers_ServiceNumberId">
+          <End Role="ServiceNumbers" Type="TransportModel.ServiceNumber" Multiplicity="1" />
+          <End Role="Tariff" Type="TransportModel.Tariff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceNumbers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tariff">
+              <PropertyRef Name="ServiceNumberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SMSCSettings_SMSC">
+          <End Role="SMSC" Type="TransportModel.SMSC" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="SMSCSettings" Type="TransportModel.SMSCSettings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SMSC">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SMSCSettings">
+              <PropertyRef Name="SMSCId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SmscToServiceGroup_SMSC_Id">
+          <End Role="SMSC" Type="TransportModel.SMSC" Multiplicity="0..1" />
+          <End Role="SmscToServiceGroup" Type="TransportModel.SmscToServiceGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SMSC">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SmscToServiceGroup">
+              <PropertyRef Name="SmscId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceGroupRule_ParameterType_Id">
+          <End Role="ParameterType" Type="TransportModel.ParameterType" Multiplicity="0..1" />
+          <End Role="ServiceGroupRule" Type="TransportModel.ServiceGroupRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParameterType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceGroupRule">
+              <PropertyRef Name="ParameterTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceGroupRule_ServiceGroup_Id">
+          <End Role="ServiceGroup" Type="TransportModel.ServiceGroup" Multiplicity="0..1" />
+          <End Role="ServiceGroupRule" Type="TransportModel.ServiceGroupRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceGroupRule">
+              <PropertyRef Name="ServiceGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SmscToServiceGroup_ServiceGroup_Id">
+          <End Role="ServiceGroup" Type="TransportModel.ServiceGroup" Multiplicity="0..1" />
+          <End Role="SmscToServiceGroup" Type="TransportModel.SmscToServiceGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceGroup">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SmscToServiceGroup">
+              <PropertyRef Name="ServiceGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CheckType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_ServiceGroupRule_CheckType_Id">
+          <End Type="TransportModel.CheckType" Role="CheckType" Multiplicity="0..1" />
+          <End Type="TransportModel.ServiceGroupRule" Role="ServiceGroupRule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CheckType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceGroupRule">
+              <PropertyRef Name="CheckTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="DEFCode">
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="RegionId" Nullable="true" />
+          <Property Type="Int32" Name="DEF" Nullable="true" />
+          <Property Type="Int64" Name="RangeStart" Nullable="true" />
+          <Property Type="Int64" Name="RangeEnd" Nullable="true" />
+          <Property Type="Guid" Name="OperatorId" Nullable="true" />
+          <Property Type="Int32" Name="ChangeType" Nullable="true" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="true" Precision="23" />
+          <Property Type="Guid" Name="brandId" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="RegionsToMacroRegions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="RegionId" Nullable="false" />
+          <Property Type="Guid" Name="MacroRegionId" Nullable="false" />
+          <Property Type="Guid" Name="OperatorBrandId" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RegionsToRegionGroup">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="RegionGroupId" />
+          <Property Type="Guid" Name="RegionId" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TransportModelStoreContainer" CdmEntityContainer="TransportEntities">
+          <EntitySetMapping Name="ServiceNumber"><EntityTypeMapping TypeName="TransportModel.ServiceNumber"><MappingFragment StoreEntitySet="ServiceNumbers">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="SN" ColumnName="SN" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SMSC"><EntityTypeMapping TypeName="TransportModel.SMSC"><MappingFragment StoreEntitySet="SMSC">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+            <ScalarProperty Name="ContactTech" ColumnName="ContactTech" />
+            <ScalarProperty Name="ContactHelpdesk" ColumnName="ContactHelpdesk" />
+            <ScalarProperty Name="ContactManager" ColumnName="ContactManager" />
+            <ScalarProperty Name="EmergencyPhone" ColumnName="EmergencyPhone" />
+            <ScalarProperty Name="IsDelimited" ColumnName="IsDelimited" />
+            <ScalarProperty Name="Delimiter" ColumnName="Delimiter" />
+            <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SMSCSettings"><EntityTypeMapping TypeName="TransportModel.SMSCSettings"><MappingFragment StoreEntitySet="SMSCSettings">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="SMSCId" ColumnName="SMSCId" />
+            <ScalarProperty Name="ProtocolType" ColumnName="ProtocolType" />
+            <ScalarProperty Name="SMPP" ColumnName="SMPP" />
+            <ScalarProperty Name="HTTP" ColumnName="HTTP" />
+            <ScalarProperty Name="Settings" ColumnName="Settings" />
+            <ScalarProperty Name="ManagerClass" ColumnName="ManagerClass" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tariff"><EntityTypeMapping TypeName="TransportModel.Tariff"><MappingFragment StoreEntitySet="Tariff">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+            <ScalarProperty Name="ServiceNumberId" ColumnName="ServiceNumberId" />
+            <ScalarProperty Name="TarifficationType" ColumnName="TarifficationType" />
+            <ScalarProperty Name="OperatorParameters" ColumnName="OperatorParameters" />
+            <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+            <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+            <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContragentResource"><EntityTypeMapping TypeName="TransportModel.ContragentResource"><MappingFragment StoreEntitySet="ContragentResources">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="ContragentId" ColumnName="ContragentId" />
+            <ScalarProperty Name="Alias" ColumnName="Alias" />
+            <ScalarProperty Name="URL" ColumnName="URL" />
+            <ScalarProperty Name="type" ColumnName="type" />
+            <ScalarProperty Name="IsTemplate" ColumnName="IsTemplate" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="ResourceCode" ColumnName="ResourceCode" />
+            <ScalarProperty Name="HasDownloadTemplate" ColumnName="HasDownloadTemplate" />
+            <ScalarProperty Name="DownloadTemplateURL" ColumnName="DownloadTemplateURL" />
+            <ScalarProperty Name="isActive" ColumnName="isActive" />
+            <ScalarProperty Name="isUSSD" ColumnName="isUSSD" />
+            <ScalarProperty Name="DownloadTemplateTarget" ColumnName="DownloadTemplateTarget" />
+            <ScalarProperty Name="Code" ColumnName="Code" />
+            <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ParameterType"><EntityTypeMapping TypeName="TransportModel.ParameterType"><MappingFragment StoreEntitySet="ParameterType">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServiceGroup"><EntityTypeMapping TypeName="TransportModel.ServiceGroup"><MappingFragment StoreEntitySet="ServiceGroup">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServiceGroupRule"><EntityTypeMapping TypeName="TransportModel.ServiceGroupRule"><MappingFragment StoreEntitySet="ServiceGroupRule">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ServiceGroupId" ColumnName="ServiceGroupId" />
+            <ScalarProperty Name="ParameterTypeId" ColumnName="ParameterTypeId" />
+            <ScalarProperty Name="CheckTypeId" ColumnName="CheckTypeId" />
+            <ScalarProperty Name="Value" ColumnName="Value" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SmscToServiceGroup"><EntityTypeMapping TypeName="TransportModel.SmscToServiceGroup"><MappingFragment StoreEntitySet="SmscToServiceGroup">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ServiceGroupId" ColumnName="ServiceGroupId" />
+            <ScalarProperty Name="SmscId" ColumnName="SmscId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CheckType">
+            <EntityTypeMapping TypeName="TransportModel.CheckType">
+              <MappingFragment StoreEntitySet="CheckType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetDefCodes" FunctionName="TransportModel.Store.GetRusDEFCodesWithBrands">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TransportModel.DEFCode">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="DEF" ColumnName="DEF" />
+                <ScalarProperty Name="RangeStart" ColumnName="RangeStart" />
+                <ScalarProperty Name="RangeEnd" ColumnName="RangeEnd" />
+                <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+                <ScalarProperty Name="ChangeType" ColumnName="ChangeType" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="brandId" ColumnName="brandId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="RegionsToMacroRegions">
+            <EntityTypeMapping TypeName="TransportModel.RegionsToMacroRegions">
+              <MappingFragment StoreEntitySet="RegionsToMacroRegions">
+                <ScalarProperty Name="OperatorBrandId" ColumnName="OperatorBrandId" />
+                <ScalarProperty Name="MacroRegionId" ColumnName="MacroRegionId" />
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegionsToRegionGroup">
+            <EntityTypeMapping TypeName="TransportModel.RegionsToRegionGroup">
+              <MappingFragment StoreEntitySet="RegionsToRegionGroup">
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="RegionGroupId" ColumnName="RegionGroupId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="TransportModel" ZoomLevel="83">
+        <EntityTypeShape EntityType="TransportModel.ServiceNumber" Width="1.5" PointX="9.875" PointY="2.375" Height="1.4033821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.SMSC" Width="1.5" PointX="3.125" PointY="7.25" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.SMSCSettings" Width="1.5" PointX="5.375" PointY="7.375" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.Tariff" Width="1.5" PointX="9.875" PointY="4.875" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.ContragentResource" Width="1.5" PointX="7.75" PointY="3.375" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.ParameterType" Width="1.5" PointX="3.25" PointY="1.75" Height="1.4033821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.ServiceGroup" Width="1.75" PointX="0.875" PointY="4" Height="1.4233821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.ServiceGroupRule" Width="1.75" PointX="3.125" PointY="3.875" Height="1.9802864583333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="TransportModel.SmscToServiceGroup" Width="1.5" PointX="0.75" PointY="7.5" Height="1.9802864583333317" IsExpanded="true" />
+        <AssociationConnector Association="TransportModel.FK_Tariff_ServiceNumbers_ServiceNumberId" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.625" PointY="3.7783821614583331" />
+          <ConnectorPoint PointX="10.625" PointY="4.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TransportModel.FK_SMSCSettings_SMSC" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.625" PointY="8.6535953776041659" />
+          <ConnectorPoint PointX="5.375" PointY="8.6535953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="TransportModel.FK_SmscToServiceGroup_SMSC_Id" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.125" PointY="8.4901432291666659" />
+          <ConnectorPoint PointX="2.25" PointY="8.4901432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="TransportModel.FK_ServiceGroupRule_ParameterType_Id" ManuallyRouted="false">
+          <ConnectorPoint PointX="4" PointY="3.1533821614583331" />
+          <ConnectorPoint PointX="4" PointY="3.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="TransportModel.FK_ServiceGroupRule_ServiceGroup_Id" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.625" PointY="4.7116910807291665" />
+          <ConnectorPoint PointX="3.125" PointY="4.7116910807291665" />
+        </AssociationConnector>
+        <AssociationConnector Association="TransportModel.FK_SmscToServiceGroup_ServiceGroup_Id" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5625" PointY="5.4233821614583331" />
+          <ConnectorPoint PointX="1.5625" PointY="7.5" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TransportModel.CheckType" Width="1.5" PointX="5.375" PointY="4.75" Height="1.4033821614583326" />
+        <AssociationConnector Association="TransportModel.FK_ServiceGroupRule_CheckType_Id" >
+          <ConnectorPoint PointX="5.375" PointY="5.3026432291666659" />
+          <ConnectorPoint PointX="4.875" PointY="5.3026432291666659" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="TransportModel.RegionsToMacroRegions" Width="1.5" PointX="7.75" PointY="8.25" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="TransportModel.RegionsToRegionGroup" Width="1.5" PointX="9.875" PointY="8.25" Height="1.5956835937500031" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
