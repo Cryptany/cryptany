@@ -1,10 +1,10 @@
 using System;
 
-namespace avantMobile.Settings
+namespace Cryptany.Core.Settings
 {
 
 	/// <summary>
-	/// »сключение. —видетельствует о том, что не удалось преобразовать данные из строкового представление в какое-либо другое.
+	/// Exception when it will be some conversion error
 	/// </summary>
 	[global::System.Serializable]
 	public class ConvertFromStringException : Exception
@@ -17,24 +17,24 @@ namespace avantMobile.Settings
 		//
 
 		/// <summary>
-		///  онструктор по умолчанию
+		/// Default constructor
 		/// </summary>
 		public ConvertFromStringException() { }
 
 		/// <summary>
-		///  онструктор принимающий определ€емое пользователем сообщение
+		/// User-defined message constructor
 		/// </summary>
 		/// <param name="message"></param>
 		public ConvertFromStringException(string message) : base(message) { }
 
 		/// <summary>
-		///  онструктор принимающий определ€емое пользователем сообщение и внутреннее исключение.
+		/// User-define message and inner exception constructor
 		/// </summary>
 		/// <param name="message"></param>
 		/// <param name="inner"></param>
 		public ConvertFromStringException(string message, Exception inner) : base(message, inner) { }
 		/// <summary>
-		/// ≈дЄ один унаследованный конструктор. —м. описание System.Exception
+		/// Serializing constructor, derived from System.Exception
 		/// </summary>
 		/// <param name="info"></param>
 		/// <param name="context"></param>

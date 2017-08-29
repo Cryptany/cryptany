@@ -8,7 +8,7 @@
     <ProjectGuid>{1EDA6189-6195-492C-8B2F-609DDCD95FF3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>avantMobile.Settings</RootNamespace>
+    <RootNamespace>Cryptany.Common.Settings</RootNamespace>
     <AssemblyName>Settings</AssemblyName>
     <SccProjectName>
     </SccProjectName>

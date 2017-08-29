@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace avantMobile.Settings.Properties {
+namespace Cryptany.Common.Settings.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

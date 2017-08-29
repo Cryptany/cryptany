@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace avantMobile.Settings
+namespace Cryptany.Common.Settings
 {
 	/// <summary>
-	/// Интерфейс провайдера настроек.
+	/// Interface for settings provider.
 	/// </summary>
 	public interface ISettingsProvider : IDisposable
 	{
 		/// <summary>
-		/// Обеспечивает доступ к значению по указанному ключу. Get/set
+		/// Indexed access method. Get/set
 		/// </summary>
 		/// <param name="key"></param>
 		/// <returns></returns>
@@ -21,11 +21,12 @@ namespace avantMobile.Settings
 		}
        
 		/// <summary>
-		/// Заново загружает значения из источника данных. Вся несохранённая информация будет потеряна
+		/// Reloads data from data source. All unsaved data will be lost!
 		/// </summary>
 		void Reload();
+
 		/// <summary>
-		/// Сохраняет сделанные изменения.
+		/// Saves modified data
 		/// </summary>
 		void Save();
 

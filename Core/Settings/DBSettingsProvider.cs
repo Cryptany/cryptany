@@ -3,25 +3,24 @@ using Avant.Common.Utils;
 using System;
 using System.Configuration;
 
-namespace avantMobile.Settings
+namespace Cryptany.Common.Settings
 {
 
 	/// <summary>
-	/// Провайдер настроек использующий для хранения данных базу данных.
-	/// <see cref="avantMobile.Settings.AbstractSettingsProvider"/>
+	/// Database-sourced settings provider.
+	/// <see cref="Cryptany.Common.Settings.AbstractSettingsProvider"/>
 	/// </summary>
 	public class DBSettingsProvider : AbstractSettingsProvider
 	{
 		
 		/// <summary>
-		/// Конструктор, просто конструктор.
+		/// Default constructor
 		/// </summary>
 		public DBSettingsProvider() 
 		{ }
 
 		/// <summary>
-		/// Тоже просто конструктор. Параметр не используется. 
-		/// Данный конструктор нужен для корректной отработки 
+		/// Constructor with not used parameter just to implement
 		/// SettingsProviderFactory.DefaultSettingsProvider
 		/// </summary>
 		/// <param name="source"></param>
@@ -31,7 +30,7 @@ namespace avantMobile.Settings
 
 		
 		/// <summary>
-		/// Загружает данные из базы
+		/// Loads settings data from database
 		/// </summary>
 		protected override void LoadSettings()
 		{
@@ -49,7 +48,7 @@ namespace avantMobile.Settings
 
                     using (SqlDataReader sdr = cmd.ExecuteReader())
                     {
-                        if (sdr == null) throw new ApplicationException("Невозможно загрузить глобальные настройки из базы.");
+                        if (sdr == null) throw new ApplicationException("Cannot load global settings from database.");
                         int ikey = sdr.GetOrdinal("key");
                         int ivalue = sdr.GetOrdinal("value");
                         int itype = sdr.GetOrdinal("type");
@@ -69,54 +68,54 @@ namespace avantMobile.Settings
 		}
 
 		/// <summary>
-		/// Сохраняет данные в базу.
-		/// Пока не работает.
+		/// Saves data to database
 		/// </summary>
 		protected override void SaveSettings()
 		{
-			/*using( SqlConnection con = DBHelper.Connection )
+			using( SqlConnection con = DBHelper.Connection )
 			{
 				ClearTable(con);
 
 				StoreData(con);
-			}*/
+			}
 		}
 
-        //private void StoreData(SqlConnection con)
-        //{
-        //    DataTable tbl = new DataTable("common.Settings");
-        //    tbl.Columns.Add("key", typeof(string));
-        //    tbl.Columns.Add("value", typeof(string));
-        //    tbl.Columns.Add("type", typeof(string));
+		/// <summary>
+		/// Internal saving method
+		/// </summary>
+		private void StoreData(SqlConnection con)
+        {
+            DataTable tbl = new DataTable("common.Settings");
+            tbl.Columns.Add("key", typeof(string));
+            tbl.Columns.Add("value", typeof(string));
+            tbl.Columns.Add("type", typeof(string));
 
-        //    foreach (string key in _InternalCollection.Keys)
-        //    {
-        //        object[] rowValues = new object[3];
-        //        rowValues[0] = key;
-        //        rowValues[1] = _InternalCollection[key].ToString();
-        //        rowValues[2] = _InternalCollection[key].GetType().ToString();
-        //        tbl.Rows.Add(rowValues);
-        //    }
+            foreach (string key in _InternalCollection.Keys)
+            {
+                object[] rowValues = new object[3];
+                rowValues[0] = key;
+                rowValues[1] = _InternalCollection[key].ToString();
+                rowValues[2] = _InternalCollection[key].GetType().ToString();
+                tbl.Rows.Add(rowValues);
+            }
 
-        //    SqlBulkCopy bcpy = new SqlBulkCopy(con);
-        //    bcpy.BatchSize = 30;
-        //    bcpy.DestinationTableName = "common.Settings";
-        //    bcpy.ColumnMappings.Add(0, 1);
-        //    bcpy.ColumnMappings.Add(1, 2);
-        //    bcpy.ColumnMappings.Add(2, 3);
-        //    bcpy.WriteToServer(tbl);
-        //}
+            SqlBulkCopy bcpy = new SqlBulkCopy(con);
+            bcpy.BatchSize = 30;
+            bcpy.DestinationTableName = "common.Settings";
+            bcpy.ColumnMappings.Add(0, 1);
+            bcpy.ColumnMappings.Add(1, 2);
+            bcpy.ColumnMappings.Add(2, 3);
+            bcpy.WriteToServer(tbl);
+        }
 
-        //private void ClearTable(SqlConnection con)
-        //{
-        //    string delQuery = Properties.Settings.Default.DBSettingsProviderDelAllQuery;
-        //    using (SqlCommand cmd = new SqlCommand(delQuery, con))
-        //    {
-        //        cmd.ExecuteNonQuery();
-        //    }
-        //}
-
-	
+        private void ClearTable(SqlConnection con)
+        {
+            string delQuery = Properties.Settings.Default.DBSettingsProviderDelAllQuery;
+            using (SqlCommand cmd = new SqlCommand(delQuery, con))
+            {
+                cmd.ExecuteNonQuery();
+            }
+        }
 	}
 	
 }

@@ -2,7 +2,7 @@ using System.Diagnostics;
 using System.ServiceProcess;
 using System;
 
-namespace RouterServices
+namespace Cryptany.Router.RouterServices
 {
     internal class RouterLoader
     {

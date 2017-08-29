@@ -4,10 +4,9 @@ using System.Text;
 using System.Reflection;
 using System.Configuration;
 using System.Diagnostics;
-namespace avantMobile.Settings
+
+namespace Cryptany.Common.Settings
 {
-
-
 	/// <summary>
 	/// Класс предоставляет доступ к единственной копии провейдера настроек по-умолчанию.
 	/// </summary>
@@ -25,8 +24,6 @@ namespace avantMobile.Settings
 		{
 			get
 			{
-				//try
-				//{
 					if (_SettingsProvider == null)
 					{
 						object[] args = new object[1];
@@ -38,12 +35,10 @@ namespace avantMobile.Settings
                         {
                             object tmpResult = Assembly.GetAssembly(Type.GetType(ClassName)).CreateInstance(ClassName,
                                                                                                             false,
-                                                                                                            BindingFlags
-                                                                                                                .
+                                                                                                            BindingFlags.
                                                                                                                 CreateInstance,
                                                                                                             null, args,
-                                                                                                            System.
-                                                                                                                Globalization
+                                                                                                            System.Globalization
                                                                                                                 .
                                                                                                                 CultureInfo
                                                                                                                 .
@@ -54,19 +49,13 @@ namespace avantMobile.Settings
                         catch (Exception ex)
 					    {
                             if (!IsLoaded)
-					            EventLog.WriteEntry("Application", "Невозможно создать экземпляр класса " + ClassName + ": " + ex , EventLogEntryType.Error);
+					            EventLog.WriteEntry("Application", "Unable to create class instance " + ClassName + ": " + ex , EventLogEntryType.Error);
 					    }
 					    
 					}
                     IsLoaded = true;
 					return _SettingsProvider;
-                //}
-                //catch (Exception ex)
-                //{
-                //    Trace.WriteLine(ex, DateTime.Now.ToLongTimeString());
-                //}
-
-				//return null;
+                }
 			}
 		}
 

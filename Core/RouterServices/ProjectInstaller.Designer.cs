@@ -1,4 +1,4 @@
-namespace RouterServices
+namespace Cryptany.Router.RouterServices
 {
 	partial class ProjectInstaller
 	{
@@ -69,8 +69,8 @@ namespace RouterServices
             // serviceInstaller_main
             // 
             this.serviceInstaller_main.Description = "Router main input queue service";
-            this.serviceInstaller_main.DisplayName = "Avant.RouterMainService";
-            this.serviceInstaller_main.ServiceName = "Avant.RouterMainService";
+            this.serviceInstaller_main.DisplayName = "Cryptany.Router.RouterMainService";
+            this.serviceInstaller_main.ServiceName = "Cryptany.Router.RouterMainService";
             this.serviceInstaller_main.ServicesDependedOn = new string[] {
         "MSMQ",
         "MSMQTriggers"};

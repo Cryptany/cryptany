@@ -2,19 +2,16 @@ using System;
 using System.Messaging;
 using System.Threading;
 using System.ServiceProcess;
-using Avant.Core.Management;
-using avantMobile.Logging;
-using avantMobile.Settings;
+using Cryptany.Core.Management;
+using Cryptany.Common.Logging;
+using Cryptany.Common.Settings;
 
-namespace RouterServices
+namespace Cryptany.Core.Router.RouterServices
 {
     ///<summary>
     ///</summary>
     public partial class RouterMainService : ServiceBase
     {
-        
-
-        
         private AutoResetEvent stopPeekEvent;
 
         private AutoResetEvent stopPeekCompleteEvent;
@@ -74,26 +71,26 @@ namespace RouterServices
 
         protected override void OnStart(string[] args)
         {
-            //try
-            //{
+            try
+            {
                 
-            //    EventLog.WriteEntry("Starting router main service.", System.Diagnostics.EventLogEntryType.Information);
+                EventLog.WriteEntry("Starting router main service.", System.Diagnostics.EventLogEntryType.Information);
                
-            //    stopPeekEvent = new AutoResetEvent(false);
-            //    stopPeekCompleteEvent = new AutoResetEvent(false);
-            //    // Start main message input queue processing 
-            //    MainInputSMSQueue = ServicesConfigurationManager.MainInputSMSQueue;
-            //    MainInputSMSQueue.ReceiveCompleted += MainInputSMSQueue_ReceiveCompleted;
-            //    MainInputSMSQueue.BeginReceive();
-            //    EventLog.WriteEntry("Router main service has started.", System.Diagnostics.EventLogEntryType.Information);
+                stopPeekEvent = new AutoResetEvent(false);
+                stopPeekCompleteEvent = new AutoResetEvent(false);
+                // Start main message input queue processing 
+                MainInputSMSQueue = ServicesConfigurationManager.MainInputSMSQueue;
+                MainInputSMSQueue.ReceiveCompleted += MainInputSMSQueue_ReceiveCompleted;
+                MainInputSMSQueue.BeginReceive();
+                EventLog.WriteEntry("Router main service has started.", System.Diagnostics.EventLogEntryType.Information);
                                
-            //}
-            //catch (Exception ex)
-            //{
-            //    EventLog.WriteEntry("Failed to start router main service! Exception: " + ex,
-            //                        System.Diagnostics.EventLogEntryType.Error);
+            }
+            catch (Exception ex)
+            {
+                EventLog.WriteEntry("Failed to start router main service! Exception: " + ex,
+                                    System.Diagnostics.EventLogEntryType.Error);
                
-            //}
+            }
         }
 
         /// <summary>
@@ -103,42 +100,42 @@ namespace RouterServices
         /// <param name="e"></param>
         void MainInputSMSQueue_ReceiveCompleted(object sender, ReceiveCompletedEventArgs e)
         {
-            //MessageQueue mq = sender as MessageQueue;
-            //try
-            //{
-            //    if (mq != null)
-            //    {
-            //        Message queueMsg = mq.EndReceive(e.AsyncResult);
-            //        if (queueMsg == null)
-            //        {
-            //            EventLog.WriteEntry("Router main service failed to recieve message.",
-            //                                System.Diagnostics.EventLogEntryType.Error);
-            //        }
-            //        else
-            //        {
-            //            avantMobile.avantCore.Message message = (avantMobile.avantCore.Message) queueMsg.Body;
-            //            // Распределить сообщение из общей входящей очереди в отдельную входящую очередь конкретного роутера
-            //            MessageQueue InputSMSQueue = ServicesConfigurationManager.GetInputSMSQueue(RouterIndex++);
-            //            InputSMSQueue.Send(message);
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    EventLog.WriteEntry("Exception in Router main service while trying to process message!" + ex,
-            //                        System.Diagnostics.EventLogEntryType.Error);
-            //}
-            //finally
-            //{
-            //    if (mq != null) mq.BeginReceive();
-            //}
+            MessageQueue mq = sender as MessageQueue;
+            try
+            {
+                if (mq != null)
+                {
+                    Message queueMsg = mq.EndReceive(e.AsyncResult);
+                    if (queueMsg == null)
+                    {
+                        EventLog.WriteEntry("Router main service failed to recieve message.",
+                                            System.Diagnostics.EventLogEntryType.Error);
+                    }
+                    else
+                    {
+                        Cryptany.Core.Message message = (Cryptany.Core.Message) queueMsg.Body;
+                        // Distribute message from common queue to separate router queue
+                        MessageQueue InputSMSQueue = ServicesConfigurationManager.GetInputSMSQueue(RouterIndex++);
+                        InputSMSQueue.Send(message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                EventLog.WriteEntry("Exception in Router main service while trying to process message!" + ex,
+                                    System.Diagnostics.EventLogEntryType.Error);
+            }
+            finally
+            {
+                if (mq != null) mq.BeginReceive();
+            }
         }
 
         protected override void OnStop()
         {
             try
             {
-                // Для удаленной отладки может быть использовано
+                // For remote debugging, use
                 // Thread.Sleep(new TimeSpan(0, 0, 25));
                 EventLog.WriteEntry("Stopping router main service.", System.Diagnostics.EventLogEntryType.Information);
                 

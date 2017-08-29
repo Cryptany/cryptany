@@ -4,25 +4,25 @@ using System.Text;
 using System.Xml;
 using System.Diagnostics;
 
-namespace avantMobile.Settings
+namespace Cryptany.Common.Settings
 {
 	/// <summary>
-	/// Провайдер настроек использующий для получения/сохранения данных XML файл.
-	/// <see cref="avantMobile.Settings.AbstractSettingsProvider"/>
+	/// Setting provider that uses XML file for stroing/retrieving settings data
+	/// <see cref="Cryptany.Common.Settings.AbstractSettingsProvider"/>
 	/// </summary>
 	public class XMLSettingsProvider : AbstractSettingsProvider
 	{
 		/// <summary>
-		/// Конструктор в качестве параметра принимает путь к XML файлу.
+		/// Construstor takes XML filename as param
 		/// </summary>
-		/// <param name="source"></param>
+		/// <param name="source">Full filename of XML file with settings</param>
 		public XMLSettingsProvider(string source)
 			: base(source) 
 		{ }
 
 
 		/// <summary>
-		/// Загружает настройки
+		/// Load settings from XML file
 		/// </summary>
 		protected override void LoadSettings()
 		{
@@ -40,7 +40,7 @@ namespace avantMobile.Settings
 		}
 
 		/// <summary>
-		/// Сохраняет настройки
+		/// Saves settings to XML file
 		/// </summary>
 		protected override void SaveSettings()
 		{
