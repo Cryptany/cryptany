@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Cryptany.Core.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CryptanyCore_AggregatorWebService_Aggregator" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:3326/Aggregation/Aggregator.asmx</Value>
+    </Setting>
+    <Setting Name="CryptanyCore_AggregationClientWS_MessageReceiver" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:1933/AggregationClient/MessageReceiver.asmx</Value>
+    </Setting>
+    <Setting Name="CryptanyCore_AggregationClient_MessageReceiver" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:3483/AggregationClient/MessageReceiver.asmx</Value>
+    </Setting>
+    <Setting Name="MSG_WrongDataItemFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Неверный формат данных. Не удаётся преобразовать данные к требуемому типу.</Value>
+    </Setting>
+    <Setting Name="MSG_WrongNumberOfRulesDataItems" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Неверное количество элементов RuleData для данного типа правила.</Value>
+    </Setting>
+    <Setting Name="CryptanyCore_ru_mobster_dev_subscriptions" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dev.mobster.ru/dev/footballws/subscriptions.asmx</Value>
+    </Setting>
+    <Setting Name="LinkToContentMessage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Spasibo za pokupku! Skachaite vash zakaz zdes': </Value>
+    </Setting>
+    <Setting Name="CryptanyCore_MtClubSubsbriptions_wsSubscriptions" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://devsvr2/dev/foundation3/subscriptions/wssubscriptions.asmx</Value>
+    </Setting>
+    <Setting Name="CryptanyCore_MtClubSubsbriptions_wsSubscriptions_temp" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://devsvr2/dev/foundation3/subscriptions/wssubscriptions.asmx</Value>
+    </Setting>
+    <Setting Name="CryptanyCore_ru_mobster_dl2_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dl2.mobster.ru/ContentLinkWS/Service.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
