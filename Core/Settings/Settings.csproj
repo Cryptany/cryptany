@@ -8,8 +8,8 @@
     <ProjectGuid>{1EDA6189-6195-492C-8B2F-609DDCD95FF3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>avantMobile.Settings</RootNamespace>
-    <AssemblyName>Settings</AssemblyName>
+    <RootNamespace>Cryptany.Common.Settings</RootNamespace>
+    <AssemblyName>Cryptany.Common.Settings</AssemblyName>
     <SccProjectName>
     </SccProjectName>
     <SccLocalPath>
@@ -37,7 +37,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>\\dev\common dlls\</OutputPath>
+    <OutputPath>\bin\Release</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -83,7 +83,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommonUtils\CommonUtils.csproj">
+    <ProjectReference Include="..\Cryptany.Common.Utils\CommonUtils.csproj">
       <Project>{7E31C002-96F3-4500-8A94-17CA32115B7F}</Project>
       <Name>CommonUtils</Name>
     </ProjectReference>

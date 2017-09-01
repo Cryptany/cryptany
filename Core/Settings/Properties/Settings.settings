@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="avantMobile.Settings.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Cryptany.Common.Settings.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="DBSettingsProviderSelectQuery" Type="System.String" Scope="Application">

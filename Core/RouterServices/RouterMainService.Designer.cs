@@ -1,4 +1,4 @@
-namespace RouterServices
+namespace Cryptany.Core.Router.RouterServices
 {
     public partial class RouterMainService
     {
@@ -31,7 +31,7 @@ namespace RouterServices
             // 
             // RouterMainService
             // 
-            this.ServiceName = "Avant.RouterMainService";
+            this.ServiceName = "Cryptany.Core.Router.RouterMainService";
 
         }
 

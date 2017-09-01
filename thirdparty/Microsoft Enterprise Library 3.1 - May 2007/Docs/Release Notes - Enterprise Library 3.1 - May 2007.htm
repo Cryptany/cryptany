@@ -1,0 +1,261 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>Enterprise Library 3.1 Release Notes</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Batang";
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	line-height:30.0pt;
+	text-autospace:none;
+	font-size:30.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:17.0pt;
+	margin-right:0in;
+	margin-bottom:1.0pt;
+	margin-left:0in;
+	line-height:19.0pt;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:17.0pt;
+	font-family:"Arial","sans-serif";}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman","serif";
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"Document Map Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Arial","sans-serif";}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Arial","sans-serif";
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Arial","sans-serif";
+	font-weight:bold;}
+span.DocumentMapChar
+	{mso-style-name:"Document Map Char";
+	mso-style-link:"Document Map";
+	font-family:"Tahoma","sans-serif";}
+p.ppBodyText, li.ppBodyText, div.ppBodyText
+	{mso-style-name:"pp Body Text";
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+p.ppBodyTextIndent, li.ppBodyTextIndent, div.ppBodyTextIndent
+	{mso-style-name:"pp Body Text Indent";
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.0in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+p.ppBodyTextIndent2, li.ppBodyTextIndent2, div.ppBodyTextIndent2
+	{mso-style-name:"pp Body Text Indent 2";
+	margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:1.5in;
+	margin-bottom:.0001pt;
+	text-indent:0in;
+	line-height:12.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Arial","sans-serif";
+	color:black;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Tahoma","sans-serif";}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	color:teal;}
+span.msoDel
+	{mso-style-name:"";
+	text-decoration:line-through;
+	color:red;}
+ /* Page Definitions */
+ @page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='text-justify-trim:punctuation'>
+
+<div class=Section1>
+
+<h1>Enterprise Library 3.1 – May 2007</h1>
+
+<h2>Release Notes</h2>
+
+<p class=ppBodyText style='text-indent:0in'>This document contains
+late-breaking information about Enterprise Library 3.1 – May 2007 that could
+not be included in the documentation. Any additional information and bug fixes
+that are delivered after the release date will be available on the <a
+href="http://go.microsoft.com/fwlink/?linkid=39209&amp;clcid=0x09">Enterprise
+Library Community</a> site and on the <a
+href="http://go.microsoft.com/fwlink/?LinkId=55978">team blogs</a>. </p>
+
+<p class=MsoNormal align=right style='margin-top:0in;margin-right:10.0pt;
+margin-bottom:0in;margin-left:10.0pt;margin-bottom:.0001pt;text-align:right;
+line-height:4.0pt'><span style='font-size:6.0pt'>  </span></p>
+
+<h2><a name=Intro>Known Issues</a></h2>
+
+<p class=ppBodyText style='text-indent:0in'>The following sections contain
+information about this release.</p>
+
+<h3>Pre-Requisites</h3>
+
+<p class=ppBodyText style='text-indent:0in'>In order to use the included
+Guidance Packages and the Visual Studio Configuration Editor, you should
+install <a
+href="http://www.microsoft.com/downloads/details.aspx?familyid=BB4A75AB-E2D4-4C96-B39D-37BAF6B5B1DC&amp;displaylang=en">Visual
+Studio 2005 Service Pack 1</a>. If you are using Windows Vista, you should also
+install <a
+href="http://www.microsoft.com/downloads/details.aspx?FamilyID=90E2942D-3AD1-4873-A2EE-4ACC0AACE5B6&amp;displaylang=en">Visual
+Studio 2005 Service Pack 1 Update for Windows Vista</a>. These updates address
+issues in Visual Studio 2005 that can impact the reliability of Enterprise
+Library features. </p>
+
+<h3>Core</h3>
+
+<p class=ppBodyText style='text-indent:0in'><b><i>Encrypting configuration
+using the RsaProtectedConfigurationProvider may fail under Windows Vista</i></b><i>.</i>
+If you use the configuration tool to specify that a configuration section
+should be encrypted using the <b>RsaProtectedConfigurationProvider</b> on a
+computer running on Windows Vista, you may receive an error such as “<i>An
+error occurred executing the configuration section handler for
+connectionStrings.Failed to encrypt the section 'connectionStrings' using
+provider 'RsaProtectedConfigurationProvider'. Error message from the provider:
+Object already exists</i>.” This error is returned from the .NET configuration
+system, and not from Enterprise Library code. At the time of writing, the cause
+and resolution are not known, however the issue has not been seen to occur when
+using the <b>DataProtectionConfigurationProvider</b>.</p>
+
+<h3>Data Access Application Block</h3>
+
+<p class=ppBodyText><b><i>Performance may suffer when executing large numbers
+of queries using the SqlCeDatabase</i></b><i>. </i>When processing more than
+150 queries in a batch, the <b>SqlCeDatabase</b> provider of the Data Access Application
+Block shows a significant response lag. To workaround this issue you can
+process the batch of queries by wrapping the batch in a transaction, creating a
+<b>SqlCeTransaction</b> instance, and passing this instance into each query in
+the batch. </p>
+
+<h3>QuickStarts</h3>
+
+<p class=ppBodyText style='text-indent:0in'><b><i>Some QuickStart Solutions
+cannot be opened from Windows Explorer</i></b><i>. </i>For some of the
+QuickStart sample applications, double-clicking the .sln files from Windows
+Explorer will not result in the solutions being opened in Visual Studio as
+expected.<i> </i>This is a problem caused by the use of non-standard file
+encoding in the solution files. To open this QuickStart applications, you
+should open Visual Studio and open the .sln files from the <b>Open Project/Solution</b>
+command.  </p>
+
+<h3>Strong Naming Guidance Package</h3>
+
+<p class=ppBodyText style='text-indent:0in'><b><i>Strong Naming Guidance Package
+may return errors during the first run</i></b><i>. </i>When running the “Strong-name
+all projects in this solution or solution folder” command and selecting the “Update
+InternalsVisibleTo” option, the operation may fail with an error “Value does
+not fall within expected range”. This error is intermittently raised by Visual
+Studio and returned to the guidance package. Running the same command a second
+time appears to resolve the issue.</p>
+
+</div>
+
+</body>
+
+</html>

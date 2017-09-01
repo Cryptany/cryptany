@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00000175-A25D-4451-A262-1ECE301B80B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cryptany.Core.Base</RootNamespace>
+    <AssemblyName>Cryptany.Core.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cryptany.Core.MsmqLog">
+      <HintPath>Cryptany.Core.MsmqLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Cryptany.Core">
+      <HintPath>Cryptany.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ContentDeliveryInterfaces">
+      <HintPath>\\dev\common dlls\ContentDeliveryInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Cryptany.Common.Settings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Cryptane.Common.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionExecuter.cs" />
+    <Compile Include="MacrosProcessors\AbstractProcessor.cs" />
+    <Compile Include="MacrosProcessors\ContentProcessorNew.cs" />
+    <Compile Include="MacrosProcessors\HelpDeskProcessor.cs" />
+    <Compile Include="MacrosProcessors\ServiceNumberProcessor.cs" />
+    <Compile Include="BalancingManager.cs" />
+    <Compile Include="Management\EventSeverity.cs" />
+    <Compile Include="Management\EventType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Management\ServiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cryptany.Core.DB\Cryptany.Core.DB.csproj">
+      <Project>{64FA234A-ABAE-4D11-9879-7449594D4970}</Project>
+      <Name>Cryptany.Core.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryptany.Common.Utils\Cryptany.Common.Utils.csproj">
+      <Project>{E5CFD439-8ABE-4B1B-B1EC-48E846B66CBC}</Project>
+      <Name>Cryptany.Common.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cryptany.Core.Interaction\Cryptany.Core.Interaction.csproj">
+      <Project>{E98F16D8-FA57-4C08-A0E4-5BC1A0E66DC8}</Project>
+      <Name>Cryptany.Core.Interaction</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

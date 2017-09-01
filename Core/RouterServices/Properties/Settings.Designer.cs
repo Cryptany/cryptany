@@ -8,9 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RouterService.Properties {
-    
-    
+namespace Cryptany.Core.Router.RouterService.Properties {
+        
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "10.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
@@ -25,10 +24,10 @@ namespace RouterService.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(".\\AvantDPOconfig.xml")]
-        public string AvantDPOconfigPath {
+        [global::System.Configuration.DefaultSettingValueAttribute(".\\CryptanyDPOconfig.xml")]
+        public string CryptanyDPOconfigPath {
             get {
-                return ((string)(this["AvantDPOconfigPath"]));
+                return ((string)(this["CryptanyDPOconfigPath"]));
             }
         }
     }

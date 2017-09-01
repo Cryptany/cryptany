@@ -1,0 +1,2 @@
+﻿; Lalala
+ErrDBrefNull=Database connection reference is null.

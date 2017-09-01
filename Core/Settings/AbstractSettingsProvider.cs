@@ -1,13 +1,29 @@
+/*
+   Copyright 2006-2017 Cryptany, Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
 using System.Diagnostics;
 
-namespace avantMobile.Settings
+namespace Cryptany.Common.Settings
 {
 	/// <summary>
-	/// Абстрактный класс обеспечивающий каркас для функционирования провайдера настроек.
+	/// Abstract class with basic functionality available for all derivatives.
 	/// </summary>
 	public abstract class AbstractSettingsProvider : ISettingsProvider
 	{
@@ -16,7 +32,7 @@ namespace avantMobile.Settings
 
 
 		/// <summary>
-		/// Конструктор по умолчанию. Вызывает LoadSettings()
+		/// Default constructor. Just calls LoadSettings()
 		/// </summary>
 		public AbstractSettingsProvider()
 		{
@@ -25,7 +41,7 @@ namespace avantMobile.Settings
 		}
 		
 		/// <summary>
-		/// Конструктор устанавливающий значение Source. Вызывает LoadSettings()
+		/// Constructor that sets Source. Calls LoadSettings()
 		/// </summary>
 		/// <param name="source"></param>
 		public AbstractSettingsProvider(string source)
@@ -37,12 +53,12 @@ namespace avantMobile.Settings
 		}
 
 		/// <summary>
-		/// Словарь содержащий пары ключ/значение.
+		/// Internal storage for settings.
 		/// </summary>
 		protected Dictionary<string, object> _InternalCollection;
 		
 		/// <summary>
-		/// Обеспечивает доступ к значению по указанному ключу. Get/set
+		/// Indexer for convenience. Get/set
 		/// </summary>
 		/// <param name="key"></param>
 		/// <returns></returns>
@@ -74,19 +90,19 @@ namespace avantMobile.Settings
         }
 
 	    /// <summary>
-		/// Загрузка настроек. Необходимо реализовать в подклассах.
+		/// Contract for Load settings.
 		/// </summary>
 		protected abstract void LoadSettings();
 		
 		/// <summary>
-		/// Сохранение настроек. Необходимо реализовать в подклассах.
+		/// Contract for Save settings
 		/// </summary>
 		protected abstract void SaveSettings();
 
 		private string _Source;
 
 		/// <summary>
-		/// Строка "Источник данных"
+		/// Name of settings Data source
 		/// </summary>
 		public string Source
 		{
@@ -97,7 +113,7 @@ namespace avantMobile.Settings
         private string _instance;
 
         /// <summary>
-        /// Строка "Источник данных"
+        /// Name of instrance of Data Source
         /// </summary>
         public string Instance
         {
@@ -110,7 +126,7 @@ namespace avantMobile.Settings
 		#region IDisposable Members
 
 		/// <summary>
-		/// см. IDisposable
+		/// ref. IDisposable
 		/// </summary>
 		public void Dispose()
 		{
@@ -123,7 +139,7 @@ namespace avantMobile.Settings
 		#region ISettingsProvider Members
 
 		/// <summary>
-		/// Очищает значения внутренней коллекции данных и заново загружает информацию.
+		/// Clears out internal collection and reload it from source
 		/// </summary>
 		public void Reload()
 		{
@@ -132,7 +148,7 @@ namespace avantMobile.Settings
 		}
 
 		/// <summary>
-		/// Сохраняет внесённые изменения.
+		/// Saves all changes settings.
 		/// </summary>
 		public void Save()
 		{
@@ -142,11 +158,11 @@ namespace avantMobile.Settings
 		#endregion
 
 		/// <summary>
-		/// Конвертит значение из строки в соответствующий тип.
-		/// <remarks>Может генерить исключние avantMobile.Settings.ConvertFromStringException в влучае неудачи.</remarks>
+		/// Converts value from string to required type.
+		/// <remarks>Throws Cryptany.Core.Settings.ConvertFromStringException</remarks>
 		/// </summary>
-		/// <param name="value">строковое представление данных</param>
-		/// <param name="typeName">тип, который будет получен на выходе</param>
+		/// <param name="value">String data representation</param>
+		/// <param name="typeName">Needed typename</param>
 		/// <returns></returns>
 		protected object ConvertFromString(string value, string typeName)
 		{
@@ -200,7 +216,6 @@ namespace avantMobile.Settings
 
 				Trace.WriteLine(errorDesc);
 				throw (new ConvertFromStringException(errorDesc, ex));
-
 			}
 
 			return tmpResult;

@@ -1,0 +1,24 @@
+﻿<config>
+	<Entities>
+		<Entity name="QuizChannel2">
+			<Attributes>
+				<Attribute name="Table" parameters="Channels,ServiceID,Equals,4ef2a218-38be-4ed4-a136-f615b7e46e4d"/>
+			</Attributes>
+		</Entity>
+		<Entity name="QuizChannel">
+			<Attributes>
+				<Attribute name="Table" parameters="Channels,ServiceID,Equals,4ef2a218-38be-4ed4-a136-f615b7e46e4d"/>
+			</Attributes>
+		</Entity>
+		<Entity name="TvadChannel">
+			<Attributes>
+				<Attribute name="Table" parameters="Channels,ServiceID,Equals,373c2a21-3be0-4dd3-b7d9-fbdc6dc5d765"/>
+			</Attributes>
+		</Entity>
+		<Entity name="VoteChannel">
+			<Attributes>
+				<Attribute name="Table" parameters="Channels,ServiceID,Equals,65fb33d2-3d39-409a-be80-a5ffdd89105c"/>
+			</Attributes>
+		</Entity>
+	</Entities>
+</config>
