@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28B76D29-A288-4A12-9096-8DAA7A353AEA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Avant.Core.Connectors</RootNamespace>
+    <AssemblyName>Avant.Core.Connectors</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'x64|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Utils\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Utils\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Utils\Microsoft Enterprise Library 3.1 - May 2007\Bin\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractConnector.cs" />
+    <Compile Include="AbstractConnectorSettings.cs" />
+    <Compile Include="AbstractMessageManager.cs" />
+    <Compile Include="HTTPConnectors.cs" />
+    <Compile Include="HTTPMessageManager.cs" />
+    <Compile Include="IMessageManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMPPConnectors.cs" />
+    <Compile Include="SMPPMessageManager.cs" />
+    <Compile Include="SMPPMessageManagerAsync.cs" />
+    <Compile Include="SMPPMessageManagerBeeline.cs" />
+    <Compile Include="SMPPMessageManagerBWC.cs" />
+    <Compile Include="SMPPMessageManagerMTS.cs" />
+    <Compile Include="SMPPMessageManagerPayloadSender.cs" />
+    <Compile Include="SMPPMessageManagerRTC.cs" />
+    <Compile Include="SMPPMessageManagerUSSD.cs" />
+    <Compile Include="SMPPMessageManagerVASMedia.cs" />
+    <Compile Include="SMPPUtils.cs" />
+    <Compile Include="SmscSettings.cs" />
+    <Compile Include="Tele2MessageManager.cs" />
+    <Compile Include="UDH Parser.cs" />
+    <Compile Include="HTTPMessageManagerInform.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Avant.ConfigOM\Avant.ConfigOM.csproj">
+      <Project>{4DFEF69A-B146-4B78-909D-CB8B2A29E329}</Project>
+      <Name>Avant.ConfigOM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.Caching\Avant.Core.Caching.csproj">
+      <Project>{D32B90E6-AFDD-409F-980A-7BEE94E1D245}</Project>
+      <Name>Avant.Core.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.Management.wmi\Avant.Core.Management.WMI.csproj">
+      <Project>{B0C6A1A2-9F7F-41D5-B279-AC91A0FA37B8}</Project>
+      <Name>Avant.Core.Management.WMI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.MsmqLog\Avant.Core.MsmqLog.csproj">
+      <Project>{A4195E02-6916-4B90-9067-566AB24E2526}</Project>
+      <Name>Avant.Core.MsmqLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.Interaction\Avant.Core.Interaction.csproj">
+      <Project>{E98F16D8-FA57-4C08-A0E4-5BC1A0E66DC8}</Project>
+      <Name>Avant.Core.Interaction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.Management\Avant.Core.Management.csproj">
+      <Project>{C7652C3B-9F08-4020-B665-E1AA6137E148}</Project>
+      <Name>Avant.Core.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.Services.Management\Avant.Core.Services.Management.csproj">
+      <Project>{85D20A7F-C121-4242-998B-35D196E77F87}</Project>
+      <Name>Avant.Core.Services.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.DPO\Avant.DPO.csproj">
+      <Project>{7C929C53-F5FE-43C1-AE27-42D804BFDB0D}</Project>
+      <Name>Avant.DPO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\avantcore\avantCore.csproj">
+      <Project>{1FD7A2F6-70F8-4F79-A1EE-EBF9189053E4}</Project>
+      <Name>avantCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CBGTarifficator\CBGTarifficator.csproj">
+      <Project>{0897CC87-9879-4265-AB25-ED24D7961CB9}</Project>
+      <Name>CBGTarifficator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonUtils\CommonUtils.csproj">
+      <Project>{7E31C002-96F3-4500-8A94-17CA32115B7F}</Project>
+      <Name>CommonUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoggingClassLibrary\Logging.csproj">
+      <Project>{E45340CA-AA2B-4256-88FB-428AA28EEF3F}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmppLib\SmppLib.csproj">
+      <Project>{E46315E1-C9A4-4208-B56C-CF4E0828593E}</Project>
+      <Name>SmppLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
