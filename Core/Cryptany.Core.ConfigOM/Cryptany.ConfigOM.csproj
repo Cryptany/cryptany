@@ -92,7 +92,6 @@
     <Compile Include="AnswerBlockType.cs" />
     <Compile Include="AnswerMap.cs" />
     <Compile Include="AnswerType.cs" />
-    <Compile Include="AvantikProject.cs" />
     <Compile Include="BlockedAbonentChannel.cs" />
     <Compile Include="CashChannel.cs" />
     <Compile Include="Chains.cs" />

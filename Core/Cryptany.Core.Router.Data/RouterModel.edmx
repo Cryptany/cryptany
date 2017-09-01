@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RouterModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RouterModelStoreContainer">
+          <EntitySet Name="ServiceNumbers" EntityType="RouterModel.Store.ServiceNumbers" store:Type="Tables" Schema="kernel" />
+          <EntitySet Name="Tariff" EntityType="RouterModel.Store.Tariff" store:Type="Tables" Schema="kernel" />
+          <EntitySet Name="Block" EntityType="RouterModel.Store.Block" store:Type="Tables" Schema="router" />
+          <EntitySet Name="BlockEntry" EntityType="RouterModel.Store.BlockEntry" store:Type="Tables" Schema="router" />
+          <EntitySet Name="BlockLink" EntityType="RouterModel.Store.BlockLink" store:Type="Tables" Schema="router" />
+          <EntitySet Name="BlockType" EntityType="RouterModel.Store.BlockType" store:Type="Tables" Schema="router" />
+          <EntitySet Name="Service" EntityType="RouterModel.Store.Service" store:Type="Tables" Schema="router" />
+          <EntitySet Name="ServiceBlock" EntityType="RouterModel.Store.ServiceBlock" store:Type="Tables" Schema="router" />
+          <EntitySet Name="ServiceType" EntityType="RouterModel.Store.ServiceType" store:Type="Tables" Schema="router" />
+          <EntitySet Name="Token" EntityType="RouterModel.Store.Token" store:Type="Tables" Schema="router" />
+          <EntitySet Name="TokenRegex" EntityType="RouterModel.Store.TokenRegex" store:Type="Tables" Schema="router" />
+          <AssociationSet Name="FK_Block_BlockType_BlockTypeId" Association="RouterModel.Store.FK_Block_BlockType_BlockTypeId">
+            <End Role="BlockType" EntitySet="BlockType" />
+            <End Role="Block" EntitySet="Block" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlocksToServiceBlocks_Block" Association="RouterModel.Store.FK_BlocksToServiceBlocks_Block">
+            <End Role="Block" EntitySet="Block" />
+            <End Role="BlockEntry" EntitySet="BlockEntry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlocksToServiceBlocks_BlockLink_ChildId" Association="RouterModel.Store.FK_BlocksToServiceBlocks_BlockLink_ChildId">
+            <End Role="BlockEntry" EntitySet="BlockEntry" />
+            <End Role="BlockLink" EntitySet="BlockLink" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlocksToServiceBlocks_BlockLink_ParentId" Association="RouterModel.Store.FK_BlocksToServiceBlocks_BlockLink_ParentId">
+            <End Role="BlockEntry" EntitySet="BlockEntry" />
+            <End Role="BlockLink" EntitySet="BlockLink" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlocksToServiceBlocks_ServiceBlock" Association="RouterModel.Store.FK_BlocksToServiceBlocks_ServiceBlock">
+            <End Role="ServiceBlock" EntitySet="ServiceBlock" />
+            <End Role="BlockEntry" EntitySet="BlockEntry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_Service_TokenId" Association="RouterModel.Store.FK_Service_Service_TokenId">
+            <End Role="Token" EntitySet="Token" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_ServiceTypeId" Association="RouterModel.Store.FK_Service_ServiceTypeId">
+            <End Role="ServiceType" EntitySet="ServiceType" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceBlock_Service_ServiceId" Association="RouterModel.Store.FK_ServiceBlock_Service_ServiceId">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="ServiceBlock" EntitySet="ServiceBlock" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tariff_ServiceNumbers_ServiceNumberId" Association="RouterModel.Store.FK_Tariff_ServiceNumbers_ServiceNumberId">
+            <End Role="ServiceNumbers" EntitySet="ServiceNumbers" />
+            <End Role="Tariff" EntitySet="Tariff" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TokenRegex_TokenId" Association="RouterModel.Store.FK_TokenRegex_TokenId">
+            <End Role="Token" EntitySet="Token" />
+            <End Role="TokenRegex" EntitySet="TokenRegex" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ServiceNumbers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SN" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tariff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OperatorId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ServiceNumberId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TarifficationType" Type="tinyint" Nullable="false" />
+          <Property Name="OperatorParameters" Type="varchar" MaxLength="255" />
+          <Property Name="CurrencyId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="IsActive" Type="bit" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Block">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="BlockTypeId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Settings" Type="xml" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlockEntry">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ServiceBlockId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BlockId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="IsVerification" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlockLink">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ParentId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ChildId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Kind" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlockType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="ServiceNumberId" Type="uniqueidentifier" />
+          <Property Name="ServiceTypeId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="State" Type="int" Nullable="false" />
+          <Property Name="TokenId" Type="uniqueidentifier" />
+          <Property Name="LastModifier" Type="nvarchar" MaxLength="255" />
+          <Property Name="ModifyDate" Type="date" />
+        </EntityType>
+        <EntityType Name="ServiceBlock">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+          <Property Name="ServiceId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServiceType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Token">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TokenRegex">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TokenId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Regex" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="TokenText" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK_Block_BlockType_BlockTypeId">
+          <End Role="BlockType" Type="RouterModel.Store.BlockType" Multiplicity="1" />
+          <End Role="Block" Type="RouterModel.Store.Block" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlockType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Block">
+              <PropertyRef Name="BlockTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlocksToServiceBlocks_Block">
+          <End Role="Block" Type="RouterModel.Store.Block" Multiplicity="1" />
+          <End Role="BlockEntry" Type="RouterModel.Store.BlockEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Block">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BlockEntry">
+              <PropertyRef Name="BlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlocksToServiceBlocks_BlockLink_ChildId">
+          <End Role="BlockEntry" Type="RouterModel.Store.BlockEntry" Multiplicity="1" />
+          <End Role="BlockLink" Type="RouterModel.Store.BlockLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlockEntry">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BlockLink">
+              <PropertyRef Name="ChildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlocksToServiceBlocks_BlockLink_ParentId">
+          <End Role="BlockEntry" Type="RouterModel.Store.BlockEntry" Multiplicity="1" />
+          <End Role="BlockLink" Type="RouterModel.Store.BlockLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlockEntry">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BlockLink">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlocksToServiceBlocks_ServiceBlock">
+          <End Role="ServiceBlock" Type="RouterModel.Store.ServiceBlock" Multiplicity="1" />
+          <End Role="BlockEntry" Type="RouterModel.Store.BlockEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceBlock">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BlockEntry">
+              <PropertyRef Name="ServiceBlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_Service_TokenId">
+          <End Role="Token" Type="RouterModel.Store.Token" Multiplicity="0..1" />
+          <End Role="Service" Type="RouterModel.Store.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Token">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="TokenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_ServiceTypeId">
+          <End Role="ServiceType" Type="RouterModel.Store.ServiceType" Multiplicity="1" />
+          <End Role="Service" Type="RouterModel.Store.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="ServiceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceBlock_Service_ServiceId">
+          <End Role="Service" Type="RouterModel.Store.Service" Multiplicity="1" />
+          <End Role="ServiceBlock" Type="RouterModel.Store.ServiceBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceBlock">
+              <PropertyRef Name="ServiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tariff_ServiceNumbers_ServiceNumberId">
+          <End Role="ServiceNumbers" Type="RouterModel.Store.ServiceNumbers" Multiplicity="1" />
+          <End Role="Tariff" Type="RouterModel.Store.Tariff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceNumbers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tariff">
+              <PropertyRef Name="ServiceNumberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TokenRegex_TokenId">
+          <End Role="Token" Type="RouterModel.Store.Token" Multiplicity="1" />
+          <End Role="TokenRegex" Type="RouterModel.Store.TokenRegex" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Token">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TokenRegex">
+              <PropertyRef Name="TokenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RouterModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="Block" EntityType="RouterModel.Block" />
+          <EntitySet Name="BlockEntry" EntityType="RouterModel.BlockEntry" />
+          <EntitySet Name="BlockLink" EntityType="RouterModel.BlockLink" />
+          <EntitySet Name="BlockType" EntityType="RouterModel.BlockType" />
+          <EntitySet Name="Service" EntityType="RouterModel.TVService" />
+          <EntitySet Name="ServiceBlock" EntityType="RouterModel.ServiceBlock" />
+          <EntitySet Name="ServiceType" EntityType="RouterModel.ServiceType" />
+          <AssociationSet Name="FK_Block_BlockType_BlockTypeId" Association="RouterModel.FK_Block_BlockType_BlockTypeId">
+            <End Role="BlockType" EntitySet="BlockType" />
+            <End Role="Block" EntitySet="Block" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlocksToServiceBlocks_Block" Association="RouterModel.FK_BlocksToServiceBlocks_Block">
+            <End Role="Block" EntitySet="Block" />
+            <End Role="BlockEntry" EntitySet="BlockEntry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlocksToServiceBlocks_BlockLink_ChildId" Association="RouterModel.FK_BlocksToServiceBlocks_BlockLink_ChildId">
+            <End Role="BlockEntry" EntitySet="BlockEntry" />
+            <End Role="BlockLink" EntitySet="BlockLink" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlocksToServiceBlocks_BlockLink_ParentId" Association="RouterModel.FK_BlocksToServiceBlocks_BlockLink_ParentId">
+            <End Role="BlockEntry" EntitySet="BlockEntry" />
+            <End Role="BlockLink" EntitySet="BlockLink" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BlocksToServiceBlocks_ServiceBlock" Association="RouterModel.FK_BlocksToServiceBlocks_ServiceBlock">
+            <End Role="ServiceBlock" EntitySet="ServiceBlock" />
+            <End Role="BlockEntry" EntitySet="BlockEntry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_ServiceType_ServiceTypeId" Association="RouterModel.FK_Service_ServiceType_ServiceTypeId">
+            <End Role="ServiceType" EntitySet="ServiceType" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceBlock_Service_ServiceId" Association="RouterModel.FK_ServiceBlock_Service_ServiceId">
+            <End Role="Service" EntitySet="Service" />
+            <End Role="ServiceBlock" EntitySet="ServiceBlock" />
+          </AssociationSet>
+          <EntitySet Name="Tariff" EntityType="RouterModel.Tariff" />
+          <EntitySet Name="ServiceNumbers" EntityType="RouterModel.ServiceNumber" />
+          <AssociationSet Name="FK_Service_ServiceNumbers_ServiceNumberId" Association="RouterModel.FK_Service_ServiceNumbers_ServiceNumberId">
+            <End Role="ServiceNumbers" EntitySet="ServiceNumbers" />
+            <End Role="TVService" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tariff_ServiceNumbers_ServiceNumberId" Association="RouterModel.FK_Tariff_ServiceNumbers_ServiceNumberId">
+            <End Role="ServiceNumbers" EntitySet="ServiceNumbers" />
+            <End Role="Tariff" EntitySet="Tariff" />
+          </AssociationSet>
+          <EntitySet Name="Token" EntityType="RouterModel.Token" />
+          <EntitySet Name="TokenRegex" EntityType="RouterModel.TokenRegex" />
+          <AssociationSet Name="FK_Service_Service_TokenId" Association="RouterModel.FK_Service_Service_TokenId">
+            <End Role="Token" EntitySet="Token" />
+            <End Role="TVService" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TokenRegex_TokenId" Association="RouterModel.FK_TokenRegex_TokenId">
+            <End Role="Token" EntitySet="Token" />
+            <End Role="TokenRegex" EntitySet="TokenRegex" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Block">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="BlockTypeId" Type="Guid" Nullable="false" />
+          <Property Name="Settings" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="BlockEntry">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ServiceBlockId" Type="Guid" Nullable="false" />
+          <Property Name="BlockId" Type="Guid" Nullable="false" />
+          <Property Name="IsVerification" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlockLink">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ParentId" Type="Guid" Nullable="false" />
+          <Property Name="ChildId" Type="Guid" Nullable="false" />
+          <Property Name="Kind" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BlockType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TVService">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ServiceTypeId" Type="Guid" Nullable="false" />
+          <Property Type="Guid" Name="ServiceNumberId" />
+          <Property Type="Int32" Name="State" Nullable="false" />
+          <Property Type="Guid" Name="TokenId" />
+          <Property Type="String" Name="LastModifier" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ModifyDate" />
+          <NavigationProperty Name="Token" Relationship="RouterModel.FK_Service_Service_TokenId" FromRole="TVService" ToRole="Token" />
+        </EntityType>
+        <EntityType Name="ServiceBlock">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="ServiceId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServiceType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Block_BlockType_BlockTypeId">
+          <End Role="BlockType" Type="RouterModel.BlockType" Multiplicity="1" />
+          <End Role="Block" Type="RouterModel.Block" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlockType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Block">
+              <PropertyRef Name="BlockTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlocksToServiceBlocks_Block">
+          <End Role="Block" Type="RouterModel.Block" Multiplicity="1" />
+          <End Role="BlockEntry" Type="RouterModel.BlockEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Block">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BlockEntry">
+              <PropertyRef Name="BlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlocksToServiceBlocks_BlockLink_ChildId">
+          <End Role="BlockEntry" Type="RouterModel.BlockEntry" Multiplicity="1" />
+          <End Role="BlockLink" Type="RouterModel.BlockLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlockEntry">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BlockLink">
+              <PropertyRef Name="ChildId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlocksToServiceBlocks_BlockLink_ParentId">
+          <End Role="BlockEntry" Type="RouterModel.BlockEntry" Multiplicity="1" />
+          <End Role="BlockLink" Type="RouterModel.BlockLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BlockEntry">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BlockLink">
+              <PropertyRef Name="ParentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BlocksToServiceBlocks_ServiceBlock">
+          <End Role="ServiceBlock" Type="RouterModel.ServiceBlock" Multiplicity="1" />
+          <End Role="BlockEntry" Type="RouterModel.BlockEntry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceBlock">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BlockEntry">
+              <PropertyRef Name="ServiceBlockId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_ServiceType_ServiceTypeId">
+          <End Role="ServiceType" Type="RouterModel.ServiceType" Multiplicity="1" />
+          <End Role="Service" Type="RouterModel.TVService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="ServiceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceBlock_Service_ServiceId">
+          <End Role="Service" Type="RouterModel.TVService" Multiplicity="1" />
+          <End Role="ServiceBlock" Type="RouterModel.ServiceBlock" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Service">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceBlock">
+              <PropertyRef Name="ServiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Tariff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="OperatorId" Nullable="false" />
+          <Property Type="Guid" Name="ServiceNumberId" Nullable="false" />
+          <Property Type="Byte" Name="TarifficationType" Nullable="false" />
+          <Property Type="String" Name="OperatorParameters" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="CurrencyId" Nullable="false" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="StartDate" />
+          <Property Type="DateTime" Name="EndDate" />
+          <Property Type="Boolean" Name="IsActive" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+        </EntityType>
+        <EntityType Name="ServiceNumber">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="SN" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Service_ServiceNumbers_ServiceNumberId">
+          <End Type="RouterModel.ServiceNumber" Role="ServiceNumbers" Multiplicity="0..1" />
+          <End Type="RouterModel.TVService" Role="TVService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceNumbers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TVService">
+              <PropertyRef Name="ServiceNumberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tariff_ServiceNumbers_ServiceNumberId">
+          <End Type="RouterModel.ServiceNumber" Role="ServiceNumbers" Multiplicity="1" />
+          <End Type="RouterModel.Tariff" Role="Tariff" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceNumbers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tariff">
+              <PropertyRef Name="ServiceNumberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Token">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          </EntityType>
+        <EntityType Name="TokenRegex">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="TokenId" Nullable="false" />
+          <Property Type="String" Name="Regex" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TokenText" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Service_Service_TokenId">
+          <End Type="RouterModel.Token" Role="Token" Multiplicity="0..1" />
+          <End Type="RouterModel.TVService" Role="TVService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Token">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TVService">
+              <PropertyRef Name="TokenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TokenRegex_TokenId">
+          <End Type="RouterModel.Token" Role="Token" Multiplicity="1" />
+          <End Type="RouterModel.TokenRegex" Role="TokenRegex" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Token">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TokenRegex">
+              <PropertyRef Name="TokenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RouterModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Block"><EntityTypeMapping TypeName="RouterModel.Block"><MappingFragment StoreEntitySet="Block">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="BlockTypeId" ColumnName="BlockTypeId" />
+            <ScalarProperty Name="Settings" ColumnName="Settings" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlockEntry"><EntityTypeMapping TypeName="RouterModel.BlockEntry"><MappingFragment StoreEntitySet="BlockEntry">
+            <ScalarProperty Name="Id" ColumnName="id" />
+            <ScalarProperty Name="ServiceBlockId" ColumnName="ServiceBlockId" />
+            <ScalarProperty Name="BlockId" ColumnName="BlockId" />
+            <ScalarProperty Name="IsVerification" ColumnName="IsVerification" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlockLink"><EntityTypeMapping TypeName="RouterModel.BlockLink"><MappingFragment StoreEntitySet="BlockLink">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+            <ScalarProperty Name="ChildId" ColumnName="ChildId" />
+            <ScalarProperty Name="Kind" ColumnName="Kind" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BlockType"><EntityTypeMapping TypeName="RouterModel.BlockType"><MappingFragment StoreEntitySet="BlockType">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Service"><EntityTypeMapping TypeName="RouterModel.TVService"><MappingFragment StoreEntitySet="Service">
+            <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+                <ScalarProperty Name="LastModifier" ColumnName="LastModifier" />
+                <ScalarProperty Name="TokenId" ColumnName="TokenId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ServiceNumberId" ColumnName="ServiceNumberId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="ServiceTypeId" ColumnName="ServiceTypeId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServiceBlock"><EntityTypeMapping TypeName="RouterModel.ServiceBlock"><MappingFragment StoreEntitySet="ServiceBlock">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServiceType"><EntityTypeMapping TypeName="RouterModel.ServiceType"><MappingFragment StoreEntitySet="ServiceType">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Tariff">
+            <EntityTypeMapping TypeName="RouterModel.Tariff">
+              <MappingFragment StoreEntitySet="Tariff">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+                <ScalarProperty Name="OperatorParameters" ColumnName="OperatorParameters" />
+                <ScalarProperty Name="TarifficationType" ColumnName="TarifficationType" />
+                <ScalarProperty Name="ServiceNumberId" ColumnName="ServiceNumberId" />
+                <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceNumbers">
+            <EntityTypeMapping TypeName="RouterModel.ServiceNumber">
+              <MappingFragment StoreEntitySet="ServiceNumbers">
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Token">
+            <EntityTypeMapping TypeName="RouterModel.Token">
+              <MappingFragment StoreEntitySet="Token">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TokenRegex">
+            <EntityTypeMapping TypeName="RouterModel.TokenRegex">
+              <MappingFragment StoreEntitySet="TokenRegex">
+                <ScalarProperty Name="TokenText" ColumnName="TokenText" />
+                <ScalarProperty Name="Regex" ColumnName="Regex" />
+                <ScalarProperty Name="TokenId" ColumnName="TokenId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="RouterModel">
+        <EntityTypeShape EntityType="RouterModel.Block" Width="1.5" PointX="7.75" PointY="6.875" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="RouterModel.BlockEntry" Width="1.5" PointX="7.5" PointY="4.25" Height="1.7879850260416665" IsExpanded="true" />
+        <EntityTypeShape EntityType="RouterModel.BlockLink" Width="1.5" PointX="9.75" PointY="4.375" Height="1.7879850260416665" IsExpanded="true" />
+        <EntityTypeShape EntityType="RouterModel.BlockType" Width="1.5" PointX="5.5" PointY="9.125" Height="1.4033821614583335" IsExpanded="true" />
+        <EntityTypeShape EntityType="RouterModel.TVService" Width="1.5" PointX="3" PointY="2" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="RouterModel.ServiceBlock" Width="1.5" PointX="5.25" PointY="3.875" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="RouterModel.ServiceType" Width="1.5" PointX="0.75" PointY="2.875" Height="1.4033821614583326" IsExpanded="true" />
+        <AssociationConnector Association="RouterModel.FK_Block_BlockType_BlockTypeId" ManuallyRouted="false">
+          <ConnectorPoint PointX="7" PointY="9.8266910807291659" />
+          <ConnectorPoint PointX="8.5" PointY="9.8266910807291659" />
+          <ConnectorPoint PointX="8.5" PointY="8.6629850260416656" />
+        </AssociationConnector>
+        <AssociationConnector Association="RouterModel.FK_BlocksToServiceBlocks_Block" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.375" PointY="6.875" />
+          <ConnectorPoint PointX="8.375" PointY="6.0379850260416665" />
+        </AssociationConnector>
+        <AssociationConnector Association="RouterModel.FK_BlocksToServiceBlocks_BlockLink_ChildId" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="5.2064925130208337" />
+          <ConnectorPoint PointX="9.75" PointY="5.2064925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="RouterModel.FK_BlocksToServiceBlocks_BlockLink_ParentId" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="4.7282462565104169" />
+          <ConnectorPoint PointX="9.75" PointY="4.7282462565104169" />
+        </AssociationConnector>
+        <AssociationConnector Association="RouterModel.FK_BlocksToServiceBlocks_ServiceBlock" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="4.860341796875" />
+          <ConnectorPoint PointX="7.5" PointY="4.860341796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="RouterModel.FK_Service_ServiceType_ServiceTypeId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="3.5766910807291659" />
+          <ConnectorPoint PointX="3" PointY="3.5766910807291659" />
+        </AssociationConnector>
+        <AssociationConnector Association="RouterModel.FK_ServiceBlock_Service_ServiceId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.31224609375" />
+          <ConnectorPoint PointX="5.25" PointY="4.31224609375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RouterModel.Tariff" Width="1.5" PointX="0.75" PointY="6.125" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="RouterModel.ServiceNumber" Width="1.5" PointX="3.125" PointY="6" Height="1.4033821614583326" />
+        <AssociationConnector Association="RouterModel.FK_Service_ServiceNumbers_ServiceNumberId">
+          <ConnectorPoint PointX="3.8125" PointY="6" />
+          <ConnectorPoint PointX="3.8125" PointY="4.7494921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="RouterModel.FK_Tariff_ServiceNumbers_ServiceNumberId">
+          <ConnectorPoint PointX="3.125" PointY="6.7641910807291659" />
+          <ConnectorPoint PointX="2.25" PointY="6.7641910807291659" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="RouterModel.Token" Width="1.5" PointX="5.75" PointY="1.625" Height="1.4033821614583331" />
+        <EntityTypeShape EntityType="RouterModel.TokenRegex" Width="1.5" PointX="7.875" PointY="1.625" Height="1.787985026041667" />
+        <AssociationConnector Association="RouterModel.FK_Service_Service_TokenId" >
+          <ConnectorPoint PointX="5.75" PointY="2.5141910807291667" />
+          <ConnectorPoint PointX="4.5" PointY="2.5141910807291667" />
+        </AssociationConnector>
+        <AssociationConnector Association="RouterModel.FK_TokenRegex_TokenId" >
+          <ConnectorPoint PointX="7.25" PointY="2.3266910807291667" />
+          <ConnectorPoint PointX="7.875" PointY="2.3266910807291667" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

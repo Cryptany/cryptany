@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E930BD9-F90E-442B-A671-2857677014E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cryptany.Core.Connectors.Management</RootNamespace>
+    <AssemblyName>Cryptany.Core.Connectors.Management</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>\\dev\common dlls\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'x64|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BalancingManager.cs" />
+    <Compile Include="ConnectorManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Avant.ConfigOM\Avant.ConfigOM.csproj">
+      <Project>{4DFEF69A-B146-4B78-909D-CB8B2A29E329}</Project>
+      <Name>Avant.ConfigOM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\avant.core.connectors\Avant.Core.Connectors.csproj">
+      <Project>{28B76D29-A288-4A12-9096-8DAA7A353AEA}</Project>
+      <Name>Avant.Core.Connectors</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.Interaction\Avant.Core.Interaction.csproj">
+      <Project>{E98F16D8-FA57-4C08-A0E4-5BC1A0E66DC8}</Project>
+      <Name>Avant.Core.Interaction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.MsmqLog\Avant.Core.MsmqLog.csproj">
+      <Project>{A4195E02-6916-4B90-9067-566AB24E2526}</Project>
+      <Name>Avant.Core.MsmqLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.Services.Management\Avant.Core.Services.Management.csproj">
+      <Project>{85D20A7F-C121-4242-998B-35D196E77F87}</Project>
+      <Name>Avant.Core.Services.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.DPO\Avant.DPO.csproj">
+      <Project>{7C929C53-F5FE-43C1-AE27-42D804BFDB0D}</Project>
+      <Name>Avant.DPO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\avantcore\avantCore.csproj">
+      <Project>{1FD7A2F6-70F8-4F79-A1EE-EBF9189053E4}</Project>
+      <Name>avantCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonUtils\CommonUtils.csproj">
+      <Project>{7E31C002-96F3-4500-8A94-17CA32115B7F}</Project>
+      <Name>CommonUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoggingClassLibrary\Logging.csproj">
+      <Project>{E45340CA-AA2B-4256-88FB-428AA28EEF3F}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Settings\Settings.csproj">
+      <Project>{1EDA6189-6195-492C-8B2F-609DDCD95FF3}</Project>
+      <Name>Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Avant.Core.Management\Avant.Core.Management.csproj">
+      <Project>{C7652C3B-9F08-4020-B665-E1AA6137E148}</Project>
+      <Name>Avant.Core.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonConstants\CommonConstants.csproj">
+      <Project>{03737D58-BF20-4510-847A-2E2BBBC0A6BA}</Project>
+      <Name>CommonConstants</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
