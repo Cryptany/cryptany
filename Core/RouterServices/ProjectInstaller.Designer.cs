@@ -43,8 +43,8 @@ namespace Cryptany.Router.RouterServices
             // serviceInstaller_1
             // 
             this.serviceInstaller_1.Description = "Router service 1";
-            this.serviceInstaller_1.DisplayName = "Avant.RouterService1";
-            this.serviceInstaller_1.ServiceName = "Avant.RouterService1";
+            this.serviceInstaller_1.DisplayName = "Cryptany.RouterService1";
+            this.serviceInstaller_1.ServiceName = "Cryptany.RouterService1";
             this.serviceInstaller_1.ServicesDependedOn = new string[] {
         "MSMQ",
         "MSMQTriggers"};
@@ -52,8 +52,8 @@ namespace Cryptany.Router.RouterServices
             // serviceInstaller_2
             // 
             this.serviceInstaller_2.Description = "Router service 2";
-            this.serviceInstaller_2.DisplayName = "Avant.RouterService2";
-            this.serviceInstaller_2.ServiceName = "Avant.RouterService2";
+            this.serviceInstaller_2.DisplayName = "Cryptany.RouterService2";
+            this.serviceInstaller_2.ServiceName = "Cryptany.RouterService2";
             this.serviceInstaller_2.ServicesDependedOn = new string[] {
         "MSMQ",
         "MSMQTriggers"};
@@ -61,7 +61,7 @@ namespace Cryptany.Router.RouterServices
             // serviceInstaller_3
             // 
             this.serviceInstaller_3.Description = "Router service 3";
-            this.serviceInstaller_3.ServiceName = "Avant.RouterService3";
+            this.serviceInstaller_3.ServiceName = "Cryptany.RouterService3";
             this.serviceInstaller_3.ServicesDependedOn = new string[] {
         "MSMQ",
         "MSMQTriggers"};
