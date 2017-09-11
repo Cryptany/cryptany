@@ -31,7 +31,7 @@ namespace Cryptany
         {
             private Guid _dbId;
             /// <summary>
-            /// ID в базе. get
+            /// ID РІ Р±Р°Р·Рµ. get
             /// </summary>
             public Guid DatabaseId
             {
@@ -43,7 +43,7 @@ namespace Cryptany
 
             private Region _region;
             /// <summary>
-            /// Регион к которому приписан абонент. get
+            /// Р РµРіРёРѕРЅ Рє РєРѕС‚РѕСЂРѕРјСѓ РїСЂРёРїРёСЃР°РЅ Р°Р±РѕРЅРµРЅС‚. get
             /// </summary>
             public Region Region
             {
@@ -55,7 +55,7 @@ namespace Cryptany
 
             private Operator _operator;
             /// <summary>
-            /// Оператор к которому приписан абонент. get
+            /// РћРїРµСЂР°С‚РѕСЂ Рє РєРѕС‚РѕСЂРѕРјСѓ РїСЂРёРїРёСЃР°РЅ Р°Р±РѕРЅРµРЅС‚. get
             /// </summary>
             public Operator Operator
             {
@@ -67,7 +67,7 @@ namespace Cryptany
 
             private string _MSISDN;
             /// <summary>
-            /// № телефона абонента. get
+            /// в„– С‚РµР»РµС„РѕРЅР° Р°Р±РѕРЅРµРЅС‚Р°. get
             /// </summary>
             public string MSISDN
             {
@@ -78,7 +78,7 @@ namespace Cryptany
             }
 
             /// <summary>
-            /// Конструктор по умолчанию. Необходим для корректной десериализации.
+            /// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ. РќРµРѕР±С…РѕРґРёРј РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕР№ РґРµСЃРµСЂРёР°Р»РёР·Р°С†РёРё.
             /// </summary>
             public Abonent()
             {
@@ -87,10 +87,10 @@ namespace Cryptany
             /// <summary>
             /// 
             /// </summary>
-            /// <param name="msisdn">№ телефона</param>
-            /// <param name="dbId">id в базе данных</param>
-            /// <param name="region">регион  к которому приписан абонент</param>
-            /// <param name="op">оператор к которому приписан абонент</param>
+            /// <param name="msisdn">в„– С‚РµР»РµС„РѕРЅР°</param>
+            /// <param name="dbId">id РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С…</param>
+            /// <param name="region">СЂРµРіРёРѕРЅ  Рє РєРѕС‚РѕСЂРѕРјСѓ РїСЂРёРїРёСЃР°РЅ Р°Р±РѕРЅРµРЅС‚</param>
+            /// <param name="op">РѕРїРµСЂР°С‚РѕСЂ Рє РєРѕС‚РѕСЂРѕРјСѓ РїСЂРёРїРёСЃР°РЅ Р°Р±РѕРЅРµРЅС‚</param>
             public Abonent(string msisdn, Guid dbId, ref Region region, ref Operator op)
             {
                 _MSISDN   = msisdn;
@@ -100,10 +100,10 @@ namespace Cryptany
             }
 
             /// <summary>
-            /// Инициализировать абонента по его номеру
-            /// Если абонент для данного номера не существует (новый), то создать нового абонента в БД
+            /// РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ Р°Р±РѕРЅРµРЅС‚Р° РїРѕ РµРіРѕ РЅРѕРјРµСЂСѓ
+            /// Р•СЃР»Рё Р°Р±РѕРЅРµРЅС‚ РґР»СЏ РґР°РЅРЅРѕРіРѕ РЅРѕРјРµСЂР° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ (РЅРѕРІС‹Р№), С‚Рѕ СЃРѕР·РґР°С‚СЊ РЅРѕРІРѕРіРѕ Р°Р±РѕРЅРµРЅС‚Р° РІ Р‘Р”
             /// </summary>
-            /// <param name="MSISDN">Номер абонента</param>
+            /// <param name="MSISDN">РќРѕРјРµСЂ Р°Р±РѕРЅРµРЅС‚Р°</param>
             /// <returns></returns>
             public static Abonent GetAbonentByMSISDN(string MSISDN)
             {
@@ -144,7 +144,7 @@ namespace Cryptany
                 catch (SqlException ex)
                 {
 
-                    ///TODO: что-нить записать
+                    ///TODO: С‡С‚Рѕ-РЅРёС‚СЊ Р·Р°РїРёСЃР°С‚СЊ
                     
                     //ILogger logger = Logging.LoggerFactory.Logger;
                     //logger.DefaultSource = "Abonent";
@@ -156,7 +156,7 @@ namespace Cryptany
                 }
                 catch (ApplicationException e)
                 {
-                    ///TODO: что-нить записать
+                    ///TODO: С‡С‚Рѕ-РЅРёС‚СЊ Р·Р°РїРёСЃР°С‚СЊ
                     /// 
                     //ILogger logger = Logging.LoggerFactory.Logger;
                     //logger.DefaultSource = "Abonent";
@@ -170,7 +170,7 @@ namespace Cryptany
             }
 
             /// <summary>
-            /// Возвращает MSISDN в формате 79031236547
+            /// Р’РѕР·РІСЂР°С‰Р°РµС‚ MSISDN РІ С„РѕСЂРјР°С‚Рµ 79031236547
             /// </summary>
             /// <returns></returns>
             public override string ToString()
@@ -179,7 +179,7 @@ namespace Cryptany
             }
 
             /// <summary>
-            /// Возвращает MSISDN в формате +79031236547
+            /// Р’РѕР·РІСЂР°С‰Р°РµС‚ MSISDN РІ С„РѕСЂРјР°С‚Рµ +79031236547
             /// </summary>
             /// <returns></returns>
             public string ToStringPlus()
@@ -188,7 +188,7 @@ namespace Cryptany
             }
 
             /// <summary>
-            /// Строка из датасета, описывающая канал, на котором залочен абонент. Если абонент нигде не залочен, вернёт null. (get/set)
+            /// РЎС‚СЂРѕРєР° РёР· РґР°С‚Р°СЃРµС‚Р°, РѕРїРёСЃС‹РІР°СЋС‰Р°СЏ РєР°РЅР°Р», РЅР° РєРѕС‚РѕСЂРѕРј Р·Р°Р»РѕС‡РµРЅ Р°Р±РѕРЅРµРЅС‚. Р•СЃР»Рё Р°Р±РѕРЅРµРЅС‚ РЅРёРіРґРµ РЅРµ Р·Р°Р»РѕС‡РµРЅ, РІРµСЂРЅС‘С‚ null. (get/set)
             /// </summary>
 			[System.Xml.Serialization.XmlIgnore]
             public Guid LockedChannel
@@ -199,9 +199,9 @@ namespace Cryptany
 					string idStr = sesMngr[MSISDN]["CurrentChannel"];
 					if ( string.IsNullOrEmpty(idStr) )
 					{
-						// ИМХО это как=то неправильно. Если не залочен никуда -- значит не залочен и нефиг всяких 
-						// дефолтов плодить !!!!
-						idStr = "0249672F-B111-4653-917A-A2EF791B3194"; //дефолтный ченэл..надо вынести в настройки
+						// РРњРҐРћ СЌС‚Рѕ РєР°Рє=С‚Рѕ РЅРµРїСЂР°РІРёР»СЊРЅРѕ. Р•СЃР»Рё РЅРµ Р·Р°Р»РѕС‡РµРЅ РЅРёРєСѓРґР° -- Р·РЅР°С‡РёС‚ РЅРµ Р·Р°Р»РѕС‡РµРЅ Рё РЅРµС„РёРі РІСЃСЏРєРёС… 
+						// РґРµС„РѕР»С‚РѕРІ РїР»РѕРґРёС‚СЊ !!!!
+						idStr = "0249672F-B111-4653-917A-A2EF791B3194"; //РґРµС„РѕР»С‚РЅС‹Р№ С‡РµРЅСЌР»..РЅР°РґРѕ РІС‹РЅРµСЃС‚Рё РІ РЅР°СЃС‚СЂРѕР№РєРё
 						sesMngr[MSISDN]["CurrentChannel"] = idStr;
 					}
 					try
@@ -233,7 +233,7 @@ namespace Cryptany
 				//}
 			}
             /// <summary>
-            /// Вспомогательная структура для сериализации объекта
+            /// Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° РґР»СЏ СЃРµСЂРёР°Р»РёР·Р°С†РёРё РѕР±СЉРµРєС‚Р°
             /// </summary>
             public struct AbonentSerializationInfo
             {
@@ -244,7 +244,7 @@ namespace Cryptany
             }
 
             /// <summary>
-            /// Вспомогательное поле, предназначенное для сериализации/десериализации объекта (get/set)
+            /// Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ, РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅРЅРѕРµ РґР»СЏ СЃРµСЂРёР°Р»РёР·Р°С†РёРё/РґРµСЃРµСЂРёР°Р»РёР·Р°С†РёРё РѕР±СЉРµРєС‚Р° (get/set)
             /// </summary>
             public AbonentSerializationInfo SerializationInfo
             {

@@ -140,7 +140,7 @@ namespace DragAndDropSimple
 
         public Line NewLink(Page Node, bool Yes)
         {
-            if (links.Count((a) => { return a.ContainsNode(Node); }) > 0) //не добавляем повторные связи
+            if (links.Count((a) => { return a.ContainsNode(Node); }) > 0) //don't add duplicates
                 return null;
             Link Created = new Link(this, Node, Yes);
             links.Add(Created);
@@ -160,11 +160,11 @@ namespace DragAndDropSimple
             linkToMove.MoveCurrLinkPoint();
         }
 
-        #region пружинки
+        #region springs
         //public void ApproachingToNodes(double distance)
         //{
         //    double linkLingthSum = 0;
-        //    //считаем суммарную длинну связей
+        //    //calculate total link length
         //    foreach (var link in links)
         //        linkLingthSum += link.LinkLength;
 
@@ -172,16 +172,16 @@ namespace DragAndDropSimple
         //    {
         //        if (link.LinkLength > distance)
         //        {
-        //            //двигаем узел вдоль линии
+        //            //move node along the line
         //            MoveNodeAlongTheLine(link, (10 * link.LinkLength / linkLingthSum));
         //        }
         //        else
         //        {
-        //            //двигаем узел вдоль линии
+        //            //move node along the line
         //            MoveNodeAlongTheLine(link, -(10 * (linkLingthSum - link.LinkLength) / linkLingthSum));
         //        }
         //    }
-        //    //перерисовываем связи
+        //    //redraw links
         //    Line a;
         //    foreach (var link in links)
         //        a = link.LinkToNode;
@@ -191,8 +191,8 @@ namespace DragAndDropSimple
         //{
         //    double K = distance / link.LinkLength;
 
-        //    double devX = link.ParentLinePoint.X - link.ChieldLinePoint.X; //если папа справа, то > 0
-        //    double devY = link.ParentLinePoint.Y - link.ChieldLinePoint.Y; //если папа снизу, то > 0
+        //    double devX = link.ParentLinePoint.X - link.ChieldLinePoint.X; 
+        //    double devY = link.ParentLinePoint.Y - link.ChieldLinePoint.Y; 
 
         //    if (link.IsParent)
         //    {
@@ -391,13 +391,13 @@ namespace DragAndDropSimple
             //{
             //    if (devX >= 0)
             //    {
-            //        //правая точка
+            //        //right point
             //        Move(myNode.PositionX + 50, myNode.PositionY + 25);
             //        linkedNode.MoveLinkPoint(myNode);
             //    }
             //    else
             //    { 
-            //        //левая точка
+            //        //left point
             //        Move(myNode.PositionX, myNode.PositionY + 25);
             //        linkedNode.MoveLinkPoint(myNode);
             //    }
@@ -407,13 +407,13 @@ namespace DragAndDropSimple
             //double width = (myNode.Rect.ActualWidth == 0) ? 30 : myNode.Rect.ActualWidth/2;
             if (devY >= 0)
             {
-                //нижняя точка
+                //bottom point
                 Move(myNode.PositionX + myNode.Width / 2, myNode.PositionY + myNode.Rect.Height);
                 linkedNode.MoveLinkPoint(myNode);
             }
             else
             {
-                //верхняя точка
+                //top point
                 Move(myNode.PositionX + myNode.Width/2, myNode.PositionY);
                 linkedNode.MoveLinkPoint(myNode);
             }
@@ -430,13 +430,13 @@ namespace DragAndDropSimple
             //{
             //    if (devX >= 0)
             //    {
-            //        //правая точка
+            //        //right point
             //        Move(myNode.PositionX + 50, myNode.PositionY + 25);
                    
             //    }
             //    else
             //    {
-            //        //левая точка
+            //        //left point
             //        Move(myNode.PositionX, myNode.PositionY + 25);
             //    }
             //}
@@ -444,13 +444,13 @@ namespace DragAndDropSimple
             //{
                 if (devY >= 0)
                 {
-                    //нижняя точка
+                    //bottom point
                     //Move(myNode.PositionX + myNode.Rect.ActualWidth / 2, myNode.PositionY + myNode.Rect.ActualHeight);
                     Move(myNode.PositionX + myNode.Width / 2, myNode.PositionY + myNode.Rect.Height);
                 }
                 else
                 {
-                    //верхняя точка
+                    //top point
                     //Move(myNode.PositionX + myNode.Rect.ActualWidth / 2, myNode.PositionY);
                     Move(myNode.PositionX + myNode.Width / 2, myNode.PositionY);
                 }
