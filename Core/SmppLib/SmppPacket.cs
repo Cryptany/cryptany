@@ -140,7 +140,7 @@ namespace Cryptany.Core
 
                 ascii.GetBytes(m_messageId).CopyTo(localArray, idx);
                  idx += ascii.GetByteCount(m_messageId);
-                localArray[idx] = 0;//нуль - терминатор
+                localArray[idx] = 0;//РЅСѓР»СЊ - С‚РµСЂРјРёРЅР°С‚РѕСЂ
 
 
                 m_Source.GetEncoded().CopyTo(localArray, idx+1);

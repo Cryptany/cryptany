@@ -13,61 +13,57 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Reflection;
 
 namespace Cryptany.Core.DPO.Configuration
 {
-	public enum ErrorType
-	{
-		Unknown,
-		InvalidXmlDocument,
-		UnexpectedNode,
-		InvalidStructural
-	}
+    public enum ErrorType
+    {
+        Unknown,
+        InvalidXmlDocument,
+        UnexpectedNode,
+        InvalidStructural
+    }
 
-	public class EntityConfigurationError
-	{
-		private ErrorType _errorType = ErrorType.Unknown;
-		private string _message;
+    public class EntityConfigurationError
+    {
+        private ErrorType _errorType = ErrorType.Unknown;
+        private string _message;
 
-		public EntityConfigurationError()
-		{
-		}
+        public EntityConfigurationError()
+        {
+        }
 
-		public EntityConfigurationError(string message)
-		{
-			_message = message;
-		}
+        public EntityConfigurationError(string message)
+        {
+            _message = message;
+        }
 
-		public EntityConfigurationError(ErrorType errorType, string message)
-		{
-			_errorType = errorType;
-			_message = message;
-		}
+        public EntityConfigurationError(ErrorType errorType, string message)
+        {
+            _errorType = errorType;
+            _message = message;
+        }
 
-		public string Message
-		{
-			get
-			{
-				return _message;
-			}
-		}
+        public string Message
+        {
+            get
+            {
+                return _message;
+            }
+        }
 
-		public ErrorType ErrorType
-		{
-			get
-			{
-				return _errorType;
-			}
-		}
+        public ErrorType ErrorType
+        {
+            get
+            {
+                return _errorType;
+            }
+        }
 
-		public override string ToString()
-		{
-			string res = string.Format("Error type: '{0}', Message: '{1}'", _errorType.ToString(), _message);
-			return res;
-		}
-	}
+        public override string ToString()
+        {
+            string res = string.Format("Error type: '{0}', Message: '{1}'", _errorType.ToString(), _message);
+            return res;
+        }
+    }
 }

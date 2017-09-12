@@ -18,7 +18,7 @@ using System;
 namespace Cryptany.Core
 {
 	/// <summary>
-	/// Проблема при попытке создания экземпляра класса
+	/// Error during class creation
 	/// </summary>
 	[global::System.Serializable]
 	public class ClassCreationException : Exception
@@ -41,7 +41,7 @@ namespace Cryptany.Core
 
 	
 	/// <summary>
-	/// Проблема при обработке токена
+	/// Error during token processing
 	/// </summary>
 	[global::System.Serializable]
 	public class MatchTokenException : Exception
@@ -63,7 +63,7 @@ namespace Cryptany.Core
 	}
 
 	/// <summary>
-	/// Проблема при обработке униварсального токена
+	/// РџСЂРѕР±Р»РµРјР° РїСЂРё РѕР±СЂР°Р±РѕС‚РєРµ СѓРЅРёРІР°СЂСЃР°Р»СЊРЅРѕРіРѕ С‚РѕРєРµРЅР°
 	/// </summary>
 	[global::System.Serializable]
 	public class MatchUniversalTokenException : MatchTokenException
@@ -85,7 +85,7 @@ namespace Cryptany.Core
 	}
 
 	/// <summary>
-	/// Проблема при обработке сообщения
+	/// РџСЂРѕР±Р»РµРјР° РїСЂРё РѕР±СЂР°Р±РѕС‚РєРµ СЃРѕРѕР±С‰РµРЅРёСЏ
 	/// </summary>
 	[global::System.Serializable]
 	public class MessageProcessingException : Exception
@@ -107,7 +107,7 @@ namespace Cryptany.Core
 	}
 	
 	/// <summary>
-	/// Проблема при отправке сообщения
+	/// РџСЂРѕР±Р»РµРјР° РїСЂРё РѕС‚РїСЂР°РІРєРµ СЃРѕРѕР±С‰РµРЅРёСЏ
 	/// </summary>
 	[global::System.Serializable]
 	public class MessageSendingException : Exception

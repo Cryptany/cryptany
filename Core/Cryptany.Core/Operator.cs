@@ -94,14 +94,14 @@ namespace Cryptany
                     {
                         _displayName = row.DisplayName;
                     }
-                    // ID зоны оператора
+                    // ID Р·РѕРЅС‹ РѕРїРµСЂР°С‚РѕСЂР°
                     _brandId = row.BrandId;
                     _zoneIntId = GetOperatorZoneId(id);
                 }
             }
 
             /// <summary>
-			/// Создаёт объект по известному ID в базе
+			/// РЎРѕР·РґР°С‘С‚ РѕР±СЉРµРєС‚ РїРѕ РёР·РІРµСЃС‚РЅРѕРјСѓ ID РІ Р±Р°Р·Рµ
 			/// </summary>
 			/// <param name="id"></param>
 			/// <returns></returns>
@@ -124,7 +124,7 @@ namespace Cryptany
                         {
                             result._displayName = row.DisplayName;
                         }
-                        // ID зоны оператора
+                        // ID Р·РѕРЅС‹ РѕРїРµСЂР°С‚РѕСЂР°
                         result._zoneIntId = GetOperatorZoneId(id);
                     }
                 }
@@ -145,12 +145,12 @@ namespace Cryptany
             }
             private static int GetOperatorZoneId(Guid id)
             {
-                // Определить целочисленный идентификатор зоны оператора для B2B 
+                // РћРїСЂРµРґРµР»РёС‚СЊ С†РµР»РѕС‡РёСЃР»РµРЅРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·РѕРЅС‹ РѕРїРµСЂР°С‚РѕСЂР° РґР»СЏ B2B 
                 int zoneIntId = 0;
                 DataRow[] drOpZone = CoreClassFactory.CreateConfigProvider().CacheDS.OperatorsToZones.Select("OperatorId = '" + id.ToString() + "'");
                 if (drOpZone.Length > 0)
                 {
-                    // есть зона, связанная с оператором
+                    // РµСЃС‚СЊ Р·РѕРЅР°, СЃРІСЏР·Р°РЅРЅР°СЏ СЃ РѕРїРµСЂР°С‚РѕСЂРѕРј
                     DataRow[] drOpZoneId = CoreClassFactory.CreateConfigProvider().CacheDS.OperatorZones.Select("Id = '" + drOpZone[0]["ZoneId"].ToString() + "'");
                     if (drOpZoneId.Length > 0)
                     {

@@ -22,7 +22,7 @@ namespace guiEditRouter.UserControlls.PropertiesElements
             get
             {
                 List<string> buff = new List<string>();
-                buff.Add("Не использовать");
+                buff.Add("Don't use");
                 buff.Add("Default");
                 buff.Add("Equals");
                 buff.Add("NotEquals");

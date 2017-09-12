@@ -20,7 +20,7 @@ using Cryptany.Common.Utils;
 namespace Cryptany.Core
 {
 	/// <summary>
-	/// Реализация провайдера конфигурации подтягивающая всё из базы данных
+	/// Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕРІР°Р№РґРµСЂР° РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїРѕРґС‚СЏРіРёРІР°СЋС‰Р°СЏ РІСЃС‘ РёР· Р±Р°Р·С‹ РґР°РЅРЅС‹С…
 	/// <see cref="Cryptany.Core.IConfigProvider"/>
 	/// </summary>
     public class DBConfigProvider: IConfigProvider

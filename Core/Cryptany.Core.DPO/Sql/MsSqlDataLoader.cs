@@ -289,7 +289,7 @@ namespace Cryptany.Core.DPO.Sql
                          catch (SqlException sex)
                         {
                             Trace.WriteLine("DPO: " + sex);
-                            if (sex.Number == -2 || _connection.State == ConnectionState.Closed) //timeout или не открылось соединение
+                            if (sex.Number == -2 || _connection.State == ConnectionState.Closed) //timeout РёР»Рё РЅРµ РѕС‚РєСЂС‹Р»РѕСЃСЊ СЃРѕРµРґРёРЅРµРЅРёРµ
                             {
                                 
                             }
@@ -574,16 +574,6 @@ namespace Cryptany.Core.DPO.Sql
 				return _mapper;
 			}
 		}
-
-		//public List<EntityBase> LoadAll()
-		//{
-		//    throw new Exception("The method or operation is not implemented.");
-		//}
-
-		//public IEntity LoadEntityById(object Id)
-		//{
-		//    throw new Exception("The method or operation is not implemented.");
-		//}
 
 		public void ReloadEntity(EntityBase entity)
 		{

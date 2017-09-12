@@ -22,14 +22,14 @@ namespace Cryptany
 	namespace Core
 	{
 		/// <summary>
-		/// класс Региона (географического)
+		/// РєР»Р°СЃСЃ Р РµРіРёРѕРЅР° (РіРµРѕРіСЂР°С„РёС‡РµСЃРєРѕРіРѕ)
 		/// </summary>
 		[Serializable]
 		public class Region
 		{
             private Guid _dbId;
 			/// <summary>
-			/// ID региона в базе
+			/// ID СЂРµРіРёРѕРЅР° РІ Р±Р°Р·Рµ
 			/// </summary>
 			public Guid DatabaseId 
 			{
@@ -43,7 +43,7 @@ namespace Cryptany
             private string _name;
 
 			/// <summary>
-			/// Название региона
+			/// РќР°Р·РІР°РЅРёРµ СЂРµРіРёРѕРЅР°
 			/// </summary>
 			public string Name 
 			{
@@ -54,14 +54,14 @@ namespace Cryptany
 			}
 
 			/// <summary>
-			/// Конструктор по-умолчанию
+			/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ
 			/// </summary>
 			public Region()
 			{
 			}
 
 			/// <summary>
-			/// Фабричный метод, создающий класс по известному идентификатору региона в базе.
+			/// Р¤Р°Р±СЂРёС‡РЅС‹Р№ РјРµС‚РѕРґ, СЃРѕР·РґР°СЋС‰РёР№ РєР»Р°СЃСЃ РїРѕ РёР·РІРµСЃС‚РЅРѕРјСѓ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ СЂРµРіРёРѕРЅР° РІ Р±Р°Р·Рµ.
 			/// </summary>
 			/// <param name="id"></param>
 			/// <returns></returns>
@@ -82,7 +82,7 @@ namespace Cryptany
             }
 
 			/// <summary>
-			/// Вспомогательная структура для сериализации объекта
+			/// Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° РґР»СЏ СЃРµСЂРёР°Р»РёР·Р°С†РёРё РѕР±СЉРµРєС‚Р°
 			/// </summary>
             public struct RegionSerializationInfo
             {

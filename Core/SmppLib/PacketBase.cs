@@ -23,7 +23,7 @@ using System.Collections.Generic;
 
 namespace Cryptany.Core.SmppLib
 {
-    //классы для работы с данными smpp пакета
+    //РєР»Р°СЃСЃС‹ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РґР°РЅРЅС‹РјРё smpp РїР°РєРµС‚Р°
     public class SmppDate
     {
         private DateTime m_Date;
@@ -54,7 +54,7 @@ namespace Cryptany.Core.SmppLib
             Date = dt;
         }
 
-        public byte[] GetEncoded() //побайтовый разбор даты
+        public byte[] GetEncoded() //РїРѕР±Р°Р№С‚РѕРІС‹Р№ СЂР°Р·Р±РѕСЂ РґР°С‚С‹
         {
             if (Date == DateTime.MinValue)
             {
@@ -162,7 +162,7 @@ namespace Cryptany.Core.SmppLib
                 }
             }
         }
-    public class SupportOperations //доп. операции для работы с данными из пакета
+    public class SupportOperations //РґРѕРї. РѕРїРµСЂР°С†РёРё РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РґР°РЅРЅС‹РјРё РёР· РїР°РєРµС‚Р°
 		{
             public static ulong GuidToULong(Guid i)
             {
@@ -298,7 +298,7 @@ namespace Cryptany.Core.SmppLib
             user_message_reference = 0x0204,
             user_response_code = 0x0205,
 
-            source_port = 0x020A, //важно. Для взаимодействия с Вымпелкомом
+            source_port = 0x020A, //РІР°Р¶РЅРѕ. Р”Р»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ Р’С‹РјРїРµР»РєРѕРјРѕРј
             destination_port = 0x020B,
 
             sar_msg_ref_num = 0x020C,
@@ -332,20 +332,20 @@ namespace Cryptany.Core.SmppLib
             its_reply_type = 0x1380,
             its_session_info = 0x1383,
 
-            service_id = 0x1400, // Доп. параметр для РТК
+            service_id = 0x1400, // Р”РѕРї. РїР°СЂР°РјРµС‚СЂ РґР»СЏ Р РўРљ
 
             charging_id = 0x2010,
-            // Life: флаг тарификации входящего сообщения (режим MO), исходящие сообщения не тарифицируются 
+            // Life: С„Р»Р°Рі С‚Р°СЂРёС„РёРєР°С†РёРё РІС…РѕРґСЏС‰РµРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ (СЂРµР¶РёРј MO), РёСЃС…РѕРґСЏС‰РёРµ СЃРѕРѕР±С‰РµРЅРёСЏ РЅРµ С‚Р°СЂРёС„РёС†РёСЂСѓСЋС‚СЃСЏ 
 
-            charging = 0x4901, // USSD Portal: индикатор о необходимости произвести тарификацию 
+            charging = 0x4901, // USSD Portal: РёРЅРґРёРєР°С‚РѕСЂ Рѕ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё РїСЂРѕРёР·РІРµСЃС‚Рё С‚Р°СЂРёС„РёРєР°С†РёСЋ 
             message_content_type = 0x4903,
-            // USSD Portal: тип передаваемой в сообщении информации (для тарифицируемых сообщений) 
+            // USSD Portal: С‚РёРї РїРµСЂРµРґР°РІР°РµРјРѕР№ РІ СЃРѕРѕР±С‰РµРЅРёРё РёРЅС„РѕСЂРјР°С†РёРё (РґР»СЏ С‚Р°СЂРёС„РёС†РёСЂСѓРµРјС‹С… СЃРѕРѕР±С‰РµРЅРёР№) 
             dialog_directive = 0x4910,
-            // USSD Portal: директива на обработку диалога от контент-провайдера в платформу агрегатора 
-            phone_vendor_and_model = 0x4920, // USSD Portal: производитель телефона и модель телефона 
-            subscription_command = 0x4951, // USSD Portal: команда подтверждения подписки или подписки на клуб
+            // USSD Portal: РґРёСЂРµРєС‚РёРІР° РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РґРёР°Р»РѕРіР° РѕС‚ РєРѕРЅС‚РµРЅС‚-РїСЂРѕРІР°Р№РґРµСЂР° РІ РїР»Р°С‚С„РѕСЂРјСѓ Р°РіСЂРµРіР°С‚РѕСЂР° 
+            phone_vendor_and_model = 0x4920, // USSD Portal: РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЊ С‚РµР»РµС„РѕРЅР° Рё РјРѕРґРµР»СЊ С‚РµР»РµС„РѕРЅР° 
+            subscription_command = 0x4951, // USSD Portal: РєРѕРјР°РЅРґР° РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРѕРґРїРёСЃРєРё РёР»Рё РїРѕРґРїРёСЃРєРё РЅР° РєР»СѓР±
 
-            whoisd_expected_message_transport_type = 0x4904 //Тип транспорта ожидаемого пакета. 0x02 – SMS
+            whoisd_expected_message_transport_type = 0x4904 //РўРёРї С‚СЂР°РЅСЃРїРѕСЂС‚Р° РѕР¶РёРґР°РµРјРѕРіРѕ РїР°РєРµС‚Р°. 0x02 вЂ“ SMS
 
 
         };
@@ -442,7 +442,7 @@ namespace Cryptany.Core.SmppLib
     }
     
     /// <summary>
-    /// Реализует структуру SMPP пакета
+    /// Р РµР°Р»РёР·СѓРµС‚ СЃС‚СЂСѓРєС‚СѓСЂСѓ SMPP РїР°РєРµС‚Р°
     /// Header: Length, CommandID, CommandStatus, SequenceNumber
     /// Message: messageID
     /// </summary>
@@ -587,35 +587,35 @@ namespace Cryptany.Core.SmppLib
         /// <returns>number of bytes read</returns>
         public virtual uint Parse(byte[] msg)
         {
-            Trace.WriteLine("SMPP: получаем длину команды");
+            Trace.WriteLine("SMPP: РїРѕР»СѓС‡Р°РµРј РґР»РёРЅСѓ РєРѕРјР°РЅРґС‹");
             uint cmdLen = SupportOperations.FromBigEndianUInt(msg);
-            Trace.WriteLine("SMPP: длина команды " + cmdLen);
+            Trace.WriteLine("SMPP: РґР»РёРЅР° РєРѕРјР°РЅРґС‹ " + cmdLen);
             byte[] localArray = new byte[4];
-            Trace.WriteLine("SMPP: получаем id команды");
+            Trace.WriteLine("SMPP: РїРѕР»СѓС‡Р°РµРј id РєРѕРјР°РЅРґС‹");
             Array.Copy(msg, 4, localArray, 0, 4);
             uint _commandId = SupportOperations.FromBigEndianUInt(localArray);
             if (Enum.IsDefined(typeof(commandIdEnum), _commandId))
                 CommandId = (commandIdEnum)_commandId;
             else
                 throw new UnknownCommandException(_commandId);
-            Trace.WriteLine("SMPP: id команды " + CommandId);
-            Trace.WriteLine("SMPP: получаем статус команды");
+            Trace.WriteLine("SMPP: id РєРѕРјР°РЅРґС‹ " + CommandId);
+            Trace.WriteLine("SMPP: РїРѕР»СѓС‡Р°РµРј СЃС‚Р°С‚СѓСЃ РєРѕРјР°РЅРґС‹");
             Array.Copy(msg, 8, localArray, 0, 4);
             uint _status = SupportOperations.FromBigEndianUInt(localArray);
-            Trace.WriteLine("SMPP: статус команды " + _status);
+            Trace.WriteLine("SMPP: СЃС‚Р°С‚СѓСЃ РєРѕРјР°РЅРґС‹ " + _status);
             _realStatusCode = _status;
             if (Enum.IsDefined(typeof(commandStatusEnum), _status))
                 StatusCode = (commandStatusEnum)_status;
             else
                 StatusCode = commandStatusEnum.ESME_RUNKNOWNERR;
-            Trace.WriteLine("SMPP: получаем номер последовательности");
+            Trace.WriteLine("SMPP: РїРѕР»СѓС‡Р°РµРј РЅРѕРјРµСЂ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё");
             Array.Copy(msg, 12, localArray, 0, 4);
             SequenceNumber = SupportOperations.FromBigEndianUInt(localArray);
-            Trace.WriteLine("SMPP: номер последовательности " + SequenceNumber);
+            Trace.WriteLine("SMPP: РЅРѕРјРµСЂ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё " + SequenceNumber);
             return 16;
         }
     }
-    //внутренние типы, перечисления
+    //РІРЅСѓС‚СЂРµРЅРЅРёРµ С‚РёРїС‹, РїРµСЂРµС‡РёСЃР»РµРЅРёСЏ
     public partial class PacketBase
     {
         public enum commandIdEnum : uint
@@ -708,7 +708,7 @@ namespace Cryptany.Core.SmppLib
             ESME_RINVDESTFLAG = 0x00000040,     // Destination flag is invalid (submit_multi)
             ESME_RINVSUBREP = 0x00000042,
             
-            // Invalid ‘submit with replace’ request (i.e. submit_sm with replace_if_present_flag set)
+            // Invalid вЂsubmit with replaceвЂ™ request (i.e. submit_sm with replace_if_present_flag set)
             ESME_RINVESMCLASS = 0x00000043,         // Invalid esm_class field data
             ESME_RCNTSUBDL = 0x00000044,            // Cannot Submit to Distribution List
             ESME_RSUBMITFAIL = 0x00000045,          // submit_sm or submit_multi failed
@@ -982,7 +982,7 @@ namespace Cryptany.Core.SmppLib
     }
 
     /// <summary>
-    /// Представляет данные SMPP пакета:
+    /// РџСЂРµРґСЃС‚Р°РІР»СЏРµС‚ РґР°РЅРЅС‹Рµ SMPP РїР°РєРµС‚Р°:
     /// SrcAddress (TON+NPI+IP), DstAddress (TON+NPI+IP)
     /// ESMClass, RegisteredDelivery, OptionalParams list
     /// </summary>
@@ -1235,7 +1235,7 @@ namespace Cryptany.Core.SmppLib
             localArray[idx++] = (byte)DataCoding;
             localArray[idx++] = DefaultSMMessageId;
 
-            if (ShortMessageLength > 255) throw new ApplicationException("Длина входящего сообщения больше 255 символов!");
+            if (ShortMessageLength > 255) throw new ApplicationException("Р”Р»РёРЅР° РІС…РѕРґСЏС‰РµРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ Р±РѕР»СЊС€Рµ 255 СЃРёРјРІРѕР»РѕРІ!");
             localArray[idx++] = (byte)ShortMessageLength;
 
             if (MessageText.Length > 0) // just copy the text
@@ -1257,11 +1257,11 @@ namespace Cryptany.Core.SmppLib
         {
             Trace.WriteLine("SMPP: Parsing MessagePacket Base");
 
-            Trace.WriteLine("SMPP: получаем длину команды");
+            Trace.WriteLine("SMPP: РїРѕР»СѓС‡Р°РµРј РґР»РёРЅСѓ РєРѕРјР°РЅРґС‹");
             int pos = (int)base.Parse(msg);
             uint cmdLength = SupportOperations.FromBigEndianUInt(msg);
 
-            Trace.WriteLine("SMPP: получаем тип сервиса");
+            Trace.WriteLine("SMPP: РїРѕР»СѓС‡Р°РµРј С‚РёРї СЃРµСЂРІРёСЃР°");
             int newpos = 0;
             ServiceType = SupportOperations.getStringValue(msg, pos, out newpos);
 
