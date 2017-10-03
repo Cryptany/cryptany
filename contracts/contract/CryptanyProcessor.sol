@@ -67,8 +67,8 @@ contract CryptanyProcessor {
     * @dev event occurs in each transaction
     */
     event sendMoneyEvent(
-        address index toPerson, 
-        address index fromPerson,
+        address indexed toPerson, 
+        address indexed fromPerson,
         uint payment,
         string comment,
         bytes32 transactionHash
@@ -78,7 +78,7 @@ contract CryptanyProcessor {
     * @dev event occurs in each positive validation
     */    
     event transactionApproved(
-        bytes32 index transactionHash,
+        bytes32 indexed transactionHash,
         address validator,
         string comment
         );
@@ -87,7 +87,7 @@ contract CryptanyProcessor {
     * @dev event occurs in each rejection
     */    
     event transactionRejected(
-        bytes32 index transactionHash,
+        bytes32 indexed transactionHash,
         address validator,
         string comment
         );        
