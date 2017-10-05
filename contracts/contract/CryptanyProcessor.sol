@@ -17,32 +17,15 @@ contract CryptanyProcessor {
         uint paymentSize;
         
         string comment;
+        
+        address[] validationsList;
     }
-
-
-  /**
-   * @dev Structure for transactions validation
-   */    
-    struct ValidationStructure {
-        
-        address validator;
-        
-        bool result;
-        
-        string comment;
-    }
-    
-    //address of contract owner
-    address  public owner;
     
     //all payments agregated by this contract
     uint public balance;
     
-    //list of allowed verifiers - might be refactored
-    mapping (address => address) verifiers;
-    
-    //mapping betwen transaction hash and all validators
-    mapping (bytes32 => ValidationStructure) pendingValidations;
+    //rating(reputation) == sum of all success eth deals
+    mapping (address => uint) rating;
     
     //mapping betwen transaction hash and payment structure
     mapping (bytes32 => PaymentStructure) pendingPayments;
@@ -51,17 +34,9 @@ contract CryptanyProcessor {
      * @dev Throws if called by any account other than the owner.
      */
     modifier onlyOwner() {
-        require(msg.sender == owner);
         _;
     }
     
-   /**
-     * @dev Throws if called by any account other than the validators.
-     */
-    modifier onlyValidators() {
-        require(verifiers[msg.sender] == msg.sender);
-        _;
-    }
     
    /**
     * @dev event occurs in each transaction
@@ -69,9 +44,10 @@ contract CryptanyProcessor {
     event sendMoneyEvent(
         address indexed toPerson, 
         address indexed fromPerson,
+        bytes32 transactionHash,
         uint payment,
         string comment,
-        bytes32 transactionHash
+        address[] judges
         );
         
    /**
@@ -102,24 +78,17 @@ contract CryptanyProcessor {
         address validator
         );
         
-   /**
-    * @dev The Ownable constructor sets the original `owner` of the contract to the sender
-    * account.
-    */
-    function Ownable() {
-      owner = msg.sender;
-    }    
 
    /**
     * @dev Main function to create transaction
     */
-    function sendMoneyFor(address toPerson, string comment) payable returns (bytes32) {
+    function sendMoneyFor(address toPerson, string comment, address[] judges) payable returns (bytes32) {
         
         //Seller balance should bigger, than any payment
         require (toPerson.balance >= msg.value);
         
         //var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment);
-        var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment);
+        var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment, judges);
         
         //hash from all concatinated data
         var transactionHash = sha3(msg.sender, toPerson, msg.value, block.timestamp);
@@ -128,11 +97,7 @@ contract CryptanyProcessor {
         balance += msg.value;
         
         //sendMoneyEvent(toPerson, msg.sender, msg.value, comment, transactionHash);
-        sendMoneyEvent(toPerson, msg.sender, msg.value, comment, transactionHash);
-        
-        //new transaction shoul be added into the pending chain
-        var pendingValidation = ValidationStructure(verifiers[1], false, "Validation required");
-        pendingValidations[transactionHash] = pendingValidation;
+        sendMoneyEvent(toPerson, msg.sender, transactionHash, msg.value, comment, judges);
         
         return transactionHash;
     }
@@ -141,16 +106,16 @@ contract CryptanyProcessor {
     * @dev Main function to process transaction
     */
     function receiveMoney(bytes32 transactionHash) returns (bool) {
-        PaymentStructure storage p = pendingPayments[transactionHash];
+        PaymentStructure memory pp = pendingPayments[transactionHash];
         
         //Only money receiver may call this function
-        require (msg.sender == p.toAddress);
+        require (msg.sender == pp.toAddress);
         
         //only approved transaction may commited
-        require (pendingValidations[transactionHash].validator == 0);
+        require (pp.validationsList.length == 0);
         
         //transaction from contract to address
-        p.toAddress.transfer(p.paymentSize);
+        pp.toAddress.transfer(pp.paymentSize);
         
         //removing payment element
         delete pendingPayments[transactionHash];
@@ -159,31 +124,28 @@ contract CryptanyProcessor {
         
     }
     
-    function addAllowedValidator(address validatorAddress) onlyOwner {
-        verifiers[validatorAddress] = validatorAddress;
-        changeListOfValidators("New validator has been added", validatorAddress);
-    }
-    
-    function removeAllowedValidator(address validatorAddress) onlyOwner {
-        //only existing validator can be removed
-        require (verifiers[validatorAddress]!=0);
-        changeListOfValidators("Validator has been removed", validatorAddress);
-    }
-    
    /**
     * @dev function to approve transaction. Should work with many validators.
     */
-    function provideValidation(bytes32 transaction) onlyValidators {
+    function provideValidation(bytes32 transactionHash) returns (bool){
         
-        var validation = pendingValidations[transaction];
-
-        if (validation.validator == msg.sender && validation.result == true){
-            delete pendingValidations[transaction]; 
-            transactionApproved(transaction, validation.validator, validation.comment);
-        }  
-        else
-            transactionRejected(transaction, validation.validator, validation.comment);
+        PaymentStructure pp = pendingPayments[transactionHash];
         
+        for (uint i = 0; i<=pp.validationsList.length-1; i++){
+            if (msg.sender == pp.validationsList[i]){
+                delete pendingPayments[transactionHash].validationsList[i];  
+                return true;
+            }
+        }
+        return false;    
     }
+    
+    function tst (bytes32 transactionHash) {
+        PaymentStructure memory pp = pendingPayments[transactionHash]; 
+        tste(pp.validationsList.length);
+    }
+    
+    event tste(
+        uint size);
 
 }
