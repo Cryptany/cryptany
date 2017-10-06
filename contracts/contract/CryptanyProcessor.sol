@@ -127,13 +127,15 @@ contract CryptanyProcessor {
    /**
     * @dev function to approve transaction. Should work with many validators.
     */
-    function provideValidation(bytes32 transactionHash) returns (bool){
+    function provideValidation(bytes32 transactionHash, string comment) returns (bool){
         
-        PaymentStructure pp = pendingPayments[transactionHash];
-        
+        PaymentStructure memory pp = pendingPayments[transactionHash];
+
         for (uint i = 0; i<=pp.validationsList.length-1; i++){
             if (msg.sender == pp.validationsList[i]){
-                delete pendingPayments[transactionHash].validationsList[i];  
+                delete pendingPayments[transactionHash].validationsList[i];
+                pendingPayments[transactionHash].validationsList.length -= 1;
+                transactionApproved(transactionHash, msg.sender, comment);
                 return true;
             }
         }
