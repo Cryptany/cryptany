@@ -19,6 +19,8 @@ contract CryptanyProcessor {
         string comment;
         
         address[] validationsList;
+        
+        uint timestamp;
     }
     
     //all payments agregated by this contract
@@ -29,13 +31,6 @@ contract CryptanyProcessor {
     
     //mapping betwen transaction hash and payment structure
     mapping (bytes32 => PaymentStructure) pendingPayments;
-    
-    /**
-     * @dev Throws if called by any account other than the owner.
-     */
-    modifier onlyOwner() {
-        _;
-    }
     
     
    /**
@@ -88,7 +83,7 @@ contract CryptanyProcessor {
         require (toPerson.balance >= msg.value);
         
         //var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment);
-        var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment, judges);
+        var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment, judges, block.timestamp);
         
         //hash from all concatinated data
         var transactionHash = sha3(msg.sender, toPerson, msg.value, block.timestamp);
@@ -120,6 +115,12 @@ contract CryptanyProcessor {
         //removing payment element
         delete pendingPayments[transactionHash];
         
+        //lets increase rating for owners of current transaction
+        rating[pp.toAddress] += pp.paymentSize;
+        rating[pp.fromAddress] += pp.paymentSize;
+        
+        balance -= pp.paymentSize;
+        
         return true;
         
     }
@@ -140,6 +141,34 @@ contract CryptanyProcessor {
             }
         }
         return false;    
+    }
+    
+   /**
+    * @dev function to rollback invalid transaction
+    * invalid transaction - transaction with incorrect(nonexistent) address
+    * may be rolled back after 115 after payment
+    */
+    function rollbackInvalidTransaction(bytes32 transactionHash) returns (bool) {
+        PaymentStructure memory pp = pendingPayments[transactionHash];
+        
+        //Only money receiver may call this function
+        require (msg.sender == pp.toAddress);
+        
+        uint deltaTime = block.timestamp - pp.timestamp;
+        
+        //10000000000 - 115 days
+        if (deltaTime >= 10000000000){
+            
+            //transaction from contract to address
+            pp.fromAddress.transfer(pp.paymentSize);
+            
+            //removing payment element
+            delete pendingPayments[transactionHash];
+            
+            balance -= pp.paymentSize;           
+            return true;    
+        }
+        return false;
     }
     
     function tst (bytes32 transactionHash) {
