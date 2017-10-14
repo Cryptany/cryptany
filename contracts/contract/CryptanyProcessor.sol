@@ -77,7 +77,7 @@ contract CryptanyProcessor {
         require (toPerson.balance >= msg.value);
         
         //hash from all concatinated data
-        var transactionHash = sha3(msg.sender, toPerson, msg.value, block.timestamp);
+        var transactionHash = keccak256(msg.sender, toPerson, msg.value, block.timestamp);
         
         //in case of we have no trustbrokers for ccurrent transaction it will be processed immediately
         if (trustbrokers.length == 0){
@@ -186,12 +186,5 @@ contract CryptanyProcessor {
         return rating[_address];
     }
     
-    function tst (bytes32 transactionHash) {
-        PaymentStructure memory pp = pendingPayments[transactionHash]; 
-        tste(pp.validationsList.length);
-    }
-    
-    event tste(
-        uint size);
 
 }
