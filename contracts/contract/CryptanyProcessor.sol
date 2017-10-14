@@ -27,7 +27,7 @@ contract CryptanyProcessor {
     uint public balance;
     
     //Temporary time to rollback an unsuccessful transaction
-    uint public constant overdueTime = 3600000;
+    uint constant overdueTime = 3600000;
     
     //rating(reputation) == sum of all success eth deals
     mapping (address => uint) rating;
@@ -80,7 +80,7 @@ contract CryptanyProcessor {
    /**
     * @dev Main function to create transaction
     */
-    function sendMoneyFor(address toPerson, string comment, address[] judges) payable returns (bytes32) {
+    function sendMoney(address toPerson, string comment, address[] judges) payable returns (bytes32) {
         
         //Seller balance should bigger, than any payment
         require (toPerson.balance >= msg.value);
@@ -90,7 +90,10 @@ contract CryptanyProcessor {
         
         //in case of we have no judges for ccurrent transaction it will be processed immediately
         if (judges.length == 0){
-            toPerson.transfer(msg.value);   
+            toPerson.transfer(msg.value);  
+            //lets increase rating for owners of current transaction
+            changeRating(toPerson, msg.value);
+            changeRating(msg.sender, msg.value);
         }
         else {
             //var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment);
@@ -126,8 +129,8 @@ contract CryptanyProcessor {
         delete pendingPayments[transactionHash];
         
         //lets increase rating for owners of current transaction
-        rating[pp.toAddress] += pp.paymentSize;
-        rating[pp.fromAddress] += pp.paymentSize;
+        changeRating(pp.toAddress, pp.paymentSize);
+        changeRating(pp.fromAddress, pp.paymentSize);
         
         balance -= pp.paymentSize;
         
@@ -136,7 +139,7 @@ contract CryptanyProcessor {
     }
     
    /**
-    * @dev function to approve transaction. Should work with many validators.
+    * @dev function to approve transaction. Merchant will get his money
     */
     function provideValidation(bytes32 transactionHash, string comment) returns (bool){
         
@@ -155,8 +158,7 @@ contract CryptanyProcessor {
     
    /**
     * @dev function to rollback overdue transaction
-    * overdue transaction - transaction with incorrect(nonexistent) address
-    * may be rolled back after 115 after payment
+    * may be rolled back after overdueTime
     */
     function rollbackvOverdueTransaction(bytes32 transactionHash) returns (bool) {
         PaymentStructure memory pp = pendingPayments[transactionHash];
@@ -180,12 +182,19 @@ contract CryptanyProcessor {
         return false;
     }
     
-    function tst (bytes32 transactionHash) {
-        PaymentStructure memory pp = pendingPayments[transactionHash]; 
-        tste(pp.validationsList.length);
+   /**
+    * @dev function to change rating of address
+    */
+    function changeRating(address _address, uint value) internal {
+        rating[_address] += value;                
     }
     
-    event tste(
-        uint size);
+   /**
+    * @dev function to check rating of current address
+    */
+    function getRating(address _address) external returns (uint) {
+        return rating[_address];
+    }
+    
 
 }
