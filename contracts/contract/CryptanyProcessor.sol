@@ -45,7 +45,7 @@ contract CryptanyProcessor {
         bytes32 transactionHash,
         uint payment,
         string comment,
-        address[] judges
+        address[] trustbrokers
         );
         
    /**
@@ -53,7 +53,7 @@ contract CryptanyProcessor {
     */    
     event transactionApproved(
         bytes32 indexed transactionHash,
-        address validator,
+        address trustbroker,
         string comment
         );
         
@@ -62,25 +62,16 @@ contract CryptanyProcessor {
     */    
     event transactionRejected(
         bytes32 indexed transactionHash,
-        address validator,
+        address trustbroker,
         string comment
         );        
         
-        
-   /**
-    * @dev event occurs when new validatior is added/removed
-    * 
-    */    
-    event changeListOfValidators(
-        string operationType,
-        address validator
-        );
         
 
    /**
     * @dev Main function to create transaction
     */
-    function sendMoney(address toPerson, string comment, address[] judges) payable returns (bytes32) {
+    function sendMoney(address toPerson, string comment, address[] trustbrokers) payable returns (bytes32) {
         
         //Seller balance should bigger, than any payment
         require (toPerson.balance >= msg.value);
@@ -88,8 +79,8 @@ contract CryptanyProcessor {
         //hash from all concatinated data
         var transactionHash = sha3(msg.sender, toPerson, msg.value, block.timestamp);
         
-        //in case of we have no judges for ccurrent transaction it will be processed immediately
-        if (judges.length == 0){
+        //in case of we have no trustbrokers for ccurrent transaction it will be processed immediately
+        if (trustbrokers.length == 0){
             toPerson.transfer(msg.value);  
             //lets increase rating for owners of current transaction
             changeRating(toPerson, msg.value);
@@ -97,13 +88,12 @@ contract CryptanyProcessor {
         }
         else {
             //var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment);
-            var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment, judges, block.timestamp);
+            var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment, trustbrokers, block.timestamp);
     
             pendingPayments[transactionHash]=pendingPay;
             balance += msg.value;
             
-            //sendMoneyEvent(toPerson, msg.sender, msg.value, comment, transactionHash);
-            sendMoneyEvent(toPerson, msg.sender, transactionHash, msg.value, comment, judges);
+            sendMoneyEvent(toPerson, msg.sender, transactionHash, msg.value, comment, trustbrokers);
             
         }
         
@@ -196,5 +186,12 @@ contract CryptanyProcessor {
         return rating[_address];
     }
     
+    function tst (bytes32 transactionHash) {
+        PaymentStructure memory pp = pendingPayments[transactionHash]; 
+        tste(pp.validationsList.length);
+    }
+    
+    event tste(
+        uint size);
 
 }
