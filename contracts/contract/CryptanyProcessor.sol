@@ -26,6 +26,9 @@ contract CryptanyProcessor {
     //all payments agregated by this contract
     uint public balance;
     
+    //Temporary time to rollback an unsuccessful transaction
+    uint public constant overdueTime = 3600000;
+    
     //rating(reputation) == sum of all success eth deals
     mapping (address => uint) rating;
     
@@ -82,17 +85,24 @@ contract CryptanyProcessor {
         //Seller balance should bigger, than any payment
         require (toPerson.balance >= msg.value);
         
-        //var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment);
-        var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment, judges, block.timestamp);
-        
         //hash from all concatinated data
         var transactionHash = sha3(msg.sender, toPerson, msg.value, block.timestamp);
-
-        pendingPayments[transactionHash]=pendingPay;
-        balance += msg.value;
         
-        //sendMoneyEvent(toPerson, msg.sender, msg.value, comment, transactionHash);
-        sendMoneyEvent(toPerson, msg.sender, transactionHash, msg.value, comment, judges);
+        //in case of we have no judges for ccurrent transaction it will be processed immediately
+        if (judges.length == 0){
+            toPerson.transfer(msg.value);   
+        }
+        else {
+            //var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment);
+            var pendingPay = PaymentStructure(msg.sender, toPerson, msg.value, comment, judges, block.timestamp);
+    
+            pendingPayments[transactionHash]=pendingPay;
+            balance += msg.value;
+            
+            //sendMoneyEvent(toPerson, msg.sender, msg.value, comment, transactionHash);
+            sendMoneyEvent(toPerson, msg.sender, transactionHash, msg.value, comment, judges);
+            
+        }
         
         return transactionHash;
     }
@@ -144,11 +154,11 @@ contract CryptanyProcessor {
     }
     
    /**
-    * @dev function to rollback invalid transaction
-    * invalid transaction - transaction with incorrect(nonexistent) address
+    * @dev function to rollback overdue transaction
+    * overdue transaction - transaction with incorrect(nonexistent) address
     * may be rolled back after 115 after payment
     */
-    function rollbackInvalidTransaction(bytes32 transactionHash) returns (bool) {
+    function rollbackvOverdueTransaction(bytes32 transactionHash) returns (bool) {
         PaymentStructure memory pp = pendingPayments[transactionHash];
         
         //Only money receiver may call this function
@@ -156,8 +166,7 @@ contract CryptanyProcessor {
         
         uint deltaTime = block.timestamp - pp.timestamp;
         
-        //10000000000 - 115 days
-        if (deltaTime >= 10000000000){
+        if (deltaTime >= overdueTime){
             
             //transaction from contract to address
             pp.fromAddress.transfer(pp.paymentSize);
